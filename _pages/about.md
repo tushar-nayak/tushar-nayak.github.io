@@ -28,4 +28,4 @@ latest_posts:
 
 I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) interested in the intersection of computer vision, and physics-based learning models (and wider pattern regognition) in the context of medical (and more specifically surgical) robots. 
 
-I'm current part of [Professor Kenji Shimada's](https://www.andrew.cmu.edu/user/shimada/) Computational Engineering & Robotics Lab, where I work on a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis.
+I'm currently part of [Professor Kenji Shimada's](https://www.andrew.cmu.edu/user/shimada/) Computational Engineering & Robotics Lab, where I work on a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis.
