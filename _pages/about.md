@@ -9,8 +9,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Pittsburgh, PA</p>
-    <p>atleast until June 2026</p>
+    <p>Steffy Robotics Lab</p>
+    <p>Scaife Hall B15</p>
+    <p>4805 Frew St.</p>
+    <p>Pittsburgh, PA 15213</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -26,6 +28,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) interested in the intersection of computer vision, and physics-based learning models (and wider pattern regognition) in the context of medical (and more specifically surgical) robots. 
+Hey there! I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) interested in the intersection of computer vision, and physics-based learning models (and wider pattern regognition) in the context of medical (and more specifically surgical) robots. I'm currently part of [Professor Kenji Shimada's](https://www.andrew.cmu.edu/user/shimada/) Computational Engineering & Robotics Lab, where I work on a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis.
 
-I'm currently part of [Professor Kenji Shimada's](https://www.andrew.cmu.edu/user/shimada/) Computational Engineering & Robotics Lab, where I work on a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis.
+Before Pittsburgh, I completed my undergrad at Manipal Institute of Technology with a major in Biomedical Engineering, specializing in pattern recognition along with signal & image processing, and a minor in Data Science. Over the second half of my undergrad, I worked under [Professor Niranjana S] (https://researcher.manipal.edu/en/persons/niranjana-s) and [Dr. Krishnaraj Chadaga](https://researcher.manipal.edu/en/persons/krishnaraj-chadaga) in the medical informatics space, on projects ranging from skin lesion image based viral infection detection to multi-stage and multi-modal cancer detection. Between my bachelors and masters, I also spent a year as a researcher at IIT Hyderabad and the Indian Council of Medical Research.  
