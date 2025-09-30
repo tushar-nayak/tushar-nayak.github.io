@@ -45,18 +45,11 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "nav-teaching",
-          title: "teaching",
+          title: "Teaching",
           description: "i haven&#39;t taught any courses (yet!), just a record of work as a teaching assistant!",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
