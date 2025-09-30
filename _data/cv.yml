@@ -2,96 +2,87 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Tushar nayak
+
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science - Research
+      institution: Carnegie Mellon University, Pittsburgh PA
+      year: 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Biomedical Engineering
+        - Computational Focus Area
+        - title: Relevant Coursework
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Computer Vision, Visual Learning & Recognition, Image-Based Computational Modelling and Analysis, Learning for 3D Vision, and Clinical Translations of AI.
+            - Planned - Physics-based Methods in Vision, Probabilistic Graphical Models
+    - title: Batchelor of Technology
+      institution: Manipal Institute of Technology
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-
+        - Major in Biomedical Engineering, specializing in Signal & Image Processing and Pattern Recognition
+        - Minor in Data Science
+        - title: Relevant Coursework
+          contents: 
+          - Pattern Recognition, Digital Image Processing, Digital Signal Processing, Signals & Systems, Signal & Image Processing Lab
+          - Regression Models, Statistical Inference, Practical Machine Learning, and R Programming.
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Student Researcher - Image Guided Surgery - Tele-Operated Endovascular Robotic Surgical Platform
+      institution: Carnegie Mellon University
+      year: 2024 - 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Generated a mesh dataset using CTAs, with automated multi-branch centerline deformation without known control points. 
+        - Estimating quantifiable deformation based on guidewire movement using physics-informed neural networks and registering deformation to preop volume. 
+        - title: Research Outcomes
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
+            - Conducted an extensive review of the vision subsystems of existing literature, sent for and awaiting publication.
+            - Deformation estimation's work's manuscript writing is underway.
+    - title: Research Assistant
+      institution: Carnegie Mellon University
       year: 1933
       description:
-        - Description 1.
-        - Description 2.
+        - Developed a neural ordinary differential equation-based model to generate visual production of tumor growth with FLAIR, CT1, T1 & T2.
+        - Augmented the Neural ODE with U-Net and attention-gated convolutional blocks encoder-decoder structure.
+        - Visually predict a future timepoint, allowing for enhanced surgery planning. Working under the guidance of Dr. Pulkit G & Dr. Aswin S.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Computer Vision for Open Horizon Robotics Edu
+      year: 2025-now
+      description: Designing a comprehensive series of open-source learning material in the domains of signal processing, image processing, pattern recognition, computer vision & deep learning (alongside material for the prerequisite math), mentoring and assisting student-led projects in the community.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Biomedical Engineering Department Head's Fellowship, Carnegie Mellon University
+    - year: 2023
       items:
-        - Max Planck Medal
+        - Best Paper AI Track at the Second International Conference on Artificial Intelligence, Computational Electronics & Communication
 
-- title: Academic Interests
+- title: Academic Interests & Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Computer Vision
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Feature detection, Feature description, Geometric Computer Vision, Camera Geometry, 3D Reconstruction, Stereovision, Motion Analysis and Optical Flow, Photometric Stereovision.
+        - Surface mesh manipulation, deformable models, registration, deformable registration, volume rendering & alignment. 
+        - Image filtering, Feature enhancement, Feature extraction, Object detection, Texture analysis, Morphological analysis, Image Compression & Color processing.
+    - title: Pattern Recognition
       items:
-        - Description 1.
-        - Description 2.
+        - Convolution Neural Networks, Neural Ordinary Differential Equations, Attention Mechanisms & Transformer models, Physics-informed Neural Networks, Recurrent Neural Networks & Long-Short Term Memory, Encoder-Decoder, Explainable AI.
+        - Support Vector Machines, Random Forests, Decision Trees, Clustering, Principal Component & Time-Series Analysis.
+    - title: Biomedical Engineering
+        - Medical Image Analysis, Image-guided computer-aided surgical systems, Tumor Detection-Classification-Evolution Modelling, Pathological Data Processing, Biomedical Signal Processing, Neuro-imaging analysis: SPM, FSL, ITK-SNAP
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Mountain & Trail Biking, Gaming, Piano, Reading comicbooks (yes!) etc.
