@@ -43,7 +43,7 @@
             - Deformation estimation's work's manuscript writing is underway.
     - title: Research Assistant
       institution: Carnegie Mellon University
-      year: 1933
+      year: 2025-present
       description:
         - Developed a neural ordinary differential equation-based model to generate visual production of tumor growth with FLAIR, CT1, T1 & T2.
         - Augmented the Neural ODE with U-Net and attention-gated convolutional blocks encoder-decoder structure.
@@ -80,7 +80,7 @@
         - Convolution Neural Networks, Neural Ordinary Differential Equations, Attention Mechanisms & Transformer models, Physics-informed Neural Networks, Recurrent Neural Networks & Long-Short Term Memory, Encoder-Decoder, Explainable AI.
         - Support Vector Machines, Random Forests, Decision Trees, Clustering, Principal Component & Time-Series Analysis.
     - title: Biomedical Engineering
-        - Medical Image Analysis, Image-guided computer-aided surgical systems, Tumor Detection-Classification-Evolution Modelling, Pathological Data Processing, Biomedical Signal Processing, Neuro-imaging analysis: SPM, FSL, ITK-SNAP
+        - Medical Image Analysis, Image-guided computer-aided surgical systems, Tumor Detection-Classification-Evolution Modelling, Pathological Data Processing, Biomedical Signal Processing, Neuro-imaging analysis - SPM, FSL, ITK-SNAP
 
 - title: Other Interests
   type: list
