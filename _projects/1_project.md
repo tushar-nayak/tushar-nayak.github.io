@@ -19,7 +19,7 @@ Here, I'm focusing on the computer vision subsystem, having generated physics in
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    snippet of my synthetic centerline deformation!
 </div>
 
 My roadmap includes but isn't limited to:
@@ -28,4 +28,4 @@ My roadmap includes but isn't limited to:
 
 We've also completed a comprehensive review of the existing literature in the realm of robotic assisted endovascular surgery, which I've written the vision sub-system of (and is currently sent to Springer Nature's Journal of Intelligent and Robotics Systems!).
 
-{% endraw %}
+# {% endraw %}
