@@ -417,8 +417,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-embarking-on-my-first-ta-position-for-applied-deep-learning-at-carnegie-mellon-university",
+          title: 'Embarking on my first TA position, for Applied Deep Learning at Carnegie Mellon...',
           description: "",
           section: "News",},{id: "news-starting-off-the-semester-as-a-teaching-assistant-for-dr-jason-szafron-s-graduate-course-fundamentals-of-computational-biomedical-engineering-and-my-thesis-guide-dr-kenji-shimada-s-computer-vision",
           title: 'Starting off the semester as a Teaching Assistant for Dr. Jason Szafron’s graduate...',
