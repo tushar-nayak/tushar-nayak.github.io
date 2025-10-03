@@ -1,11 +1,11 @@
 ---
 layout: page
 title: endovasculature deformation estimation and registration
-description: 
-img: assets/img/newplot.png
+description: research at cerlab (master's thesis) 
+img: assets/img/newplotx.png
 importance: 1
 category: at carnegie mellon
-related_publications: true
+related_publications: false
 ---
 
 ---

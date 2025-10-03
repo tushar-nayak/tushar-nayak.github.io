@@ -1,7 +1,7 @@
 ---
 layout: page
 title: spatiotemporal glioblastoma evolution prediction
-description: a project with a background image and giscus comments
+description: research at the ∀ lab
 img: assets/img/gbp1.png
 importance: 2
 category: at carnegie mellon
