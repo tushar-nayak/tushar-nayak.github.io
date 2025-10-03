@@ -425,12 +425,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-endovasculature-deformation-estimation-and-registration",
           title: 'endovasculature deformation estimation and registration',
-          description: "",
+          description: "research at cerlab (master&#39;s thesis)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-spatiotemporal-glioblastoma-evolution-prediction",
           title: 'spatiotemporal glioblastoma evolution prediction',
-          description: "a project with a background image and giscus comments",
+          description: "research at the ∀ lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
