@@ -7,7 +7,10 @@ importance: 2
 category: at carnegie mellon
 giscus_comments: true
 ---
-`project status: currently paused (January - September 2025)`
+
+---
+project status: currently paused (January - September 2025)`
+---
 
 Conducted during the Spring and Summer semesters of 2025 under [Dr. Pulkit Grover](https://users.ece.cmu.edu/~pgrover/), [Dr. Aswin Sankaranarayanan](https://users.ece.cmu.edu/~saswin/) and [Dr. Matthew J Shepart, MD](https://findcare.ahn.org/Matthew-J-Shepard), this study is complementary to a Partial Differential Equation based approach by a [fellow graduate student researcher](https://www.linkedin.com/in/cynthiashan/). Both approaches use a multi-modal approach that combine FLAIR, T1, T2 and CT1 modalities of brain MRI from the LUMIERE dataset.
 
@@ -42,4 +45,4 @@ I worked on a Neural Ordinary Differential (N-ODE) network framework designed to
 
 
 
-# {% endraw %}
+

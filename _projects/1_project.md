@@ -7,7 +7,10 @@ importance: 1
 category: at carnegie mellon
 related_publications: true
 ---
-`project status: ongoing`
+
+---
+project status: ongoing
+---
 
 I'm working on remote surgical robotics at the Computational Engineering & Robotics Lab at CMU under Dr. Kenji Shimada & doctoral candidate Rishi Basdeo at the Department of Mechanical Engineering and collaborators and clinicians from University of Pittsburgh's [Surreality Lab](https://surreality.pitt.edu/) and neurosurgens from UPMC. 
 
@@ -28,4 +31,3 @@ My roadmap includes but isn't limited to:
 
 We've also completed a comprehensive review of the existing literature in the realm of robotic assisted endovascular surgery, which I've written the vision sub-system of (and is currently sent to Springer Nature's Journal of Intelligent and Robotics Systems!).
 
-# {% endraw %}
