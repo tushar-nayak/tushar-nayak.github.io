@@ -2,14 +2,14 @@
 layout: page
 title: spatiotemporal glioblastoma evolution prediction
 description: a project with a background image and giscus comments
-img: assets/img/image1.png
+img: assets/img/gbp1.png
 importance: 2
 category: at carnegie mellon
-giscus_comments: true
+# giscus_comments: true
 ---
 
 ---
-project status: currently paused (January - September 2025)`
+project status: currently paused (January - September 2025)
 ---
 
 Conducted during the Spring and Summer semesters of 2025 under [Dr. Pulkit Grover](https://users.ece.cmu.edu/~pgrover/), [Dr. Aswin Sankaranarayanan](https://users.ece.cmu.edu/~saswin/) and [Dr. Matthew J Shepart, MD](https://findcare.ahn.org/Matthew-J-Shepard), this study is complementary to a Partial Differential Equation based approach by a [fellow graduate student researcher](https://www.linkedin.com/in/cynthiashan/). Both approaches use a multi-modal approach that combine FLAIR, T1, T2 and CT1 modalities of brain MRI from the LUMIERE dataset.
@@ -18,7 +18,7 @@ I worked on a Neural Ordinary Differential (N-ODE) network framework designed to
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/newplot.png" title="prelimnary results of my model (actually) predicting a future timepoint of the tumour growth!" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/image1.png" title="prelimnary results of my model (actually) predicting a future timepoint of the tumour growth!" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
