@@ -1,7 +1,7 @@
 ---
 layout: page
 title: spatiotemporal glioblastoma evolution prediction
-description: research at the ∀ lab
+description: research at the ∀ lab & image science lab
 img: assets/img/gbp1.png
 importance: 2
 category: at carnegie mellon
