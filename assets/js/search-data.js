@@ -430,7 +430,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-spatiotemporal-glioblastoma-evolution-prediction",
           title: 'spatiotemporal glioblastoma evolution prediction',
-          description: "research at the ∀ lab",
+          description: "research at the ∀ lab &amp; image science lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-neural-correlates-associated-to-images-for-emtional-response-in-fmri",
