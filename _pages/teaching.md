@@ -20,3 +20,27 @@ Graduate & Undergraduate Students | Fall 2025 | Dr. Jason Szafron | College of E
 ### Applied Deep Learning [🔗](https://tushar-nayak.github.io/assets/pdf/17644s25.pdf)
 Graduate Students | Spring 2025 | Dr. Clarence Worrell | School of Computer Science <br>
 `Deep neural networks have made in-roads in virtually every industry, propelled by exponential increases in compute power and fundamental progress in modeling. Knowledge of these models is fast becoming a key asset for software engineers, as current systems are quickly starting to include many neural components, and the practice of software engineering itself is starting to benefit from neural program assistance (incl. automated bug finding, translation between programming languages). This course equips the next generation of software engineers with knowledge of neural models, the software engineering challenges involved in using these, and hands-on experience with their applications. It teaches both a rich vocabulary of general, essential concepts (including architectures), and recent work on applications of these models, aimed primarily at applications for and in software engineering itself. The course includes a hands-on deep learning project aimed that will be used to teach the various stages (and their pitfalls) of building and deploying deep learners.`
+
+## Manipal Institute of Technology
+BioInnovate Technical Workshop Series | Conducted through IEEE Engineering in Medicine in Biology Society, Student Chapter Manipal
+`During my tenure as the Head of Research (and Chairperson) at the Manipal student chapter of IEEE Engineering in Medicine & Biology Society, the student organization teamed up with the Department of Biomedical Engineering in organizing several workshops over my junior and senior year. I conducted workshops to introduce freshers and sophomores to the ​fundamentals of signal and image processing, deep learning, microcontrollers and Linux. Additionally, I also ​organized and executed a half-year long learning a semester long junior members in electronics, fundamentals of programming, market analysis and signal processing. Exceptional students from this initiatives shadowed my lab work and undertook a study alongside me, the results of which we presented at a university symposium.`
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bi-dl.jpg" title="workshop on neural networks" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bi-pr.jpg" title="workshop on neural networks" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bi-mc.jpg" title="workshop on microcontrollers" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bi-linux.jpg" title="workshop on linux" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bi-ip.jpg" title="workshop on image processing" class="img-fluid rounded z-depth-1" %}
+    </div>  
+</div>
+<div class="caption">
+    Outtakes from some of my workshops and seminars.
+</div>
