@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: biomedical engineer turned computer vision focused roboticist!
+subtitle: computer vision focused roboticist working in robotic surgery
 
 profile:
   align: right
@@ -27,7 +27,9 @@ latest_posts:
   limit: 2 # leave blank to include all the blog posts
 ---
 
-Hey there! I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) department interested in the intersection of computer vision, and physics-based learning models in the context of medical (and more specifically surgical) robots informed by medical imaging. I'm currently part of [Professor Kenji Shimada's](https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html) [Computational Engineering & Robotics Lab](https://cerlab11.andrew.cmu.edu/), where I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis with doctoral candidate [Rishi Basdeo](https://www.rishibasdeo.com/). My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluroscopy angiograms and register the deformation to the pre-operative computer tomography angiographs.
+Hey there! I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) department interested in the intersection of computer vision, and physics-based learning models in the context of medical (and more specifically surgical) robots informed by medical imaging. 
+
+I'm currently part of [Professor Kenji Shimada's](https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html) [Computational Engineering & Robotics Lab](https://cerlab11.andrew.cmu.edu/), where I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis with doctoral candidate [Rishi Basdeo](https://www.rishibasdeo.com/). My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluroscopy angiograms and register the deformation to the pre-operative computer tomography angiographs.
 
 Before Pittsburgh, I completed my undergrad at [Manipal Institute of Technology](https://www.manipal.edu/mit.html) with a major in Biomedical Engineering, focusing on pattern recognition and image processing, and a minor in Data Science. Over the second half of my undergrad, I worked under [Professor Niranjana S](https://researcher.manipal.edu/en/persons/niranjana-s) and [Dr. Krishnaraj Chadaga](https://researcher.manipal.edu/en/persons/krishnaraj-chadaga) at the Biomedical Computing Lab on projects ranging from skin lesion image based viral infection detection to multi-stage and multi-modal cancer detection. 
 
