@@ -7,10 +7,9 @@ img: assets/img/fmri.png
 importance: 3
 category: at carnegie mellon
 ---
-    ---
-    project status: completed (september - december 2024)
-    Full report [:link:](https://tushar-nayak.github.io/assets/pdf/42668.pdf) [Project Report](https://tushar-nayak.github.io/assets/pdf/42668.pdf)
-    ---
+
+project status: completed (september - december 2024)
+Full report [:link:](https://tushar-nayak.github.io/assets/pdf/42668.pdf) [Project Report](https://tushar-nayak.github.io/assets/pdf/42668.pdf)
 
 This project maps how the brain processes emotionally positive, negative, and neutral images using a multimodal fMRI workflow on a 3T Siemens Prisma, combining structural MRI, resting-state fMRI, task-based BOLD, and ASL perfusion to link anatomy, connectivity, and blood flow with stimulus-driven responses. The functional task presented 100 images (40 positive, 40 negative, 20 neutral) with 8-second events and GLM analysis using a double-gamma HRF, alongside structural brain extraction/segmentation (T1/T2), ICA of resting-state data, and pCASL-based perfusion quantification.
 
