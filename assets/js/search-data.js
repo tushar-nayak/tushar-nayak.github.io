@@ -433,9 +433,9 @@ ninja.data = [{
           description: "research at the ∀ lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-neural-correlates-associated-to-images-for-emtional-response-in-fmri",
+          title: 'neural correlates associated to images for emtional response in fMRI',
+          description: "final project for course - fundamentals of mri and neuroimaging analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
