@@ -7,7 +7,7 @@ dropdown: true
 children:
   - title: resume
     permalink: https://tushar-nayak.github.io/assets/pdf/ResumeIncomplete.pdf
-  - title: divider
+  #- title: divider
   - #title: blog
     #permalink: /blog/
 ---
