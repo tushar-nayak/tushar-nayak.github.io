@@ -2,7 +2,7 @@
 layout: page
 title: research
 permalink: /research/
-description: expanding on my homepage...
+description: #expanding on my homepage...
 nav: true
 nav_order: 3
 display_categories: [at carnegie mellon, at manipal, other]

@@ -9,7 +9,7 @@ related_publications: true
 ---
 
 ---
-project status: completed and published
+project status: completed and published/presented.
 ---
 
 My undergraduate research was anchored and centered around my work with building deep learning models that combined explainable AI with attention mechanisms for robust neural networks that visually explained model predictions. I paired this with my work in image pre-processing for improving training using feature engineering and removing training biases.
@@ -23,5 +23,5 @@ My undergraduate research was anchored and centered around my work with building
     !
 </div>
 
-The work utilized the LC25000 dataset on two studies: one where I created a baseline results for the 5-way classification and the other being a more fleshed out work with the lung cancer dataset and transfer learning coupled with spatial attention {% cite nayak2024automated %}. 
+The work utilized the LC25000 dataset on two studies: one where I created a baseline results for the 5-way classification {% cite nayak2023processing %} and the other being a more fleshed out work with the lung cancer dataset and transfer learning coupled with spatial attention {% cite nayak2024automated %}. 
 
