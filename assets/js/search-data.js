@@ -430,9 +430,9 @@ ninja.data = [{
           section: "News",},{id: "news-starting-off-the-semester-as-a-teaching-assistant-for-dr-jason-szafron-s-graduate-course-fundamentals-of-computational-biomedical-engineering-and-my-thesis-guide-dr-kenji-shimada-s-computer-vision",
           title: 'Starting off the semester as a Teaching Assistant for Dr. Jason Szafron’s graduate...',
           description: "",
-          section: "News",},{id: "projects-endovasculature-deformation-estimation-and-registration",
-          title: 'endovasculature deformation estimation and registration',
-          description: "research at cerlab (master&#39;s thesis)",
+          section: "News",},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
+          title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
+          description: "Research at CERLAB (master&#39;s thesis)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-spatiotemporal-glioblastoma-evolution-visual-prediction",
