@@ -445,9 +445,9 @@ ninja.data = [{
           description: "final project for course - fundamentals of mri and neuroimaging analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-sparse-2d-echocardiography-to-3d-cardiac-reconstruction-with-pose-refinement",
+          title: 'Sparse 2D Echocardiography to 3D Cardiac Reconstruction with Pose Refinement',
+          description: "Course Project for Learning for 3D Vision",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
