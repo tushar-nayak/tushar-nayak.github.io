@@ -460,9 +460,9 @@ ninja.data = [{
           description: "Research at Biomedical Computing Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-monkeypox-virus-detection-using-skin-lesion-images",
+          title: 'Monkeypox Virus Detection Using Skin Lesion Images',
+          description: "Prelimnary project at Biomedical Computing Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-project-8",
