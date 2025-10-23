@@ -4,7 +4,7 @@ title: neural correlates associated to images for emtional response in fMRI
 description: final project for course - fundamentals of mri and neuroimaging analysis
 img: assets/img/fmri.png
 # redirect: https://unsplash.com
-importance: 3
+importance: 6
 category: at carnegie mellon
 ---
 
