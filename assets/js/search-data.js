@@ -435,9 +435,9 @@ ninja.data = [{
           description: "research at cerlab (master&#39;s thesis)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-spatiotemporal-glioblastoma-evolution-prediction",
-          title: 'spatiotemporal glioblastoma evolution prediction',
-          description: "research at the ∀ lab &amp; image science lab",
+            },},{id: "projects-spatiotemporal-glioblastoma-evolution-visual-prediction",
+          title: 'Spatiotemporal Glioblastoma Evolution Visual Prediction',
+          description: "Research at The ∀ Lab &amp; Image Science Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-neural-correlates-associated-to-images-for-emtional-response-in-fmri",
