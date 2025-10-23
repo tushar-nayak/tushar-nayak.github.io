@@ -1,7 +1,7 @@
 ---
 layout: page
-title: endovasculature deformation estimation and registration
-description: research at cerlab (master's thesis) 
+title: Physics-Informed Endovasculature Deformation Estimation And Registration
+description: Research at CERLAB (master's thesis) 
 img: assets/img/newplotx.png
 importance: 1
 category: at carnegie mellon
