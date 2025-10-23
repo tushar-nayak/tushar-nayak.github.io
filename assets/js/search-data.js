@@ -450,14 +450,14 @@ ninja.data = [{
           description: "Course Project for Learning for 3D Vision",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-multi-model-oral-squamous-cell-carcinoma-detection",
+          title: 'Multi-Model Oral Squamous Cell Carcinoma Detection',
+          description: "Undergraduate thesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-lung-amp-colon-cancer-detection-using-histopathological-imaging",
+          title: 'Lung &amp;amp; Colon cancer detection using Histopathological Imaging',
+          description: "Research at Biomedical Computing Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "projects-project-7",
