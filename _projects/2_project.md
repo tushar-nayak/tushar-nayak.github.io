@@ -1,7 +1,7 @@
 ---
 layout: page
-title: spatiotemporal glioblastoma evolution prediction
-description: research at the ∀ lab & image science lab
+title: Spatiotemporal Glioblastoma Evolution Visual Prediction
+description: Research at The ∀ Lab & Image Science Lab
 img: assets/img/gbp1.png
 importance: 2
 category: at carnegie mellon
@@ -12,7 +12,7 @@ category: at carnegie mellon
 project status: currently paused (January - September 2025)
 ---
 
-Conducted during the Spring and Summer semesters of 2025 under [Dr. Pulkit Grover](https://users.ece.cmu.edu/~pgrover/), [Dr. Aswin Sankaranarayanan](https://users.ece.cmu.edu/~saswin/) and [Dr. Matthew J Shepart, MD](https://findcare.ahn.org/Matthew-J-Shepard), this study is complementary to a Partial Differential Equation based approach by [Cynthia Han](https://www.linkedin.com/in/cynthiashan/) a fellow graduate student researcher. Both approaches use a multi-modal approach that combine FLAIR, T1, T2 and CT1 modalities of brain MRI from the LUMIERE dataset.
+Conducted during the Spring and Summer semesters of 2025 under [Dr. Pulkit Grover](https://users.ece.cmu.edu/~pgrover/), [Dr. Aswin Sankaranarayanan](https://users.ece.cmu.edu/~saswin/) and [Dr. Matthew J Shepard, MD](https://findcare.ahn.org/Matthew-J-Shepard), this study is complementary to a Partial Differential Equation based approach by [Cynthia Han](https://www.linkedin.com/in/cynthiashan/) a fellow graduate student researcher. Both approaches use a multi-modal approach that combine FLAIR, T1, T2 and CT1 modalities of brain MRI from the LUMIERE dataset.
 
 I worked on a Neural Ordinary Differential (N-ODE) network framework designed to model and predict tumor growth dynamics from longitudinal MRI data. By encoding a patient’s tumor size measurements over time into interpretable kinetic parameters, the N-ODE formulates tumor progression as a continuous-time dynamical system, allowing for unbiased and personalized predictions, even from early-stage data. 
 
