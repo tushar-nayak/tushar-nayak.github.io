@@ -38,3 +38,12 @@ Before Pittsburgh, I completed my undergrad at [Manipal Institute of Technology]
 Between my bachelors and masters, I also spent a year as a researcher at [IIT Hyderabad](https://www.iith.ac.in/) working on motion-capture & electromyograhy analysis for exercise and the [Indian Council of Medical Research](https://www.icmr.gov.in/) where I worked on an ultrasound-based fetal anomaly system.  
 
 Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the [bme department's ambassador](https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf), going trailbiking, playing the piano or continuing work on this website!  
+
+<details>
+  <summary>Click to expand for more</summary>
+  <p>This is hidden content that will appear when the user clicks to expand.</p>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+  </ul>
+</details>
