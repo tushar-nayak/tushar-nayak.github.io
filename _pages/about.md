@@ -35,10 +35,30 @@ Always happy to connect with curious minds! Feel free to reach out on email: tus
 
 <details>
   <summary>Read more...</summary>
-
-  Before Pittsburgh, I completed my undergrad at [Manipal Institute of Technology](https://www.manipal.edu/mit.html) with a major in [Biomedical Engineering](https://www.manipal.edu/mit/department-faculty/department-list/biomedical.html), focusing on pattern recognition and image processing, and a minor in Data Science. Over the second half of my undergrad, I worked under [Professor Niranjana S](https://researcher.manipal.edu/en/persons/niranjana-s) and [Dr. Krishnaraj Chadaga](https://researcher.manipal.edu/en/persons/krishnaraj-chadaga) at the Biomedical Computing Lab on projects ranging from skin lesion image based viral infection detection to multi-stage and multi-modal cancer detection.
   
-  Between my bachelors and masters, I also spent a year as a researcher at [IIT Hyderabad](https://www.iith.ac.in/) working on motion-capture & electromyograhy analysis for exercise and the [Indian Council of Medical Research](https://www.icmr.gov.in/) where I worked on an ultrasound-based fetal anomaly system.
+  Before Pittsburgh, I completed my undergrad at 
+  <a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a> 
+  with a major in 
+  <a href="https://www.manipal.edu/mit/department-faculty/department-list/biomedical.html">Biomedical Engineering</a>, 
+  focusing on pattern recognition and image processing, and a minor in Data Science. 
+  Over the second half of my undergrad, I worked under 
+  <a href="https://researcher.manipal.edu/en/persons/niranjana-s">Professor Niranjana S</a> 
+  and 
+  <a href="https://researcher.manipal.edu/en/persons/krishnaraj-chadaga">Dr. Krishnaraj Chadaga</a> 
+  at the Biomedical Computing Lab on projects ranging from skin lesion image-based viral infection detection to multi-stage and multi-modal cancer detection.
 
-  Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the [bme department's ambassador](https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf), going trailbiking, playing the piano or continuing work on this website!
+  <br><br>
+
+  Between my bachelors and masters, I also spent a year as a researcher at 
+  <a href="https://www.iith.ac.in/">IIT Hyderabad</a> 
+  working on motion-capture & electromyography analysis for exercise and the 
+  <a href="https://www.icmr.gov.in/">Indian Council of Medical Research</a> 
+  where I worked on an ultrasound-based fetal anomaly system.
+
+  <br><br>
+
+  Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the 
+  <a href="https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf">BME department's ambassador</a>, 
+  going trailbiking, playing the piano or continuing work on this website!
 </details>
+
