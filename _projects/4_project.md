@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sparse 2D Echocardiography to 3D Cardiac Reconstruction with Pose Refinement
+title: Few-Shot 2D Echo to 3D Cardiac Reconstruction via Neural Implicit Priors
 description: Course Project for Learning for 3D Vision
 img:
 importance: 3
@@ -36,13 +36,11 @@ Developed a unified framework to reconstruct patient-specific 3D ventricular sha
 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/l3d1.png" title="!" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/l3d1.png" title="Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/l2d2.png" title="!" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/l3d2.png" title="Middle Slice GT v/s Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
