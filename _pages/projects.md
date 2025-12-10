@@ -5,7 +5,7 @@ permalink: /research/
 description: #expanding on my homepage...
 nav: true
 nav_order: 2
-display_categories: [at carnegie mellon - lab, at carnegie mellon - courseworkwork, at manipal, other]
+display_categories: [at carnegie mellon, at carnegie mellon - course projects, at manipal, other]
 horizontal: false
 ---
 

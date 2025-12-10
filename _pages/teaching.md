@@ -7,7 +7,12 @@ nav: true
 nav_order: 6
 ---
 
-## Carnegie Mellon University
+# Carnegie Mellon University
+
+### Machine Learning in Experimental Biomedical Engineering Research 
+Graduate Students | Spring 2026 | Dr. Newell Washburn | College of Engineering <br>
+`This course is designed to introduce students to applications of artificial intelligence and machine learning in experimental BME research. The course will be focused on the main data types that are generated: tabular data from sets of experiments, image data, spectral data, and time-series data. A diversity of regression and classification methods, including linear models, Gaussian processes, tree-based methods, and TabPFN, will be introduced with an emphasis on experimental design and modeling datasets based on small sample sizes. Important examples include quantitative analysis of cells in culture, in situ spectroscopic data, and omics data. Methods of statistical analysis, feature selection, and transfer learning will also be introduced.`
+
 ### Computer Vision for Engineers [🔗](https://www.andrew.cmu.edu/course/24-678/) [🔗](https://tushar-nayak.github.io/assets/pdf/24678f25.pdf)
 Graduate Students | Fall 2025 | Dr. Kenji Shimada | College of Engineering <br>
 `The course provides a general introduction to the basics of computer vision and its modern engineering applications such as factory automation, infrastructure inspection, mobile-robot navigation, self-driving cars, and medical diagnosis.  Students learn the theories, algorithms, and computational methods of computer vision, including (1) Sensor Selection, (2) Image Processing and Analysis, (3) Motion Analyses, (4) 3D Reconstruction, (5) Pointcloud Processing, (6) Feature Tracking, and (8) Object Detection. After learning theories and algorithms in lecture, students will have weekly problem sets to design computational methods for computer vision, write computer programs, and present their results.`
@@ -21,7 +26,7 @@ Graduate & Undergraduate Students | Fall 2025 | Dr. Jason Szafron | College of E
 Graduate Students | Spring 2025 | Dr. Clarence Worrell | School of Computer Science <br>
 `Deep neural networks have made in-roads in virtually every industry, propelled by exponential increases in compute power and fundamental progress in modeling. Knowledge of these models is fast becoming a key asset for software engineers, as current systems are quickly starting to include many neural components, and the practice of software engineering itself is starting to benefit from neural program assistance (incl. automated bug finding, translation between programming languages). This course equips the next generation of software engineers with knowledge of neural models, the software engineering challenges involved in using these, and hands-on experience with their applications. It teaches both a rich vocabulary of general, essential concepts (including architectures), and recent work on applications of these models, aimed primarily at applications for and in software engineering itself. The course includes a hands-on deep learning project aimed that will be used to teach the various stages (and their pitfalls) of building and deploying deep learners.`
 
-## Manipal Institute of Technology
+# Manipal Institute of Technology
 BioInnovate Technical Workshop Series | Conducted through IEEE Engineering in Medicine in Biology Society, Student Chapter Manipal<br>
 `During my tenure as the Head of Research (and Chairperson) at the Manipal student chapter of IEEE Engineering in Medicine & Biology Society, the student organization teamed up with the Department of Biomedical Engineering in organizing several workshops over my junior and senior year. I conducted workshops to introduce freshers and sophomores to the ​fundamentals of signal and image processing, deep learning, microcontrollers and Linux. Additionally, I also ​organized and executed a half-year long learning a semester long junior members in electronics, fundamentals of programming, market analysis and signal processing. Exceptional students from this initiatives shadowed my lab work and undertook a study alongside me, the results of which we presented at a university symposium.`
 <div class="row">
