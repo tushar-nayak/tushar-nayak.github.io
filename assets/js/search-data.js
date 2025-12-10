@@ -452,8 +452,8 @@ ninja.data = [{
           description: "Course Project for Fundamentals of MRI and Neuroimaging Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-sparse-2d-echocardiography-to-3d-cardiac-reconstruction-with-pose-refinement",
-          title: 'Sparse 2D Echocardiography to 3D Cardiac Reconstruction with Pose Refinement',
+            },},{id: "projects-few-shot-2d-echo-to-3d-cardiac-reconstruction-via-neural-implicit-priors",
+          title: 'Few-Shot 2D Echo to 3D Cardiac Reconstruction via Neural Implicit Priors',
           description: "Course Project for Learning for 3D Vision",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
