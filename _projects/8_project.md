@@ -5,7 +5,6 @@ description: an other project with a background image and giscus comments
 img: assets/img/cma.png
 importance: 3
 category: at carnegie mellon
-giscus_comments: false
 ---
 
 ---
