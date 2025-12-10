@@ -2,80 +2,48 @@
 layout: page
 title: project 8
 description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
+img: assets/img/cma.png
 importance: 2
-category: work
-giscus_comments: true
+category: at carnegie mellon
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+---
+project status: completed 
+[:link:](https://tushar-nayak.github.io/assets/pdf/42640.pdf) [Project Report](https://tushar-nayak.github.io/assets/pdf/42640.pdf)
+---
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project builds an end-to-end 3D deep learning pipeline for automatic coronary artery segmentation and geometric reconstruction from CT angiography (CTA). Using a ResUNet3D backbone with hybrid Dice–BCE loss and a dedicated geometric post-processing stage, the system outputs clean 3D meshes and point clouds of the coronary tree suitable for surgical planning and simulation. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Coronary CTA provides rich volumetric data, but converting these scans into usable 3D vessel models is still mostly manual, slow, and operator-dependent.  The goal of this project is to automate that workflow so that high-fidelity coronary meshes can be generated directly from volumetric scans for applications in diagnosis, robotic navigation, and hemodynamic simulation.
+
+- Backbone: 3D residual U-Net (ResUNet3D) with encoder–decoder architecture and skip connections for volumetric artery segmentation.    
+- Hybrid Loss: Compound Dice + Binary Cross Entropy loss to handle severe class imbalance while sharpening vessel boundaries.    
+- Training Strategy: Mixed-precision training (autocast + GradScaler) to fit large 3D volumes and accelerate training on CUDA GPUs.    
+- Preprocessing: Intensity clipping to a coronary HU window and resampling to a uniform 3D grid for stable training.  
+
+Geometric Post-processing
+
+- Probability to Mask: Adaptive thresholding of network outputs to capture faint, low-contrast vessels.    
+- Cleanup: Morphological opening and connected-component filtering to remove noise and retain the main coronary tree.    
+- Surface Reconstruction: Marching Cubes for watertight mesh extraction, followed by Laplacian smoothing to reduce voxelization artifacts while preserving branching structure.    
+- Visualization: Generation of both point clouds and triangulated meshes, enabling inspection from multiple viewpoints and downstream use in surgical/CFD tools.  
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mesh1.gif" title="Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/pointcloud1.gif" title="Middle Slice GT v/s Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mesh2.gif" title="Reconstruction" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/pointcloud2.gif" title="Middle Slice GT v/s Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Collaborators: [Jared Scott](https://jaredescott.github.io)
