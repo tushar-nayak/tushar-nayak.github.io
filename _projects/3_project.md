@@ -5,7 +5,7 @@ description: Course Project for Fundamentals of MRI and Neuroimaging Analysis
 img: assets/img/fmri.png
 # redirect: https://unsplash.com
 importance: 6
-category: at carnegie mellon
+category: at carnegie mellon - course projects
 ---
 
 project status: completed (september - december 2024)

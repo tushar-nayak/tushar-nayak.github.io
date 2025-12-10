@@ -4,7 +4,7 @@ title: CTA to Mesh & PointCloud Coronary Artery Segmentation using Residual 3D U
 description: Course Project for Image Based Computational Modelling & Analysis
 img: assets/img/cma.png
 importance: 3
-category: at carnegie mellon
+category: at carnegie mellon - course projects
 ---
 
 
