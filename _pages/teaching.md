@@ -19,7 +19,7 @@ Graduate Students | Fall 2025 | Dr. Kenji Shimada | Department of Mechanical Eng
 
 
 ### 3. Fundamentals of Computational Biomedical Engineering [🔗](https://tushar-nayak.github.io/assets/pdf/42675F25.pdf)
-Graduate & Undergraduate Students | Fall 2025 | Dr. Jason Szafron | Department of Biomedical Engineering, College of Engineeering <br>
+Graduate Students | Fall 2025 | Dr. Jason Szafron | Department of Biomedical Engineering, College of Engineeering <br>
 `The primary objective of the course is to explore coding for biomedical computing. It is intended for students without a strong background in coding to serve as a bridge to more advanced modeling and computing courses. This course will enable students to use computational tools for solving biomedical engineering problems, in preparation for other graduate courses and for their future career. Students will gain solid skills in programming MATLAB and Simulink to organize, analyze, model, and visualize biomedical problems. Areas to cover include linear algebra and principal component analysis, non-linear equations, calculus, ordinary differential equations, and machine learning, with examples drawn from cancer diagnosis, glucose monitoring, immunotherapy, bioelectrical activities, cardiac simulation, kidney dialysis, and infectious disease modeling, etc. The course will end by transitioning to Python programming, taking advantage of the similarities between Python and MATLAB.`
 
 ### 4. Applied Deep Learning [🔗](https://tushar-nayak.github.io/assets/pdf/17644s25.pdf)
