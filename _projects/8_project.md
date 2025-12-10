@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 8
+title: CTA to Mesh & PointCloud Coronary Artery Segmentation using Residual 3D U-Net
 description: an other project with a background image and giscus comments
 img: assets/img/cma.png
-importance: 2
+importance: 3
 category: at carnegie mellon
 giscus_comments: false
 ---
