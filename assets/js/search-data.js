@@ -474,7 +474,7 @@ ninja.data = [{
               window.location.href = "/projects/7_project/";
             },},{id: "projects-cta-to-mesh-amp-pointcloud-coronary-artery-segmentation-using-residual-3d-u-net",
           title: 'CTA to Mesh &amp;amp; PointCloud Coronary Artery Segmentation using Residual 3D U-Net',
-          description: "an other project with a background image and giscus comments",
+          description: "Course Project for Image Based Computational Modelling &amp; Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
             },},{id: "projects-project-9",
