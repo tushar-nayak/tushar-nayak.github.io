@@ -7,6 +7,14 @@ nav: true
 nav_order: 3
 ---
 
+<div class="row">
+    <div class="col-sm-12" style="margin-bottom: 20px;">
+        <a href="https://scholar.google.com/citations?user=9xUX7NoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-graduation-cap"></i> View Google Scholar Profile
+        </a>
+    </div>
+</div>
+
 <!-- _pages/publications.md -->
 
 <!-- Bibsearch Feature -->
