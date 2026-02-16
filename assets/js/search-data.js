@@ -463,9 +463,9 @@ ninja.data = [{
           description: "Course Project for Image Based Computational Modelling &amp; Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+            },},{id: "projects-multi-view-breast-cancer-grading-via-spatial-transformers",
+          title: 'Multi-View Breast Cancer Grading via Spatial Transformers',
+          description: "Course project for Projects in Biomedical AI",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
