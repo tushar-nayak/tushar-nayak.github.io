@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
+title: Multi-View Breast Cancer Grading via Spatial Transformers
+description: Course project for Projects in Biomedical AI
 img: assets/img/6.jpg
-importance: 4
-category: fun
+importance: 2
+category: at carnegie mellon - course projects
 ---
 
 Every project has a beautiful feature showcase page.
