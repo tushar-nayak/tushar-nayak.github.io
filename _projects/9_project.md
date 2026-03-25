@@ -30,3 +30,4 @@ Produces: Aligned MLO and a Transformation matrix
 Output: Fused tensor [CC, aligned MLO], saved for downstream training
 
 
+Collaborator: [Elissa Matlock](https://www.linkedin.com/in/elissa-matlock/)

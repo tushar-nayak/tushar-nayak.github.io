@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CTA to Mesh & PointCloud Coronary Artery Segmentation using Residual 3D U-Net
+title: CTA to Mesh & Point-Cloud Coronary Artery Segmentation using Residual 3D U-Net
 description: Course Project for Image Based Computational Modelling & Analysis
 img: assets/img/cma.png
 importance: 3
