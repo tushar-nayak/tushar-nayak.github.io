@@ -6,7 +6,7 @@ description: #expanding on my homepage...
 nav: true
 nav_order: 2
 display_categories: [at carnegie mellon - course projects, others]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
