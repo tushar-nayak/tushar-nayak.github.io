@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-research",
+  },{id: "nav-projects",
+          title: "projects",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-research",
           title: "research",
           description: "",
           section: "Navigation",
@@ -458,8 +465,8 @@ ninja.data = [{
           description: "Prelimnary project at Biomedical Computing Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-cta-to-mesh-amp-pointcloud-coronary-artery-segmentation-using-residual-3d-u-net",
-          title: 'CTA to Mesh &amp;amp; PointCloud Coronary Artery Segmentation using Residual 3D U-Net',
+            },},{id: "projects-cta-to-mesh-amp-point-cloud-coronary-artery-segmentation-using-residual-3d-u-net",
+          title: 'CTA to Mesh &amp;amp; Point-Cloud Coronary Artery Segmentation using Residual 3D U-Net',
           description: "Course Project for Image Based Computational Modelling &amp; Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
