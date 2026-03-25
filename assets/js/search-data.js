@@ -463,8 +463,8 @@ ninja.data = [{
           description: "Course Project for Image Based Computational Modelling &amp; Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-multi-view-breast-cancer-grading-via-spatial-transformers",
-          title: 'Multi-View Breast Cancer Grading via Spatial Transformers',
+            },},{id: "projects-attention-augmented-dual-view-mammogram-alignment-for-enhanced-bi-rads-classification",
+          title: 'Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Classification',
           description: "Course project for Projects in Biomedical AI",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
