@@ -4,7 +4,7 @@ title: Few-Shot 2D Echo to 3D Cardiac Reconstruction via Neural Implicit Priors
 description: Course Project for Learning for 3D Vision
 img: assets/img/l3d1.png
 importance: 3
-category: at carnegie mellon - course projects
+category: course projects
 ---
 
 ---

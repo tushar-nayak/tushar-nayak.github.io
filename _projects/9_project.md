@@ -4,11 +4,11 @@ title: Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Cl
 description: Course project for Projects in Biomedical AI
 img: assets/img/6.jpg
 importance: 2
-category: at carnegie mellon - course projects
+category: course projects
 ---
 
     ---
-    project status: (almost) complete
+    project status: in progress
     ---
 
 This project presents a deep learning pipeline for automatic alignment and classification of dual-view mammograms using Spatial Transformer Networks (STNs) and transfer learning.
@@ -30,4 +30,4 @@ Produces: Aligned MLO and a Transformation matrix
 Output: Fused tensor [CC, aligned MLO], saved for downstream training
 
 
-Collaborator: [Elissa Matlock](https://www.linkedin.com/in/elissa-matlock/)
+Collaborator: [Elissa Matlock](https://www.linkedin.com/in/elissa-matlock/) and complete pipeline collaborators: [Haiya Shah](https://github.com/haiyashah) (Segmentation) & [Yiman Wu](https://www.linkedin.com/in/yiman-wu/)
