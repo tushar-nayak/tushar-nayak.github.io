@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: #expanding on my homepage...
 nav: true
-nav_order: 2
+nav_order: 3
 display_categories: [course projects, others]
 horizontal: true
 ---
