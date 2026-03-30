@@ -5,8 +5,13 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  # - alshedivat/al-folio
-  # - jekyll/jekyll
+- tushar-nayak/tushar-nayak.github.io
+- tushar-nayak/neural-anisotropic-diffusion
+- tushar-nayak/telesurgery_deformation
+- tushar-nayak/grading-cbisddsm
+- tushar-nayak/glioblastoma-evolution
+
+#- jekyll/jekyll
   # - twbs/bootstrap
   # - jquery/jquery
   # - FortAwesome/Font-Awesome
