@@ -8,12 +8,12 @@ category: at manipal
 ---
 
 ---
-project status: completed
----
 
-What turned into my undergraduate thesis, this a novel deep learning-based tri-modal, multi-stage system for detecting oral squamous cell carcinoma (OSCC) by integrating non-invasive oral lesion images, optical coherence tomography (OCT) scans, and invasive histopathology images, each analyzed by specialized convolutional neural networks employing regularized transfer learning, attention mechanisms, and ensemble methods. 
+## project status: completed
 
-The system demonstrates high diagnostic performance, with F1-scores above 0.91 for each modality (0.99 for lesion images, 0.91 for OCT, and 0.97 for histopathology), and leverages explainable AI techniques like Grad-CAM and Score-CAM to provide visual insights into model decisions, enhancing interpretability and clinical trust. 
+What turned into my undergraduate thesis, this a novel deep learning-based tri-modal, multi-stage system for detecting oral squamous cell carcinoma (OSCC) by integrating non-invasive oral lesion images, optical coherence tomography (OCT) scans, and invasive histopathology images, each analyzed by specialized convolutional neural networks employing regularized transfer learning, attention mechanisms, and ensemble methods.
+
+The system demonstrates high diagnostic performance, with F1-scores above 0.91 for each modality (0.99 for lesion images, 0.91 for OCT, and 0.97 for histopathology), and leverages explainable AI techniques like Grad-CAM and Score-CAM to provide visual insights into model decisions, enhancing interpretability and clinical trust.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

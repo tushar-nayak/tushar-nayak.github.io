@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: 
+title:
 description: members of the lab or group
 nav: false
 nav_order: 7

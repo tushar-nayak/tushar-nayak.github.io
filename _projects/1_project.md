@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Physics-Informed Endovasculature Deformation Estimation And Registration
-description: Research at CERLAB (master's thesis) 
+description: Research at CERLAB (master's thesis)
 img: assets/img/newplotx.png
 importance: 1
 category: at carnegie mellon
@@ -9,10 +9,10 @@ related_publications: false
 ---
 
 ---
-project status: ongoing
----
 
-I'm working on remote surgical robotics at the Computational Engineering & Robotics Lab at CMU under Dr. Kenji Shimada & doctoral candidate Rishi Basdeo at the Department of Mechanical Engineering and collaborators and clinicians from University of Pittsburgh's [Surreality Lab](https://surreality.pitt.edu/) and neurosurgens from UPMC. 
+## project status: ongoing
+
+I'm working on remote surgical robotics at the Computational Engineering & Robotics Lab at CMU under Dr. Kenji Shimada & doctoral candidate Rishi Basdeo at the Department of Mechanical Engineering and collaborators and clinicians from University of Pittsburgh's [Surreality Lab](https://surreality.pitt.edu/) and neurosurgens from UPMC.
 
 Here, I'm focusing on the computer vision subsystem, having generated physics informed synthetic blood vessel networks and implementing free form deformation for stenosis along with centerline deformation to simulate guidewire movement.
 
@@ -26,8 +26,8 @@ Here, I'm focusing on the computer vision subsystem, having generated physics in
 </div>
 
 My roadmap includes but isn't limited to:
+
 - developing ways to introduce synthetic contrast, thereby decreasing the amount of chemical contrast required while acquiring the fluoroscopy angiographs and predict vessel motion based on the guidewire
-- added physics constratints due to blood flow fluid dynamics to determine safe force thresholds for the guidewire to prevent vasculature damage, using the aforementioned deformation estimation. 
+- added physics constratints due to blood flow fluid dynamics to determine safe force thresholds for the guidewire to prevent vasculature damage, using the aforementioned deformation estimation.
 
 We've also completed a comprehensive review of the existing literature in the realm of robotic assisted endovascular surgery, which I've written the vision sub-system of (and is currently sent to Springer Nature's Journal of Intelligent and Robotics Systems!).
-

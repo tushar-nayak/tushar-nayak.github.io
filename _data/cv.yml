@@ -4,7 +4,6 @@
     - name: Full Name
       value: Tushar nayak
 
-
 - title: Education
   type: time_table
   contents:
@@ -25,9 +24,9 @@
         - Major in Biomedical Engineering, specializing in Signal & Image Processing and Pattern Recognition
         - Minor in Data Science
         - title: Relevant Coursework
-          contents: 
-          - Pattern Recognition, Digital Image Processing, Digital Signal Processing, Signals & Systems, Signal & Image Processing Lab
-          - Regression Models, Statistical Inference, Practical Machine Learning, and R Programming.
+          contents:
+            - Pattern Recognition, Digital Image Processing, Digital Signal Processing, Signals & Systems, Signal & Image Processing Lab
+            - Regression Models, Statistical Inference, Practical Machine Learning, and R Programming.
 - title: Experience
   type: time_table
   contents:
@@ -35,8 +34,8 @@
       institution: Carnegie Mellon University
       year: 2024 - 2026
       description:
-        - Generated a mesh dataset using CTAs, with automated multi-branch centerline deformation without known control points. 
-        - Estimating quantifiable deformation based on guidewire movement using physics-informed neural networks and registering deformation to preop volume. 
+        - Generated a mesh dataset using CTAs, with automated multi-branch centerline deformation without known control points.
+        - Estimating quantifiable deformation based on guidewire movement using physics-informed neural networks and registering deformation to preop volume.
         - title: Research Outcomes
           contents:
             - Conducted an extensive review of the vision subsystems of existing literature, sent for and awaiting publication.
@@ -48,7 +47,6 @@
         - Developed a neural ordinary differential equation-based model to generate visual production of tumor growth with FLAIR, CT1, T1 & T2.
         - Augmented the Neural ODE with U-Net and attention-gated convolutional blocks encoder-decoder structure.
         - Visually predict a future timepoint, allowing for enhanced surgery planning. Working under the guidance of Dr. Pulkit G & Dr. Aswin S.
-
 
 - title: Open Source Projects
   type: time_table
@@ -73,7 +71,7 @@
     - title: Computer Vision
       items:
         - Feature detection, Feature description, Geometric Computer Vision, Camera Geometry, 3D Reconstruction, Stereovision, Motion Analysis and Optical Flow, Photometric Stereovision.
-        - Surface mesh manipulation, deformable models, registration, deformable registration, volume rendering & alignment. 
+        - Surface mesh manipulation, deformable models, registration, deformable registration, volume rendering & alignment.
         - Image filtering, Feature enhancement, Feature extraction, Object detection, Texture analysis, Morphological analysis, Image Compression & Color processing.
     - title: Pattern Recognition
       items:
