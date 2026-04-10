@@ -44,21 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "dropdown-resume",
-              title: "resume",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "https://tushar-nayak.github.io/assets/pdf/ResumeIncomplete.pdf";
-              },
-            },{id: "dropdown-",
-              title: "",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "post-a-post-with-plotly-js",
+        },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
