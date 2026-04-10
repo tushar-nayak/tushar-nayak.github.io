@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "i haven&#39;t taught any courses (yet!), just a record of work as a teaching assistant!",
@@ -56,7 +49,14 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "https://tushar-nayak.github.io/";
+                window.location.href = "https://github.com/tushar-nayak";
+              },
+            },{id: "dropdown-linkedin",
+              title: "linkedin",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
             },{id: "post-a-post-with-plotly-js",
         
