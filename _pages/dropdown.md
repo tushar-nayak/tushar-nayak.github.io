@@ -9,5 +9,7 @@ children:
     permalink: https://tushar-nayak.github.io/assets/pdf/ResumeIncomplete.pdf
   - title: divider
   - title: github
-    permalink: https://tushar-nayak.github.io/
+    permalink: https://github.com/tushar-nayak
+  - title: linkedin
+    permalink: https://www.linkedin.com/in/nayaktushar
 ---
