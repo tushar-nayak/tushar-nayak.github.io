@@ -8,6 +8,6 @@ children:
   - title: resume
     permalink: https://tushar-nayak.github.io/assets/pdf/ResumeIncomplete.pdf
   - title: divider
-  -  title: github
-    permalink: https://github.com/tushar-nayak
+  - title: github
+    permalink: https://tushar-nayak.github.io/
 ---
