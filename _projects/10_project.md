@@ -89,4 +89,8 @@ The Unified Neural PDE significantly outperformed classical, non-learned baselin
 The entire pipeline—including the unrolled PDE module, the custom loss functions, and the training scripts—is written in PyTorch. 
 
 The unified codebase is publicly available on GitHub:
-[🔗 View the Repository (unified-final branch)](https://github.com/tushar-nayak/neural-anisotropic-diffusion/tree/unified-final)
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://github.com/tushar-nayak/neural-anisotropic-diffusion/tree/unified-final" target="_blank" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
+    🚀 View the Codebase
+  </a>
+</div>
