@@ -87,3 +87,9 @@ A hard strain cap of **1.15** is embedded in the loss, directly encoding the cli
 - [ ] Full intra-operative vessel motion prediction from guidewire state
 
 
+The current codebase is publicly available on GitHub:
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://github.com/katahar/telesurgery_cerlab/tree/deformation-graph/cv/deformable_registration" target="_blank" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
+    🚀 View the Codebase
+  </a>
+</div>
