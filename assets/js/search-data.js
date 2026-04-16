@@ -449,6 +449,11 @@ ninja.data = [{
           description: "Course project for Medical Image Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
+            },},{id: "projects-neural-active-contours",
+          title: 'Neural Active Contours',
+          description: "A non U-Net segmentation approach for medical images",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
             },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
           title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
           description: "Research at CERLAB (master&#39;s thesis)",
