@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Neural Active Contours 
+title: Neural Active Contours
 description: A non U-Net segmentation approach for medical images
 img: assets/img/6.jpg
 importance: 1
@@ -10,7 +10,6 @@ category: personal projects
     ---
     project status: alpha stage
     ---
-
 
 <div style="max-width: 520px; margin: 24px auto; text-align: center;">
   <a href="https://github.com/tushar-nayak/neural-active-contours/"
@@ -37,6 +36,6 @@ category: personal projects
     <div style="font-size: 0.95rem; opacity: 0.8;">
       View the source code
     </div>
+
   </a>
 </div>
-

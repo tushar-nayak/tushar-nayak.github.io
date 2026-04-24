@@ -56,6 +56,7 @@ Spatial Alignment using a Spatial Transformer
     <div style="font-size: 0.95rem; opacity: 0.8;">
       View the source code
     </div>
+
   </a>
 </div>
 

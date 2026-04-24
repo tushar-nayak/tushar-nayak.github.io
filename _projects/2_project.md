@@ -42,27 +42,27 @@ I worked on a Neural Ordinary Differential (N-ODE) network framework designed to
     me presenting this work at carnegie mellon's 2025 forum by the biomedical engineering department
 </div>
 
- ## related approaches across branches
+## related approaches across branches
 
-  This project evolved through a few related modeling directions.
+This project evolved through a few related modeling directions.
 
-  The earliest recovered version was a rough Neural ODE prototype built from the original source code. That branch established the basic idea of using an attention U-Net
-  encoder, temporal conditioning, and a latent ODE block for glioblastoma forecasting.
+The earliest recovered version was a rough Neural ODE prototype built from the original source code. That branch established the basic idea of using an attention U-Net
+encoder, temporal conditioning, and a latent ODE block for glioblastoma forecasting.
 
-  I then cleaned that into a runnable `neural-ode-implementation` branch. That version turned the recovered idea into a proper pipeline for the local patient data, using a
-  2D slice-based attention U-Net + Neural ODE model, strict holdout evaluation, and a persistence baseline for comparison.
+I then cleaned that into a runnable `neural-ode-implementation` branch. That version turned the recovered idea into a proper pipeline for the local patient data, using a
+2D slice-based attention U-Net + Neural ODE model, strict holdout evaluation, and a persistence baseline for comparison.
 
-  After that, I shifted to a `history-conditioned-forecast` branch that reframed the task as prefix-history prediction: use all earlier MRI weeks for a patient and forecast
-  the next one. In that version, each historical week is encoded separately, a learned week embedding is added, the latent history is aggregated, and the Neural ODE evolves
-  the state forward in continuous time before decoding the future scan.
+After that, I shifted to a `history-conditioned-forecast` branch that reframed the task as prefix-history prediction: use all earlier MRI weeks for a patient and forecast
+the next one. In that version, each historical week is encoded separately, a learned week embedding is added, the latent history is aggregated, and the Neural ODE evolves
+the state forward in continuous time before decoding the future scan.
 
-  The `history-conditioned-forecast-slim` branch is a slimmer merged version of that same prefix-history line, keeping the forecasting idea while trimming the branch down.
+The `history-conditioned-forecast-slim` branch is a slimmer merged version of that same prefix-history line, keeping the forecasting idea while trimming the branch down.
 
-  In parallel, there was also a separate `physics-dual-patient-rerun` branch that explored a physics-informed 3D forecasting pipeline. That approach treated the MRI
-  evolution as a more explicit dynamics problem rather than a learned latent forecast, and it used the same local patient set for comparison.
+In parallel, there was also a separate `physics-dual-patient-rerun` branch that explored a physics-informed 3D forecasting pipeline. That approach treated the MRI
+evolution as a more explicit dynamics problem rather than a learned latent forecast, and it used the same local patient set for comparison.
 
-  Across all of these branches, the common goal was the same: model glioblastoma progression from longitudinal MRI data and compare learned forecasts against simple
-  persistence baselines.
+Across all of these branches, the common goal was the same: model glioblastoma progression from longitudinal MRI data and compare learned forecasts against simple
+persistence baselines.
 
 <div style="max-width: 520px; margin: 24px auto; text-align: center;">
   <a href="https://github.com/tushar-nayak/glioblastoma-evolution"
