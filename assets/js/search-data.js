@@ -49,7 +49,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "https://tushar-nayak.github.io/assets/pdf/ResumeIncomplete.pdf";
+                window.location.href = "https://tushar-nayak.github.io/resume/tushar-nayak-resume.pdf";
               },
             },{id: "dropdown-github",
               title: "github",
@@ -454,6 +454,21 @@ ninja.data = [{
           description: "A non U-Net segmentation approach for medical images",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_project/";
+            },},{id: "projects-neural-active-contours",
+          title: 'Neural Active Contours',
+          description: "3D Lung CT Segmentation and",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
+            },},{id: "projects-neural-active-contours",
+          title: 'Neural Active Contours',
+          description: "VLM-Guided Deformable 3D Gaussian Splatting for Surgical Scenes",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_project/";
+            },},{id: "projects-neural-active-contours",
+          title: 'Neural Active Contours',
+          description: "Neural Morphological Analysis of Fungi",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/14_project/";
             },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
           title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
           description: "Research at CERLAB (master&#39;s thesis)",
