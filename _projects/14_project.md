@@ -3,7 +3,7 @@ layout: page
 title: Neural Active Contours
 description: Neural Morphological Analysis of Fungi
 img: assets/img/6.jpg
-importance: 1
+importance: 3
 category: personal projects
 ---
 
