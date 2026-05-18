@@ -469,6 +469,11 @@ ninja.data = [{
           description: "Neural Morphological Analysis of Fungi",
           section: "Projects",handler: () => {
               window.location.href = "/projects/14_project/";
+            },},{id: "projects-dermaseg",
+          title: 'DermaSeg',
+          description: "Deep Learning-Based Skin Lesion Segmentation on ISIC 2018",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/15_project/";
             },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
           title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
           description: "Research at CERLAB (master&#39;s thesis)",
