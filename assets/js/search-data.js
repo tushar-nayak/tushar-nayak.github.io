@@ -454,31 +454,56 @@ ninja.data = [{
           description: "A non U-Net segmentation approach for medical images",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_project/";
-            },},{id: "projects-neural-active-contours",
-          title: 'Neural Active Contours',
-          description: "3D Lung CT Segmentation and",
+            },},{id: "projects-full-volume-lung-ct-segmentation-and-surface-export",
+          title: 'Full-Volume Lung CT Segmentation and Surface Export',
+          description: "A real-data MONAI and VTK pipeline that segments full chest CT volumes, exports lung surfaces, and reports validation metrics for navigation-prep experiments.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/12_project/";
-            },},{id: "projects-neural-active-contours",
-          title: 'Neural Active Contours',
-          description: "VLM-Guided Deformable 3D Gaussian Splatting for Surgical Scenes",
+            },},{id: "projects-deformable-3d-surgical-scene-reconstruction",
+          title: 'Deformable 3D Surgical Scene Reconstruction',
+          description: "A surgical vision prototype that combines depth-based point clouds, deformable 3D Gaussian splatting, and VLM-guided semantic querying for endoscopic scenes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_project/";
-            },},{id: "projects-neural-active-contours",
-          title: 'Neural Active Contours',
-          description: "Neural Morphological Analysis of Fungi",
+            },},{id: "projects-neural-morphological-analysis-of-fungi",
+          title: 'Neural Morphological Analysis of Fungi',
+          description: "A microscopy project for fungal species classification and future neural-field modeling of morphology from high-resolution biological image patches.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/14_project/";
-            },},{id: "projects-dermaseg",
-          title: 'DermaSeg',
-          description: "Deep Learning-Based Skin Lesion Segmentation on ISIC 2018",
+            },},{id: "projects-skin-lesion-segmentation-on-isic-2018",
+          title: 'Skin Lesion Segmentation on ISIC 2018',
+          description: "A reproducible dermoscopy segmentation benchmark with DeepLabV3 baselines, planned U-Net and transformer comparisons, and promptable SAM-style extensions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/15_project/";
+            },},{id: "projects-open-vocabulary-surgical-tool-detection-and-tracking",
+          title: 'Open-Vocabulary Surgical Tool Detection and Tracking',
+          description: "A real endoscopy pipeline that turns text prompts into surgical tool boxes, masks, tracking overlays, and evaluation metrics using Grounding DINO and SAM2.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/16_project/";
+            },},{id: "projects-gaussian-occupancy-cardiac-reconstruction",
+          title: 'Gaussian Occupancy Cardiac Reconstruction',
+          description: "A sparse-view echocardiography project that recovers 3D cardiac anatomy with Gaussian occupancy fields, differentiable slice supervision, and mesh evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_project/";
+            },},{id: "projects-sparse-view-coronary-vessel-reconstruction",
+          title: 'Sparse-View Coronary Vessel Reconstruction',
+          description: "A research prototype for recovering 3D coronary vessel geometry from limited angiographic projections using differentiable rendering and hemodynamic constraints.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/18_project/";
+            },},{id: "projects-multi-scale-lung-histopathology-classification",
+          title: 'Multi-Scale Lung Histopathology Classification',
+          description: "A pathology model that fuses 20x and 40x whole-slide image views with cross-scale attention for malignancy, subtype, and differentiation grading.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/19_project/";
             },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
           title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
           description: "Research at CERLAB (master&#39;s thesis)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-federated-graph-learning-for-pathology-images",
+          title: 'Federated Graph Learning for Pathology Images',
+          description: "A pathology learning pipeline that combines self-supervised image encoding, patient-level federated training, graph reasoning, and concept-bottleneck classification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/20_project/";
             },},{id: "projects-spatiotemporal-glioblastoma-evolution-visual-prediction",
           title: 'Spatiotemporal Glioblastoma Evolution Visual Prediction',
           description: "Research at The ∀ Lab &amp; Image Science Lab",
