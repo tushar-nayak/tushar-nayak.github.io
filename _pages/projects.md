@@ -5,8 +5,8 @@ permalink: /projects/
 description: #expanding on my homepage...
 nav: true
 nav_order: 3
-display_categories: [at carnegie mellon, personal projects, course projects, at manipal, others]
-horizontal: true
+display_categories: [personal projects, course projects, others]
+horizontal: false
 ---
 
 <!-- pages/projects.md -->

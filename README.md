@@ -1,25 +1,90 @@
-# al-folio
+# Tushar Nayak
 
-<div align="center">
+Personal academic website and project portfolio for [tushar-nayak.github.io](https://tushar-nayak.github.io/).
 
-[![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
+This site is built with [Jekyll](https://jekyllrb.com/) on top of the [al-folio](https://github.com/alshedivat/al-folio) theme, with custom project pages, featured work, and a homepage research map.
 
-**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**
+## Local development
 
----
+### Recommended: Docker
 
-[![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
-[![Maintainers](https://img.shields.io/badge/maintainers-4-success.svg)](#maintainers)
-[![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
-[![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+```bash
+docker compose up
+```
 
-[![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio)
-[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
+The site will be available at `http://localhost:8080`.
 
-</div>
+### Native Ruby setup
 
-## User community
+This repo currently expects a modern Ruby/Bundler setup. If you want to run it natively, use:
+
+- Ruby `>= 3.1`
+- Bundler `2.6.9`
+
+Then install dependencies and serve:
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+## Formatting
+
+Prettier is used for Liquid, Markdown, and related frontend files.
+
+Check formatting:
+
+```bash
+npx prettier . --check
+```
+
+Write formatting fixes:
+
+```bash
+npx prettier . --write
+```
+
+## Where things live
+
+- `_pages/`: top-level pages such as home, projects, publications, CV
+- `_projects/`: individual project pages and project metadata
+- `_includes/`: reusable Liquid partials
+- `_layouts/`: page layouts
+- `_sass/`: site styling
+- `assets/`: images, PDFs, JS, CSS, and project thumbnails
+
+## Project content
+
+Projects are managed as a Jekyll collection in `_projects/`.
+
+Useful front matter fields include:
+
+- `title`
+- `description`
+- `img`
+- `importance`
+- `category`
+- `github`
+- `website`
+- `report`
+- `status`
+- `tags`
+- `featured`
+
+Custom project UI is driven by:
+
+- `_includes/project_meta.liquid`
+- `_includes/project_links.liquid`
+- `_includes/featured_projects.liquid`
+- `_includes/research_map.liquid`
+
+## Deployment
+
+The production site is served from GitHub Pages at:
+
+<https://tushar-nayak.github.io/>
+
+## Notes
+
+- This repo is customized from `al-folio`; the upstream README does not describe the current site accurately.
+- If local Ruby setup fails, prefer Docker first. It is the simpler path for this repo.
