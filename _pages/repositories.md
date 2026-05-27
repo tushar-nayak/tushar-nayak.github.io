@@ -26,38 +26,6 @@ For a broader project overview with descriptions and results, see the [projects]
   </div>
 {% endif %}
 
-<div class="contrib-graph">
-  {% include generated/github_contributions.liquid %}
-</div>
-
-<script>
-  (function () {
-    "use strict";
-
-    function hydrateContributionGraph() {
-      var graph = document.querySelector(".contrib-graph");
-      if (!graph) return;
-
-      graph.querySelectorAll("tool-tip[for]").forEach(function (tooltip) {
-        var targetId = tooltip.getAttribute("for");
-        var target = targetId ? document.getElementById(targetId) : null;
-        var text = tooltip.textContent ? tooltip.textContent.trim() : "";
-
-        if (target && text) {
-          target.setAttribute("title", text);
-          target.setAttribute("aria-label", text);
-        }
-      });
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", hydrateContributionGraph);
-    } else {
-      hydrateContributionGraph();
-    }
-  })();
-</script>
-
 {% if site.data.repositories.github_repos %}
 
   <h2>Selected repositories</h2>
