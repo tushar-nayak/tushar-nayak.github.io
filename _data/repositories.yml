@@ -1,15 +1,22 @@
 github_users:
   - tushar-nayak
-  - technologyfoundhere
 
 repo_description_lines_max: 2
 
 github_repos:
   - tushar-nayak/tushar-nayak.github.io
+  - tushar-nayak/glioblastoma-evolution
+  - tushar-nayak/lungvolseg
+  - tushar-nayak/derma-seg
+  - tushar-nayak/surgi-prompt
+  - tushar-nayak/cardiac-reconstruction-evolved
+  - tushar-nayak/lobe-ranger
+  - tushar-nayak/vascular-reconstruction
+  - tushar-nayak/glass-path
+  - tushar-nayak/fungal-neo
   - tushar-nayak/neural-anisotropic-diffusion
   - tushar-nayak/telesurgery_deformation
   - tushar-nayak/grading-cbisddsm
-  - tushar-nayak/glioblastoma-evolution
 #- jekyll/jekyll
 # - twbs/bootstrap
 # - jquery/jquery
