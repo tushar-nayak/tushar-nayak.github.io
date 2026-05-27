@@ -31,6 +31,8 @@ I'm interested in the intersection of computer vision, and physics-based learnin
 
 Always happy to connect with curious minds! Feel free to reach out on email: tusharn [at] andrew [dot] cmu [dot] edu [:mailbox:](mailto:tusharn@andrew.cmu.edu) or at the Steffey Robotics Lab space at [Scaife Hall](https://maps.app.goo.gl/Vau7Cu9NhYost5q7A).
 
+{% include research_map.liquid %}
+
 <details>
   <summary>Read more...</summary>
   

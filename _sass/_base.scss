@@ -661,6 +661,193 @@ footer.sticky-bottom {
 
 // Projects
 
+.research-map {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba($blue-color, 0.08), transparent 38%),
+    linear-gradient(315deg, rgba($green-color-bright, 0.07), transparent 36%), var(--global-card-bg-color);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.research-map__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+}
+
+.research-map__eyebrow {
+  margin: 0;
+  color: var(--global-theme-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-map__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "robotics core core imaging"
+    "geometry core core pathology";
+  gap: 0.75rem;
+}
+
+.research-map__node {
+  position: relative;
+  display: flex;
+  min-height: 118px;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  color: var(--global-text-color);
+  background: rgba(255, 255, 255, 0.45);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--global-theme-color);
+    box-shadow: 0 12px 28px rgba($black-color, 0.12);
+    color: var(--global-text-color);
+  }
+
+  strong,
+  small {
+    display: block;
+  }
+
+  strong {
+    line-height: 1.25;
+  }
+
+  small {
+    margin-top: 0.35rem;
+    color: var(--global-text-color-light);
+    line-height: 1.45;
+  }
+}
+
+.research-map__node--core {
+  grid-area: core;
+  min-height: 100%;
+  align-items: center;
+  background: rgba($blue-color, 0.09);
+}
+
+.research-map__node--robotics {
+  grid-area: robotics;
+}
+
+.research-map__node--imaging {
+  grid-area: imaging;
+}
+
+.research-map__node--geometry {
+  grid-area: geometry;
+}
+
+.research-map__node--pathology {
+  grid-area: pathology;
+}
+
+.research-map__icon {
+  display: inline-flex;
+  width: 2.15rem;
+  height: 2.15rem;
+  flex: 0 0 2.15rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--global-theme-color);
+  background: rgba($blue-color, 0.1);
+}
+
+.research-map__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+
+  a {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    font-size: 0.82rem;
+    transition:
+      color 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease;
+
+    &:hover {
+      color: var(--global-hover-text-color);
+      border-color: var(--global-theme-color);
+      background: var(--global-theme-color);
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .research-map__node {
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .research-map__node--core {
+    background: rgba($cyan-color, 0.08);
+  }
+}
+
+@media (max-width: 991px) {
+  .research-map__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "core core"
+      "robotics imaging"
+      "geometry pathology";
+  }
+}
+
+@media (max-width: 575px) {
+  .research-map {
+    padding: 1rem;
+  }
+
+  .research-map__header {
+    display: block;
+  }
+
+  .research-map__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "core"
+      "robotics"
+      "imaging"
+      "geometry"
+      "pathology";
+  }
+
+  .research-map__node {
+    min-height: 0;
+  }
+}
+
 .projects {
   a {
     text-decoration: none;
