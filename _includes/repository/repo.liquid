@@ -29,20 +29,11 @@
           {% if matched_project.status %}
             <span class="project-card-status">{{ matched_project.status }}</span>
           {% endif %}
-          {% for tag in matched_project.tags limit: 2 %}
-            <span class="project-card-tag">{{ tag }}</span>
-          {% endfor %}
         </div>
       {% else %}
         <p class="repo-card__description">GitHub repository for code, experiments, and documentation.</p>
       {% endif %}
 
-      <div class="repo-card__actions">
-        <span class="repo-card__action">Source Code</span>
-        {% if matched_project %}
-          <span class="repo-card__action">Project Page</span>
-        {% endif %}
-      </div>
     </div>
   </a>
 </div>

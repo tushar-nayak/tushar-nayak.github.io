@@ -1,0 +1,152 @@
+{% comment %}
+  project_filter.liquid
+  Renders an animated pill-based filter bar for the projects page.
+  Each project card must carry a `data-filter-tags` attribute with a
+  comma-separated list of its tags so the JS can match them.
+
+  Hide strategy — two phases so visible cards reflow without gaps:
+    Hiding: add .pf-item--fading (opacity → 0) → after transition ends,
+            add .pf-item--gone (display: none).
+    Showing: remove .pf-item--gone → rAF → remove .pf-item--fading
+             so the browser has one frame to register display:block before
+             the opacity transition runs.
+{% endcomment %}
+
+{% assign domain_filters = "Surgical Robotics,Medical Imaging,3D Vision,Pathology,Course Project" | split: "," %}
+
+<div class="project-filter" role="group" aria-label="Filter projects by topic">
+  <button
+    class="project-filter__pill project-filter__pill--active"
+    data-filter="all"
+    aria-pressed="true"
+  >
+    All
+  </button>
+
+  {% for label in domain_filters %}
+    <button
+      class="project-filter__pill"
+      data-filter="{{ label }}"
+      aria-pressed="false"
+    >
+      {{ label }}
+    </button>
+  {% endfor %}
+</div>
+
+<p class="project-filter__count" aria-live="polite"></p>
+
+<script>
+  (function () {
+    "use strict";
+
+    var FADE_MS = 200; // must match CSS transition duration
+
+    function initProjectFilter() {
+      var bar = document.querySelector(".project-filter");
+      var countEl = document.querySelector(".project-filter__count");
+      if (!bar) return;
+
+      var items = Array.from(document.querySelectorAll(".pf-item"));
+      if (!items.length) return;
+
+      var pills = Array.from(bar.querySelectorAll(".project-filter__pill"));
+      var active = "all";
+
+      // Track pending timers so rapid clicks don't stack.
+      var timers = new WeakMap();
+
+      function showItem(el) {
+        // Cancel any pending hide timer.
+        if (timers.has(el)) {
+          clearTimeout(timers.get(el));
+          timers.delete(el);
+        }
+        // Phase 1: pull back into flow.
+        el.classList.remove("pf-item--gone");
+        // Phase 2: next frame → remove fading class so opacity transitions in.
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            el.classList.remove("pf-item--fading");
+          });
+        });
+      }
+
+      function hideItem(el) {
+        // Phase 1: fade out.
+        el.classList.add("pf-item--fading");
+        // Phase 2: after fade completes, remove from flow.
+        var t = setTimeout(function () {
+          el.classList.add("pf-item--gone");
+          timers.delete(el);
+        }, FADE_MS);
+        timers.set(el, t);
+      }
+
+      function updateCount(visibleCount) {
+        if (!countEl) return;
+        if (active === "all") {
+          countEl.textContent = "";
+        } else {
+          countEl.textContent =
+            visibleCount === 0
+              ? "No projects match this filter."
+              : visibleCount + " project" + (visibleCount === 1 ? "" : "s");
+        }
+      }
+
+      function applyFilter(filter) {
+        active = filter;
+        var visible = 0;
+
+        items.forEach(function (item) {
+          var raw = item.getAttribute("data-filter-tags") || "";
+          var tags = raw.split(",").map(function (t) {
+            return t.trim().toLowerCase();
+          });
+          var match =
+            filter === "all" || tags.indexOf(filter.toLowerCase()) !== -1;
+
+          if (match) {
+            visible++;
+            showItem(item);
+          } else {
+            hideItem(item);
+          }
+        });
+
+        pills.forEach(function (p) {
+          var isActive = p.getAttribute("data-filter") === filter;
+          p.classList.toggle("project-filter__pill--active", isActive);
+          p.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        updateCount(visible);
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener("click", function () {
+          applyFilter(pill.getAttribute("data-filter"));
+        });
+      });
+
+      // Arrow-key navigation between pills.
+      bar.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        var idx = pills.indexOf(document.activeElement);
+        if (idx === -1) return;
+        var next =
+          e.key === "ArrowRight"
+            ? (idx + 1) % pills.length
+            : (idx - 1 + pills.length) % pills.length;
+        pills[next].focus();
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initProjectFilter);
+    } else {
+      initProjectFilter();
+    }
+  })();
+</script>
