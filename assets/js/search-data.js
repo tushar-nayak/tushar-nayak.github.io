@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Under Construction 🚧",
+          description: "Selected GitHub repositories and codebases.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
