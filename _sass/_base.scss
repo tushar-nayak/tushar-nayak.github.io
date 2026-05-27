@@ -663,11 +663,10 @@ footer.sticky-bottom {
 
 .research-map {
   margin: 2rem 0 2.5rem;
-  padding: 1.25rem;
+  padding: 1.35rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba($blue-color, 0.08), transparent 38%),
-    linear-gradient(315deg, rgba($green-color-bright, 0.07), transparent 36%), var(--global-card-bg-color);
+  background: var(--global-card-bg-color);
 
   a {
     text-decoration: none;
@@ -675,16 +674,19 @@ footer.sticky-bottom {
 }
 
 .research-map__header {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
   margin-bottom: 1rem;
 
   h2 {
     margin: 0;
     font-size: 1.35rem;
   }
+}
+
+.research-map__intro {
+  max-width: 44rem;
+  margin: 0.45rem 0 0;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
 }
 
 .research-map__eyebrow {
@@ -698,24 +700,20 @@ footer.sticky-bottom {
 
 .research-map__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-areas:
-    "robotics core core imaging"
-    "geometry core core pathology";
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
-.research-map__node {
-  position: relative;
-  display: flex;
-  min-height: 118px;
-  align-items: flex-start;
-  gap: 0.75rem;
+.research-map__card {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
   padding: 1rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   color: var(--global-text-color);
-  background: rgba(255, 255, 255, 0.45);
+  background: transparent;
   transition:
     transform 0.18s ease,
     border-color 0.18s ease,
@@ -724,47 +722,22 @@ footer.sticky-bottom {
   &:hover {
     transform: translateY(-2px);
     border-color: var(--global-theme-color);
-    box-shadow: 0 12px 28px rgba($black-color, 0.12);
+    box-shadow: 0 12px 28px rgba($black-color, 0.08);
     color: var(--global-text-color);
   }
 
-  strong,
-  small {
-    display: block;
-  }
-
-  strong {
+  h3 {
+    margin: 0;
+    font-size: 1rem;
     line-height: 1.25;
   }
 
-  small {
-    margin-top: 0.35rem;
+  p {
+    margin: 0.35rem 0 0;
     color: var(--global-text-color-light);
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
-}
-
-.research-map__node--core {
-  grid-area: core;
-  min-height: 100%;
-  align-items: center;
-  background: rgba($blue-color, 0.09);
-}
-
-.research-map__node--robotics {
-  grid-area: robotics;
-}
-
-.research-map__node--imaging {
-  grid-area: imaging;
-}
-
-.research-map__node--geometry {
-  grid-area: geometry;
-}
-
-.research-map__node--pathology {
-  grid-area: pathology;
 }
 
 .research-map__icon {
@@ -780,28 +753,11 @@ footer.sticky-bottom {
 }
 
 .research-map__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.9rem;
-
-  a {
-    padding: 0.35rem 0.65rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 999px;
-    color: var(--global-text-color);
-    font-size: 0.82rem;
-    transition:
-      color 0.18s ease,
-      border-color 0.18s ease,
-      background 0.18s ease;
-
-    &:hover {
-      color: var(--global-hover-text-color);
-      border-color: var(--global-theme-color);
-      background: var(--global-theme-color);
-    }
-  }
+  display: inline-block;
+  margin-top: 0.65rem;
+  color: var(--global-theme-color);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .featured-projects {
@@ -938,12 +894,8 @@ footer.sticky-bottom {
 }
 
 html[data-theme="dark"] {
-  .research-map__node {
-    background: rgba(255, 255, 255, 0.035);
-  }
-
-  .research-map__node--core {
-    background: rgba($cyan-color, 0.08);
+  .research-map__card {
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .project-card-tag,
@@ -954,11 +906,7 @@ html[data-theme="dark"] {
 
 @media (max-width: 991px) {
   .research-map__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas:
-      "core core"
-      "robotics imaging"
-      "geometry pathology";
+    grid-template-columns: 1fr;
   }
 
   .featured-projects__grid {
@@ -972,21 +920,7 @@ html[data-theme="dark"] {
   }
 
   .research-map__header {
-    display: block;
-  }
-
-  .research-map__grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "core"
-      "robotics"
-      "imaging"
-      "geometry"
-      "pathology";
-  }
-
-  .research-map__node {
-    min-height: 0;
+    margin-bottom: 0.85rem;
   }
 
   .featured-project {
