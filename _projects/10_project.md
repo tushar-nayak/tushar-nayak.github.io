@@ -2,7 +2,7 @@
 layout: page
 title: Neural Anisotropic Diffusion for Medical Image Relaxation
 description: Course project for Medical Image Analysis
-img: assets/img/nad_qualitative_results.png
+img: assets/img/project_thumbnails/neural-anisotropic-diffusion.png
 importance: 3
 category: course projects
 github: https://github.com/tushar-nayak/neural-anisotropic-diffusion

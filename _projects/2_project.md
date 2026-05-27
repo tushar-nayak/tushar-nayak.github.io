@@ -2,7 +2,7 @@
 layout: page
 title: Spatiotemporal Glioblastoma Evolution Visual Prediction
 description: Research at The ∀ Lab & Image Science Lab
-img: assets/img/gbp1.png
+img: assets/img/project_thumbnails/glioblastoma-evolution.png
 importance: 2
 category: at carnegie mellon
 github: https://github.com/tushar-nayak/glioblastoma-evolution

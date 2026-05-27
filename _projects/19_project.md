@@ -2,7 +2,7 @@
 layout: page
 title: Multi-Scale Lung Histopathology Classification
 description: A pathology model that fuses 20x and 40x whole-slide image views with cross-scale attention for malignancy, subtype, and differentiation grading.
-img: assets/img/lc.png
+img: assets/img/project_thumbnails/lobe-ranger.png
 importance: 3
 category: personal projects
 github: https://github.com/tushar-nayak/lobe-ranger

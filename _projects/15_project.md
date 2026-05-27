@@ -2,7 +2,7 @@
 layout: page
 title: Skin Lesion Segmentation on ISIC 2018
 description: A reproducible dermoscopy segmentation benchmark with DeepLabV3 baselines, planned U-Net and transformer comparisons, and promptable SAM-style extensions.
-img: https://tushar-nayak.github.io/derma-seg/assets/isic_deeplabv3_sample_001.png
+img: assets/img/project_thumbnails/derma-seg.png
 importance: 2
 category: personal projects
 github: https://github.com/tushar-nayak/derma-seg

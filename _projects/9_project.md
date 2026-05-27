@@ -2,7 +2,6 @@
 layout: page
 title: Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Classification
 description: Course project for Projects in Biomedical AI
-img: assets/img/6.jpg
 importance: 2
 category: course projects
 github: https://github.com/tushar-nayak/grading-cbisddsm

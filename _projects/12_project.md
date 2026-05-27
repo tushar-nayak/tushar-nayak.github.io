@@ -2,7 +2,7 @@
 layout: page
 title: Full-Volume Lung CT Segmentation and Surface Export
 description: A real-data MONAI and VTK pipeline that segments full chest CT volumes, exports lung surfaces, and reports validation metrics for navigation-prep experiments.
-img: assets/img/cma.png
+img: assets/img/project_thumbnails/lungvolseg.png
 importance: 2
 category: personal projects
 github: https://github.com/tushar-nayak/lungvolseg
