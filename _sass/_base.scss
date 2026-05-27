@@ -662,11 +662,10 @@ footer.sticky-bottom {
 // Projects
 
 .research-map {
-  margin: 2rem 0 2.5rem;
-  padding: 1.35rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 8px;
-  background: var(--global-card-bg-color);
+  clear: both;
+  margin: 2rem 0 2.25rem;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid var(--global-divider-color);
 
   a {
     text-decoration: none;
@@ -678,15 +677,16 @@ footer.sticky-bottom {
 
   h2 {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
   }
 }
 
 .research-map__intro {
-  max-width: 44rem;
+  max-width: 42rem;
   margin: 0.45rem 0 0;
   color: var(--global-text-color-light);
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .research-map__eyebrow {
@@ -698,33 +698,36 @@ footer.sticky-bottom {
   text-transform: uppercase;
 }
 
-.research-map__grid {
+.research-map__list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: 0.75rem;
 }
 
-.research-map__card {
-  display: grid;
-  grid-template-columns: 2.25rem 1fr;
-  gap: 0.85rem;
-  align-items: start;
-  padding: 1rem;
+.research-map__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   color: var(--global-text-color);
-  background: transparent;
+  background: var(--global-card-bg-color);
   transition:
     transform 0.18s ease,
     border-color 0.18s ease,
     box-shadow 0.18s ease;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     border-color: var(--global-theme-color);
-    box-shadow: 0 12px 28px rgba($black-color, 0.08);
+    box-shadow: 0 8px 20px rgba($black-color, 0.06);
     color: var(--global-text-color);
   }
+}
+
+.research-map__item-main {
+  min-width: 0;
 
   h3 {
     margin: 0;
@@ -740,24 +743,14 @@ footer.sticky-bottom {
   }
 }
 
-.research-map__icon {
-  display: inline-flex;
-  width: 2.15rem;
-  height: 2.15rem;
-  flex: 0 0 2.15rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  color: var(--global-theme-color);
-  background: rgba($blue-color, 0.1);
-}
-
-.research-map__links {
-  display: inline-block;
-  margin-top: 0.65rem;
+.research-map__item-links {
+  flex: 0 0 auto;
+  max-width: 16rem;
   color: var(--global-theme-color);
   font-size: 0.82rem;
   font-weight: 600;
+  line-height: 1.4;
+  text-align: right;
 }
 
 .featured-projects {
@@ -894,10 +887,6 @@ footer.sticky-bottom {
 }
 
 html[data-theme="dark"] {
-  .research-map__card {
-    background: rgba(255, 255, 255, 0.02);
-  }
-
   .project-card-tag,
   .project-meta__tag {
     background: rgba($cyan-color, 0.08);
@@ -905,8 +894,14 @@ html[data-theme="dark"] {
 }
 
 @media (max-width: 991px) {
-  .research-map__grid {
-    grid-template-columns: 1fr;
+  .research-map__item {
+    display: block;
+  }
+
+  .research-map__item-links {
+    display: block;
+    margin-top: 0.55rem;
+    text-align: left;
   }
 
   .featured-projects__grid {
