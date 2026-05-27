@@ -42,7 +42,7 @@
       <div class="featured-projects__group">
         <p class="featured-projects__group-label">Featured projects</p>
         <div class="featured-projects__grid">
-          {% for project in featured_nonresearch limit: 3 %}
+          {% for project in featured_nonresearch limit: 4 %}
             <a class="featured-project" href="{{ project.url | relative_url }}">
               {% if project.img %}
                 {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 992px) 320px, 100vw" alt=project.title class="featured-project__image" %}

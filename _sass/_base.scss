@@ -544,6 +544,130 @@ footer.sticky-bottom {
   }
 }
 
+.repositories {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.repo-card {
+  display: block;
+  height: 100%;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  color: var(--global-text-color);
+  background: var(--global-card-bg-color);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--global-theme-color);
+    box-shadow: 0 12px 28px rgba($black-color, 0.08);
+    color: var(--global-text-color);
+    text-decoration: none;
+  }
+}
+
+.repo-card--profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 164px;
+  padding: 1.15rem;
+}
+
+.repo-card__icon,
+.repo-card__github-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--global-theme-color);
+}
+
+.repo-card__icon {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  border-radius: 999px;
+  background: rgba($blue-color, 0.08);
+  font-size: 1.4rem;
+}
+
+.repo-card__body {
+  padding: 1rem 1.05rem;
+}
+
+.repo-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.repo-card__title-wrap {
+  min-width: 0;
+}
+
+.repo-card__eyebrow {
+  margin: 0 0 0.2rem;
+  color: var(--global-theme-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.repo-card h3 {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.repo-card__github-mark {
+  font-size: 1.15rem;
+}
+
+.repo-card__path,
+.repo-card__description,
+.repo-card--profile p {
+  margin-bottom: 0;
+}
+
+.repo-card__path {
+  margin-top: 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+}
+
+.repo-card__description,
+.repo-card--profile p {
+  margin-top: 0.65rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.repo-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.repo-card__action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
 // Blog
 
 .header-bar {
