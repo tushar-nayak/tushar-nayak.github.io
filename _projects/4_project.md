@@ -11,7 +11,6 @@ category: course projects
 
 ## project status: completed
 
-
 <div style="max-width: 520px; margin: 24px auto; display: flex; flex-direction: column; gap: 16px;">
   <!-- Project Website Button -->
   <a href="https://tushar-nayak.github.io/cardiac-volume-reconstruction/"

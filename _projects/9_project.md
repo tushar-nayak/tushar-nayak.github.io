@@ -11,8 +11,7 @@ category: course projects
     project status: Complete!
     ---
 
-
-### [Project Report](https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Report.pdf) 
+### [Project Report](https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Report.pdf)
 
 This project presents a deep learning pipeline for automatic alignment and classification of dual-view mammograms using Spatial Transformer Networks (STNs) and transfer learning.
 Mammography typically includes two standard views: Craniocaudal (CC) and Mediolateral Oblique (MLO). These views differ significantly in geometry, making direct comparison difficult. This project addresses that challenge by learning spatial transformations that align the two views before classification.

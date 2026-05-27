@@ -144,5 +144,3 @@ _Note: The model successfully reduced noise and preserved large-scale contrast a
 <div class="caption">
     Training and validation loss/PSNR curves over 300 epochs.
 </div>
-
-

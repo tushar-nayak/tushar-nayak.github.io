@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Neural Active Contours
-description: 3D Lung CT Segmentation and 
-img: assets/img/6.jpg
+title: Full-Volume Lung CT Segmentation and Surface Export
+description: A real-data MONAI and VTK pipeline that segments full chest CT volumes, exports lung surfaces, and reports validation metrics for navigation-prep experiments.
+img: assets/img/cma.png
 importance: 2
 category: personal projects
+github: https://github.com/tushar-nayak/lungvolseg
+website: https://tushar-nayak.github.io/lungvolseg/
 ---
 
     ---
@@ -73,7 +75,6 @@ category: personal projects
 
   </a>
 </div>
-
 
 # LungVolSeg: A Reproducible Full-Volume Lung CT Segmentation and Surface Export Pipeline
 
@@ -235,29 +236,29 @@ The run completed end to end and generated:
 
 ### Quantitative Results
 
-| Case | Dice Lung | HD95 Lung |
-|---|---:|---:|
-| `zenodo_lung_001` | 0.9921 | 1.0000 |
-| `zenodo_lung_002` | 0.9848 | 5.0000 |
-| `zenodo_lung_003` | 0.9797 | 5.0000 |
-| `zenodo_lung_004` | 0.9880 | 4.0000 |
-| `zenodo_lung_005` | 0.9877 | 4.0000 |
-| `zenodo_lung_006` | 0.9926 | 1.0000 |
-| `zenodo_lung_007` | 0.9893 | 1.4142 |
-| `zenodo_lung_008` | 0.9908 | 1.0000 |
-| `zenodo_lung_009` | 0.9916 | 1.0000 |
-| `zenodo_lung_010` | 0.9886 | 1.0000 |
-| `zenodo_lung_011` | 0.8636 | 20.0000 |
-| `zenodo_lung_012` | 0.8589 | 18.0000 |
-| `zenodo_lung_013` | 0.8678 | 14.6287 |
-| `zenodo_lung_014` | 0.8778 | 19.6214 |
-| `zenodo_lung_015` | 0.9030 | 19.7484 |
-| `zenodo_lung_016` | 0.8414 | 18.4120 |
-| `zenodo_lung_017` | 0.7808 | 16.7631 |
-| `zenodo_lung_018` | 0.8866 | 20.8087 |
-| `zenodo_lung_019` | 0.8747 | 20.4206 |
-| `zenodo_lung_020` | 0.8456 | 19.0000 |
-| **Mean** | **0.9243** | **10.5909** |
+| Case              |  Dice Lung |   HD95 Lung |
+| ----------------- | ---------: | ----------: |
+| `zenodo_lung_001` |     0.9921 |      1.0000 |
+| `zenodo_lung_002` |     0.9848 |      5.0000 |
+| `zenodo_lung_003` |     0.9797 |      5.0000 |
+| `zenodo_lung_004` |     0.9880 |      4.0000 |
+| `zenodo_lung_005` |     0.9877 |      4.0000 |
+| `zenodo_lung_006` |     0.9926 |      1.0000 |
+| `zenodo_lung_007` |     0.9893 |      1.4142 |
+| `zenodo_lung_008` |     0.9908 |      1.0000 |
+| `zenodo_lung_009` |     0.9916 |      1.0000 |
+| `zenodo_lung_010` |     0.9886 |      1.0000 |
+| `zenodo_lung_011` |     0.8636 |     20.0000 |
+| `zenodo_lung_012` |     0.8589 |     18.0000 |
+| `zenodo_lung_013` |     0.8678 |     14.6287 |
+| `zenodo_lung_014` |     0.8778 |     19.6214 |
+| `zenodo_lung_015` |     0.9030 |     19.7484 |
+| `zenodo_lung_016` |     0.8414 |     18.4120 |
+| `zenodo_lung_017` |     0.7808 |     16.7631 |
+| `zenodo_lung_018` |     0.8866 |     20.8087 |
+| `zenodo_lung_019` |     0.8747 |     20.4206 |
+| `zenodo_lung_020` |     0.8456 |     19.0000 |
+| **Mean**          | **0.9243** | **10.5909** |
 
 The first half of the dataset is near-perfect, while a weaker subgroup appears in the second half. That pattern suggests structured case difficulty rather than random optimization noise.
 

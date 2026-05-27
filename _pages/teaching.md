@@ -8,6 +8,7 @@ nav_order: 6
 ---
 
 # Open Horizon Robotics [🔗](https://github.com/openhorizonrobotics/perception)
+
 Authoring a comprehensive open-source computer vision course covering Classical 2D Vision, Deep Learning for Vision, 3D Computer Vision, Vision Geometries, Image-based Localization \& Mapping, Vision Synthesis and Perception Physics
 
 # Carnegie Mellon University
