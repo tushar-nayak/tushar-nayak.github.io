@@ -10,46 +10,97 @@ horizontal: false
 
 <!-- pages/projects.md -->
 
+This page is organized as a research chronology rather than a flat portfolio. The project links are the same, but the framing follows how my work evolved across institutions, methods, and application domains.
+
 {% include project_filter.liquid %}
 
-<div class="projects">
-  {% assign sorted_projects = site.projects | sort: "importance" %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% assign tag_string = project.tags | join: "," %}
-      <div
-        class="col pf-item"
-        data-filter-tags="{{ tag_string }}"
-      >
-        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-          <div class="card h-100 hoverable">
-            {% if project.img %}
-              {%
-                include figure.liquid
-                loading="eager"
-                path=project.img
-                sizes="250px"
-                alt="project thumbnail"
-                class="card-img-top"
-              %}
-            {% endif %}
-            <div class="card-body">
-              <h2 class="card-title">{{ project.title }}</h2>
-              {% if project.status or project.tags %}
-                <div class="project-card-meta">
-                  {% if project.status %}
-                    <span class="project-card-status">{{ project.status }}</span>
-                  {% endif %}
-                  {% for tag in project.tags limit: 3 %}
-                    <span class="project-card-tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-              <p class="card-text">{{ project.description }}</p>
-            </div>
+{% assign manipal_projects = site.projects | where: "category", "at manipal" | sort: "importance" %}
+{% assign course_projects = site.projects | where: "category", "course projects" | sort: "importance" %}
+{% assign cmu_projects = site.projects | where: "category", "at carnegie mellon" | sort: "importance" %}
+{% assign personal_projects = site.projects | where: "category", "personal projects" | sort: "importance" %}
+
+<div class="research-chronology">
+  <section class="chronology-stage">
+    <div class="chronology-stage__rail">
+      <p class="chronology-stage__eyebrow">Phase 1</p>
+      <h2>Foundations at Manipal</h2>
+      <p class="chronology-stage__summary">The starting point was biomedical computing and medical image analysis work centered on pathology, lesion analysis, and early multimodal diagnostic modeling.</p>
+    </div>
+    <div class="chronology-stage__content">
+      <div class="row row-cols-1 row-cols-md-2">
+        {% for project in manipal_projects %}
+          {% assign tag_string = project.tags | join: "," %}
+          <div
+            class="col mb-4 pf-item"
+            data-filter-tags="{{ tag_string }}"
+          >
+            {% include projects_horizontal.liquid %}
           </div>
-        </a>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
+    </div>
+  </section>
+
+  <section class="chronology-stage">
+    <div class="chronology-stage__rail">
+      <p class="chronology-stage__eyebrow">Phase 2</p>
+      <h2>Coursework and Method Building</h2>
+      <p class="chronology-stage__summary">Course-driven projects became a sandbox for reconstruction, segmentation, alignment, denoising, and representation learning, with more deliberate focus on geometry and clinically relevant imaging tasks.</p>
+    </div>
+    <div class="chronology-stage__content">
+      <div class="row row-cols-1 row-cols-md-2">
+        {% for project in course_projects %}
+          {% assign tag_string = project.tags | join: "," %}
+          <div
+            class="col mb-4 pf-item"
+            data-filter-tags="{{ tag_string }}"
+          >
+            {% include projects_horizontal.liquid %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="chronology-stage">
+    <div class="chronology-stage__rail">
+      <p class="chronology-stage__eyebrow">Phase 3</p>
+      <h2>Carnegie Mellon Research</h2>
+      <p class="chronology-stage__summary">The work then narrowed toward image-guided robotic intervention, with projects in deformation estimation, registration, and predictive modeling for clinically grounded robotic systems.</p>
+    </div>
+    <div class="chronology-stage__content">
+      <div class="row row-cols-1 row-cols-md-2">
+        {% for project in cmu_projects %}
+          {% assign tag_string = project.tags | join: "," %}
+          <div
+            class="col mb-4 pf-item"
+            data-filter-tags="{{ tag_string }}"
+          >
+            {% include projects_horizontal.liquid %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="chronology-stage">
+    <div class="chronology-stage__rail">
+      <p class="chronology-stage__eyebrow">Phase 4</p>
+      <h2>Current Independent Directions</h2>
+      <p class="chronology-stage__summary">The current phase expands into active research prototypes across surgical vision, 3D reconstruction, pathology, segmentation benchmarks, and tool-aware medical AI systems.</p>
+    </div>
+    <div class="chronology-stage__content">
+      <div class="row row-cols-1 row-cols-md-2">
+        {% for project in personal_projects %}
+          {% assign tag_string = project.tags | join: "," %}
+          <div
+            class="col mb-4 pf-item"
+            data-filter-tags="{{ tag_string }}"
+          >
+            {% include projects_horizontal.liquid %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </div>

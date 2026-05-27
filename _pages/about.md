@@ -25,11 +25,11 @@ latest_posts:
   limit: 2 # leave blank to include all the blog posts
 ---
 
-Hey there! I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research oriented masters in the [Biomedical Engineering](https://www.cmu.edu/bme/) department, advised by [Professor Kenji Shimada](https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html).
+I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research-oriented master's in the [Biomedical Engineering](https://www.cmu.edu/bme/) department, advised by [Professor Kenji Shimada](https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html) at the [Computational Engineering & Robotics Lab](https://cerlab.cmu.edu), where I work on computer vision for image-guided robotic intervention.
 
-I'm interested in the intersection of computer vision, and physics-based learning models in the context of medical (and more specifically, surgical) robots informed and guided by medical imaging.
+My research combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse or noisy clinical data.
 
-Always happy to connect with curious minds! Feel free to reach out on email: tusharn [at] andrew [dot] cmu [dot] edu [:mailbox:](mailto:tusharn@andrew.cmu.edu) or at the Steffey Robotics Lab space at [Scaife Hall](https://maps.app.goo.gl/Vau7Cu9NhYost5q7A).
+I build these methods for surgical and biomedical settings including endovascular robotics, 3D reconstruction, image-guided navigation, and learning systems grounded in real clinical workflows. Always happy to connect. Reach me at tusharn [at] andrew [dot] cmu [dot] edu [:mailbox:](mailto:tusharn@andrew.cmu.edu) or at the Steffey Robotics Lab space at [Scaife Hall](https://maps.app.goo.gl/Vau7Cu9NhYost5q7A).
 
 {% include research_map.liquid %}
 
