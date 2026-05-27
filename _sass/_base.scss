@@ -1192,7 +1192,6 @@ html[data-theme="dark"] {
   display: none;
 }
 
-
 // GitHub contribution calendar
 
 .contrib-graph {
@@ -1363,25 +1362,44 @@ html[data-theme="dark"] {
   }
 
   // Static legend cells — colour set by JS palette on load + theme switch
-  .cg-cell[data-level="0"] { background-color: #ebedf0; }
-  .cg-cell[data-level="1"] { background-color: #9be9a8; }
-  .cg-cell[data-level="2"] { background-color: #40c463; }
-  .cg-cell[data-level="3"] { background-color: #30a14e; }
-  .cg-cell[data-level="4"] { background-color: #216e39; }
+  .cg-cell[data-level="0"] {
+    background-color: #ebedf0;
+  }
+  .cg-cell[data-level="1"] {
+    background-color: #9be9a8;
+  }
+  .cg-cell[data-level="2"] {
+    background-color: #40c463;
+  }
+  .cg-cell[data-level="3"] {
+    background-color: #30a14e;
+  }
+  .cg-cell[data-level="4"] {
+    background-color: #216e39;
+  }
 }
 
 html[data-theme="dark"] {
   .contrib-graph__legend {
-    .cg-cell[data-level="0"] { background-color: #161b22; }
-    .cg-cell[data-level="1"] { background-color: #0e4429; }
-    .cg-cell[data-level="2"] { background-color: #006d32; }
-    .cg-cell[data-level="3"] { background-color: #26a641; }
-    .cg-cell[data-level="4"] { background-color: #39d353; }
+    .cg-cell[data-level="0"] {
+      background-color: #161b22;
+    }
+    .cg-cell[data-level="1"] {
+      background-color: #0e4429;
+    }
+    .cg-cell[data-level="2"] {
+      background-color: #006d32;
+    }
+    .cg-cell[data-level="3"] {
+      background-color: #26a641;
+    }
+    .cg-cell[data-level="4"] {
+      background-color: #39d353;
+    }
   }
 }
 
 // Publication profile buttons (Google Scholar + ORCID)
-
 
 .pub-profile-links {
   display: flex;
@@ -1512,7 +1530,6 @@ html[data-theme="dark"] {
 }
 
 // Publications
-
 
 .publications {
   margin-top: 2rem;

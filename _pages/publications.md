@@ -20,16 +20,19 @@ nav_order: 3
     <i class="fas fa-arrow-up-right-from-square pub-profile-btn__external"></i>
   </a>
 
-  <a
-    class="pub-profile-btn pub-profile-btn--orcid"
-    href="https://orcid.org/0000-0002-4328-7983"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="View ORCID profile"
-  >
+<a
+class="pub-profile-btn pub-profile-btn--orcid"
+href="https://orcid.org/0000-0002-4328-7983"
+target="\_blank"
+rel="noopener noreferrer"
+aria-label="View ORCID profile"
+
+>
+
     <i class="ai ai-orcid pub-profile-btn__icon"></i>
     <span class="pub-profile-btn__text">ORCID</span>
     <i class="fas fa-arrow-up-right-from-square pub-profile-btn__external"></i>
+
   </a>
 </div>
 
