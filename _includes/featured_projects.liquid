@@ -8,13 +8,16 @@
     </div>
 
     <div class="featured-projects__grid">
-      {% for project in featured_projects limit: 6 %}
+      {% for project in featured_projects limit: 5 %}
         <a class="featured-project" href="{{ project.url | relative_url }}">
           {% if project.img %}
             {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 992px) 320px, 100vw" alt=project.title class="featured-project__image" %}
           {% endif %}
           <div class="featured-project__body">
             <div class="featured-project__meta">
+              {% if project.featured_kind == 'research' %}
+                <span class="project-card-tag">Featured Research</span>
+              {% endif %}
               {% if project.status %}
                 <span class="project-card-status">{{ project.status }}</span>
               {% endif %}

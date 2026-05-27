@@ -9,7 +9,6 @@ github: https://github.com/tushar-nayak/lungvolseg
 website: https://tushar-nayak.github.io/lungvolseg/
 status: completed
 tags: [Medical Imaging, CT, Segmentation, Surface Export]
-featured: true
 ---
 
     ---

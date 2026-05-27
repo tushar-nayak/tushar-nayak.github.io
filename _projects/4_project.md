@@ -9,6 +9,7 @@ github: https://github.com/tushar-nayak/cardiac-volume-reconstruction
 website: https://tushar-nayak.github.io/cardiac-volume-reconstruction/
 status: completed
 tags: [3D Vision, Medical Imaging, Cardiac Reconstruction, Course Project]
+featured: true
 ---
 
 ---

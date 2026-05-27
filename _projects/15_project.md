@@ -9,7 +9,6 @@ github: https://github.com/tushar-nayak/derma-seg
 website: https://tushar-nayak.github.io/derma-seg/
 status: active extension
 tags: [Medical Imaging, Dermatology, Segmentation, Benchmarking]
-featured: true
 ---
 
     ---

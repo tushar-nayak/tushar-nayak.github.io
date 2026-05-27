@@ -10,6 +10,7 @@ website: https://tushar-nayak.github.io/glioblastoma-evolution/
 status: paused
 tags: [Medical Imaging, Neural ODEs, MRI, Forecasting]
 featured: true
+featured_kind: research
 # giscus_comments: true
 ---
 

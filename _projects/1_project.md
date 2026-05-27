@@ -9,6 +9,7 @@ github: https://github.com/katahar/telesurgery_cerlab/tree/deformation-graph/cv/
 status: ongoing
 tags: [Surgical Robotics, Medical Imaging, 3D Vision, Physics-Informed ML]
 featured: true
+featured_kind: research
 related_publications: false
 ---
 
