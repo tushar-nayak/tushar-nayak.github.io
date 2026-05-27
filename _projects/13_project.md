@@ -7,13 +7,13 @@ importance: 1
 category: personal projects
 github: https://github.com/tushar-nayak/endo-splat/
 website: https://tushar-nayak.github.io/endo-splat/
+status: active
+tags: [Surgical Robotics, 3D Vision, Gaussian Splatting, VLMs]
 ---
 
     ---
     project status: current working on it!
     ---
-
-{% include project_links.liquid %}
 
 EndoSemantic-Splat is a reference implementation of a real-time, deformable 3D scene reconstruction pipeline designed for dynamic endoscopic and laparoscopic environments. The code in this repository focuses on a dependency-light Python implementation of the core ideas: sparse point-cloud initialization from depth, Gaussian splatting style rendering, deterministic open-vocabulary semantic querying, and a smooth deformation field with a structural regularizer.
 

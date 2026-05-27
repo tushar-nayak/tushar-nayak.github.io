@@ -6,13 +6,13 @@ img: assets/img/bi-dl.jpg
 importance: 3
 category: personal projects
 github: https://github.com/tushar-nayak/fungal-neo/
+status: alpha
+tags: [Pathology, Microscopy, Morphology, Deep Learning]
 ---
 
     ---
     project status: alpha stage
     ---
-
-{% include project_links.liquid %}
 
 ## Current Status: Phase 1 (Classification)
 

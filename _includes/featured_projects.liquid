@@ -1,0 +1,32 @@
+{% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
+
+{% if featured_projects.size > 0 %}
+  <section class="featured-projects" aria-labelledby="featured-projects-title">
+    <div class="featured-projects__header">
+      <p class="featured-projects__eyebrow">Featured Work</p>
+      <h2 id="featured-projects-title">Selected projects</h2>
+    </div>
+
+    <div class="featured-projects__grid">
+      {% for project in featured_projects limit: 6 %}
+        <a class="featured-project" href="{{ project.url | relative_url }}">
+          {% if project.img %}
+            {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 992px) 320px, 100vw" alt=project.title class="featured-project__image" %}
+          {% endif %}
+          <div class="featured-project__body">
+            <div class="featured-project__meta">
+              {% if project.status %}
+                <span class="project-card-status">{{ project.status }}</span>
+              {% endif %}
+              {% for tag in project.tags limit: 2 %}
+                <span class="project-card-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

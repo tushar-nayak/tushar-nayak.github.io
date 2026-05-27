@@ -7,11 +7,12 @@ importance: 1
 category: personal projects
 github: https://github.com/tushar-nayak/surgi-prompt
 website: https://tushar-nayak.github.io/surgi-prompt/
+status: active prototype
+tags: [Surgical Robotics, Tool Tracking, Open-Vocabulary AI, Segmentation]
+featured: true
 ---
 
 ## project status: active prototype
-
-{% include project_links.liquid %}
 
 SurgiPrompt maps text prompts such as `forceps`, `grasper`, `catheter`, and `guidewire` directly onto real endoscopic and laparoscopic video frames.
 

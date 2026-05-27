@@ -5,6 +5,8 @@ description: Prelimnary project at Biomedical Computing Lab
 img: assets/img/mpxc.png
 importance: 1
 category: at manipal
+status: published
+tags: [Medical Imaging, Dermatology, Classification, Explainable AI]
 related_publications: true
 ---
 

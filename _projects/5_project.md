@@ -5,6 +5,8 @@ description: Undergraduate thesis
 img: assets/img/oscc.jpg
 importance: 3
 category: at manipal
+status: completed
+tags: [Pathology, Cancer Detection, Deep Learning, Undergraduate Thesis]
 ---
 
 ---

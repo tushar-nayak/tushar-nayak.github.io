@@ -7,13 +7,14 @@ importance: 2
 category: personal projects
 github: https://github.com/tushar-nayak/derma-seg
 website: https://tushar-nayak.github.io/derma-seg/
+status: active extension
+tags: [Medical Imaging, Dermatology, Segmentation, Benchmarking]
+featured: true
 ---
 
     ---
     project status: completed baseline + active extensions
     ---
-
-{% include project_links.liquid %}
 
 ## Overview
 

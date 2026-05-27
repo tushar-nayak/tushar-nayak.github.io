@@ -33,6 +33,8 @@ Always happy to connect with curious minds! Feel free to reach out on email: tus
 
 {% include research_map.liquid %}
 
+{% include featured_projects.liquid %}
+
 <details>
   <summary>Read more...</summary>
   

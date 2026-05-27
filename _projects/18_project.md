@@ -6,11 +6,11 @@ img: assets/img/newplot.png
 importance: 2
 category: personal projects
 github: https://github.com/tushar-nayak/vascular-reconstruction
+status: research prototype
+tags: [3D Vision, Medical Imaging, Vascular Reconstruction, Differentiable Rendering]
 ---
 
 ## project status: research prototype
-
-{% include project_links.liquid %}
 
 This project explores sparse-view 3D coronary vessel reconstruction from angiographic projections.
 

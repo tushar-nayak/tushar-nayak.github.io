@@ -1,0 +1,16 @@
+{% if page.status or page.tags or page.website or page.github or page.report %}
+  <div class="project-meta">
+    {% if page.status or page.tags %}
+      <div class="project-meta__badges">
+        {% if page.status %}
+          <span class="project-meta__status">{{ page.status }}</span>
+        {% endif %}
+        {% for tag in page.tags %}
+          <span class="project-meta__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% include project_links.liquid %}
+  </div>
+{% endif %}

@@ -5,6 +5,8 @@ description: Research at Biomedical Computing Lab
 img: assets/img/lc.png
 importance: 4
 category: at manipal
+status: published
+tags: [Pathology, Histopathology, Cancer Detection, Deep Learning]
 related_publications: true
 ---
 

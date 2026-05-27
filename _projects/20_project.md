@@ -6,11 +6,11 @@ img: assets/img/oscc2.png
 importance: 4
 category: personal projects
 github: https://github.com/tushar-nayak/glass-path
+status: prototype
+tags: [Pathology, Federated Learning, Graph Learning, Concept Bottlenecks]
 ---
 
 ## project status: prototype
-
-{% include project_links.liquid %}
 
 GLASS Path is a graph-based learning architecture for spatial structures in pathology.
 

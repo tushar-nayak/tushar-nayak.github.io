@@ -7,11 +7,12 @@ importance: 2
 category: personal projects
 github: https://github.com/tushar-nayak/cardiac-reconstruction-evolved
 website: https://tushar-nayak.github.io/cardiac-reconstruction-evolved/
+status: active extension
+tags: [3D Vision, Medical Imaging, Cardiac Reconstruction, Gaussian Fields]
+featured: true
 ---
 
 ## project status: active extension
-
-{% include project_links.liquid %}
 
 CardiacReconstruction-Evolved extends the sparse 2D echo to 3D reconstruction line into a stabilized Gaussian occupancy formulation.
 

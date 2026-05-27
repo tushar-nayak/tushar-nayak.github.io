@@ -5,6 +5,9 @@ description: Course Project for Image Based Computational Modelling & Analysis
 img: assets/img/cma.png
 importance: 3
 category: course projects
+report: https://tushar-nayak.github.io/assets/pdf/42640.pdf
+status: completed
+tags: [Medical Imaging, 3D Vision, CT, Course Project]
 ---
 
 project status: completed

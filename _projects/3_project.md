@@ -6,6 +6,9 @@ img: assets/img/fmri.png
 # redirect: https://unsplash.com
 importance: 6
 category: course projects
+report: https://tushar-nayak.github.io/assets/pdf/42668.pdf
+status: completed
+tags: [Medical Imaging, fMRI, Neuroimaging, Course Project]
 ---
 
 project status: completed (september - december 2024)
