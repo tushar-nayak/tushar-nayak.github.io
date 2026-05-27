@@ -5,15 +5,12 @@
 {% assign total_featured = featured_research.size | plus: featured_nonresearch.size %}
 
 {% if total_featured > 0 %}
-  <section class="featured-projects" aria-labelledby="featured-projects-title">
-    <div class="featured-projects__header">
-      <p class="featured-projects__eyebrow">Featured Work</p>
-      <h2 id="featured-projects-title">Selected projects</h2>
-    </div>
-
+  <section class="featured-projects">
     {% if featured_research.size > 0 %}
       <div class="featured-projects__group">
-        <p class="featured-projects__group-label">Featured research</p>
+        <h2>
+          <a href="{{ '/projects/' | relative_url }}" style="color: inherit">featured research</a>
+        </h2>
         <div class="featured-projects__grid">
           {% for project in featured_research %}
             <a class="featured-project" href="{{ project.url | relative_url }}">
@@ -40,7 +37,9 @@
 
     {% if featured_nonresearch.size > 0 %}
       <div class="featured-projects__group">
-        <p class="featured-projects__group-label">Featured projects</p>
+        <h2>
+          <a href="{{ '/projects/' | relative_url }}" style="color: inherit">featured projects</a>
+        </h2>
         <div class="featured-projects__grid">
           {% for project in featured_nonresearch limit: 4 %}
             <a class="featured-project" href="{{ project.url | relative_url }}">

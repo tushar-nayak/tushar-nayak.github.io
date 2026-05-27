@@ -813,15 +813,6 @@ footer.sticky-bottom {
   line-height: 1.55;
 }
 
-.research-map__eyebrow {
-  margin: 0;
-  color: var(--global-theme-color);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .research-map__list {
   display: grid;
   gap: 0.75rem;
@@ -830,7 +821,6 @@ footer.sticky-bottom {
 .research-map__item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 1rem;
   padding: 0.95rem 1rem;
   border: 1px solid var(--global-divider-color);
@@ -847,6 +837,23 @@ footer.sticky-bottom {
     border-color: var(--global-theme-color);
     box-shadow: 0 8px 20px rgba($black-color, 0.06);
     color: var(--global-text-color);
+  }
+}
+
+.research-map__icon {
+  display: inline-flex;
+  flex: 0 0 2.85rem;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: 0.9rem;
+  color: var(--global-theme-color);
+  background: rgba($blue-color, 0.08);
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -867,16 +874,6 @@ footer.sticky-bottom {
   }
 }
 
-.research-map__item-links {
-  flex: 0 0 auto;
-  max-width: 16rem;
-  color: var(--global-theme-color);
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1.4;
-  text-align: right;
-}
-
 .featured-projects {
   margin: 2.25rem 0 2.75rem;
 }
@@ -885,34 +882,11 @@ footer.sticky-bottom {
   margin-top: 1.35rem;
 }
 
-.featured-projects__group-label {
-  margin: 0 0 0.8rem;
-  color: var(--global-theme-color);
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.featured-projects__header {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
-
+.featured-projects__group {
   h2 {
-    margin: 0;
+    margin-bottom: 0.8rem;
     font-size: 1.35rem;
   }
-}
-
-.featured-projects__eyebrow {
-  margin: 0;
-  color: var(--global-theme-color);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .featured-projects__grid {
@@ -1030,16 +1004,6 @@ html[data-theme="dark"] {
 }
 
 @media (max-width: 991px) {
-  .research-map__item {
-    display: block;
-  }
-
-  .research-map__item-links {
-    display: block;
-    margin-top: 0.55rem;
-    text-align: left;
-  }
-
   .featured-projects__grid {
     grid-template-columns: 1fr;
   }
