@@ -1162,203 +1162,198 @@ html[data-theme="dark"] {
   margin: 2rem 0 2.5rem;
   padding: 1.1rem 0 0;
   border-top: 1px solid var(--global-divider-color);
-}
+  --gh-calendar-0: #ebedf0;
+  --gh-calendar-1: #9be9a8;
+  --gh-calendar-2: #40c463;
+  --gh-calendar-3: #30a14e;
+  --gh-calendar-4: #216e39;
 
-.contrib-graph__eyebrow {
-  margin: 0;
-  color: var(--global-theme-color);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+  .js-yearly-contributions {
+    color: var(--global-text-color);
+  }
 
-.contrib-graph__title {
-  margin: 0.15rem 0 1rem;
-  font-size: 1.3rem;
-}
+  .position-relative {
+    position: relative;
+  }
 
-.contrib-graph__year {
-  color: var(--global-text-color-light);
-  font-weight: 400;
-}
+  .f4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 
-.contrib-graph__loading,
-.contrib-graph__error {
-  font-size: 0.88rem;
-  color: var(--global-text-color-light);
-  padding: 1rem 0;
-}
+  .text-normal {
+    font-weight: 400;
+  }
 
-// Scrollable wrapper so the calendar never breaks the page on small screens
-.contrib-graph__wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
 
-.contrib-graph__canvas-wrap {
-  display: inline-block;
-  min-width: 100%;
-}
+  .border {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+  }
 
-// Month labels row — same grid as the cell columns
-.contrib-graph__months {
-  --cg-cell-size: 10px;
-  --cg-gap: 2px;
-  display: grid;
-  grid-template-columns: repeat(53, var(--cg-cell-size));
-  gap: 0 var(--cg-gap);
-  margin-left: calc(2ch + var(--cg-gap) * 2); // align with day-label offset
-  margin-bottom: 4px;
+  .graph-before-activity-overview {
+    margin-top: 0.5rem;
+  }
 
-  span {
-    font-size: 0.7rem;
-    color: var(--global-text-color-light);
-    white-space: nowrap;
+  .js-calendar-graph {
     overflow: hidden;
+    padding-top: 0.25rem;
   }
-}
 
-// Body: day labels + cell grid side-by-side
-.contrib-graph__body {
-  display: flex;
-  gap: 3px;
-  align-items: flex-start;
-}
+  .js-calendar-graph > div {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.contrib-graph__days {
-  --cg-cell-size: 10px;
-  --cg-gap: 2px;
-  display: grid;
-  grid-template-rows: repeat(7, var(--cg-cell-size));
-  gap: var(--cg-gap);
-  padding-top: 1px;
+  .ContributionCalendar-grid {
+    width: max-content;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 4px;
+    overflow: hidden;
+    position: relative;
+  }
 
-  span {
-    font-size: 0.62rem;
-    line-height: var(--cg-cell-size);
+  .ContributionCalendar-label {
     color: var(--global-text-color-light);
+    font-size: 12px;
     white-space: nowrap;
-
-    &:empty {
-      visibility: hidden; // Sun, Tue, Thu, Sat are hidden for compactness
-    }
-  }
-}
-
-// The main grid — JS sets grid-template-columns dynamically
-.contrib-graph__grid {
-  --cg-cell-size: 10px;
-  --cg-gap: 2px;
-  display: grid;
-  grid-template-rows: repeat(7, var(--cg-cell-size));
-  grid-auto-flow: column;
-  gap: var(--cg-gap);
-}
-
-.cg-col {
-  display: grid;
-  grid-template-rows: repeat(7, var(--cg-cell-size));
-  gap: var(--cg-gap);
-}
-
-// Individual day cell
-.cg-cell {
-  display: block;
-  width: var(--cg-cell-size, 10px);
-  height: var(--cg-cell-size, 10px);
-  border-radius: 2px;
-
-  background-color: #ebedf0; // overridden by JS
-  transition: opacity 0.12s ease;
-
-  &:not(.cg-cell--pad):hover {
-    outline: 1px solid rgba(0, 0, 0, 0.3);
-    outline-offset: -1px;
-    opacity: 0.85;
-    cursor: default;
   }
 
-  &.cg-cell--pad {
-    visibility: hidden;
-  }
-}
-
-html[data-theme="dark"] {
-  .cg-cell:not(.cg-cell--pad):hover {
-    outline-color: rgba(255, 255, 255, 0.25);
-  }
-}
-
-// Footer: "View on GitHub" link + Less/More legend
-.contrib-graph__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 0.6rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.contrib-graph__link {
-  font-size: 0.78rem;
-  color: var(--global-theme-color);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.contrib-graph__legend {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-
-  span {
-    font-size: 0.72rem;
-    color: var(--global-text-color-light);
-  }
-
-  .cg-cell {
+  .ContributionCalendar-day {
+    display: block;
     width: 11px;
     height: 11px;
+    border-radius: 2px;
+    background-color: var(--gh-calendar-0);
+    outline: 1px solid rgba($black-color, 0.04);
+    outline-offset: -1px;
+    transition:
+      outline-color 0.08s ease,
+      box-shadow 0.08s ease;
+
+    &[data-level="0"] {
+      background-color: var(--gh-calendar-0);
+    }
+
+    &[data-level="1"] {
+      background-color: var(--gh-calendar-1);
+    }
+
+    &[data-level="2"] {
+      background-color: var(--gh-calendar-2);
+    }
+
+    &[data-level="3"] {
+      background-color: var(--gh-calendar-3);
+    }
+
+    &[data-level="4"] {
+      background-color: var(--gh-calendar-4);
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid rgba($black-color, 0.35);
+      outline-offset: 1px;
+      box-shadow: none;
+    }
   }
 
-  // Static legend cells — colour set by JS palette on load + theme switch
-  .cg-cell[data-level="0"] {
-    background-color: #ebedf0;
+  .width-full.f6.px-0.tmp-px-md-5.py-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.5rem 16px 0.75rem;
+    font-size: 12px;
   }
-  .cg-cell[data-level="1"] {
-    background-color: #9be9a8;
+
+  .float-left,
+  .float-right {
+    float: none;
   }
-  .cg-cell[data-level="2"] {
-    background-color: #40c463;
+
+  .float-right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--global-text-color-light);
   }
-  .cg-cell[data-level="3"] {
-    background-color: #30a14e;
+
+  .mr-1,
+  .tmp-mr-1 {
+    margin-right: 0.25rem;
   }
-  .cg-cell[data-level="4"] {
-    background-color: #216e39;
+
+  .Link--muted {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  tool-tip {
+    display: none;
   }
 }
 
-html[data-theme="dark"] {
-  .contrib-graph__legend {
-    .cg-cell[data-level="0"] {
-      background-color: #161b22;
+.contrib-graph__error {
+  margin: 0;
+  padding: 1rem 0;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+
+html[data-theme="dark"] .contrib-graph {
+  --gh-calendar-0: #161b22;
+  --gh-calendar-1: #0e4429;
+  --gh-calendar-2: #006d32;
+  --gh-calendar-3: #26a641;
+  --gh-calendar-4: #39d353;
+
+  .ContributionCalendar-day {
+    outline-color: rgba($white-color, 0.06);
+
+    &:hover,
+    &:focus {
+      outline-color: rgba($white-color, 0.35);
     }
-    .cg-cell[data-level="1"] {
-      background-color: #0e4429;
+  }
+}
+
+@media (max-width: 767px) {
+  .contrib-graph {
+    .js-calendar-graph > div {
+      padding: 0 8px;
     }
-    .cg-cell[data-level="2"] {
-      background-color: #006d32;
-    }
-    .cg-cell[data-level="3"] {
-      background-color: #26a641;
-    }
-    .cg-cell[data-level="4"] {
-      background-color: #39d353;
+
+    .width-full.f6.px-0.tmp-px-md-5.py-1 {
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 }
