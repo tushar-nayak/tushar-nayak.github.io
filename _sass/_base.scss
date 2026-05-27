@@ -478,8 +478,8 @@ footer.fixed-bottom {
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
   }
 
@@ -501,6 +501,43 @@ footer.sticky-bottom {
 
   .container {
     text-align: center;
+  }
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-footer__links,
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.site-footer__links {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.site-footer__meta {
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-footer__links,
+  .site-footer__meta {
+    justify-content: center;
   }
 }
 

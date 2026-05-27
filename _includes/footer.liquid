@@ -1,14 +1,40 @@
+{% assign social_data = site.data.socials %}
+
 {% capture footer_contents %}
-  &copy; Copyright {{ site.time | date: '%Y' }}
-  {{ site.first_name }}
-  {{ site.middle_name }}
-  {{ site.last_name }}. {{ site.footer_text }}
-  {% if site.impressum_path %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-  {% endif %}
-  {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
-  {% endif %}
+  <div class="site-footer">
+    <div class="site-footer__links">
+      {% if social_data.email %}
+        <a href="mailto:{{ social_data.email | encode_email }}">email</a>
+      {% endif %}
+      <a href="{{ '/cv/' | relative_url }}">cv</a>
+      {% if social_data.github_username %}
+        <a href="https://github.com/{{ social_data.github_username }}" target="_blank" rel="noopener noreferrer">github</a>
+      {% endif %}
+      {% if social_data.scholar_userid %}
+        <a
+          href="https://scholar.google.com/citations?user={{ social_data.scholar_userid }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >scholar</a>
+      {% endif %}
+      {% if social_data.linkedin_username %}
+        <a
+          href="https://www.linkedin.com/in/{{ social_data.linkedin_username }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >linkedin</a>
+      {% endif %}
+    </div>
+
+    <div class="site-footer__meta">
+      <span>
+        &copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+      </span>
+      {% if site.last_updated %}
+        <span>Last updated: {{ 'now' | date: '%B %d, %Y' }}</span>
+      {% endif %}
+    </div>
+  </div>
 {% endcapture %}
 
 {% if site.footer_fixed %}
