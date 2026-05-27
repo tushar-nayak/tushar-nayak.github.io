@@ -757,6 +757,18 @@ footer.sticky-bottom {
   margin: 2.25rem 0 2.75rem;
 }
 
+.featured-projects__group + .featured-projects__group {
+  margin-top: 1.35rem;
+}
+
+.featured-projects__group-label {
+  margin: 0 0 0.8rem;
+  color: var(--global-theme-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .featured-projects__header {
   display: flex;
   align-items: end;
