@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Starting local Jekyll preview..."
+echo "Site URL: http://localhost:8080"
+echo "Stop with Ctrl+C"
+
+docker compose up "$@"

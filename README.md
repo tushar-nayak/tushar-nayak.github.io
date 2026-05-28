@@ -9,6 +9,12 @@ This site is built with [Jekyll](https://jekyllrb.com/) on top of the [al-folio]
 ### Recommended: Docker
 
 ```bash
+./bin/preview
+```
+
+or directly:
+
+```bash
 docker compose up
 ```
 

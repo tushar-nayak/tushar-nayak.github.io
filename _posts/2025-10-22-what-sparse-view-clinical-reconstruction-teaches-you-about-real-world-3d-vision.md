@@ -5,6 +5,7 @@ date: 2025-10-22 10:00:00
 description: Why sparse clinical imaging is a very good way to stop romanticizing 3D vision.
 tags: 3d-vision medical-imaging reconstruction echocardiography geometry
 categories: research
+featured_project: 4_project.md
 ---
 
 If you spend enough time around 3D vision papers, it is easy to get used to nice assumptions.

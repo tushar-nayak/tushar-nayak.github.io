@@ -5,6 +5,7 @@ date: 2026-04-07 10:00:00
 description: Why high scores in biomedical AI can still leave you with a model that explains very little and generalizes even less.
 tags: biomedical-ai evaluation xai metrics pathology medical-imaging
 categories: research
+featured_project: 7_project.md
 ---
 
 Biomedical AI has a bad habit of producing numbers that look comforting before the model has really earned that comfort.

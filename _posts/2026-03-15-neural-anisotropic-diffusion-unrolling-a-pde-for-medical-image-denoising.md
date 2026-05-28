@@ -7,6 +7,7 @@ description: How an edge-aware PDE can be turned into a neural network that remo
 tags: medical-imaging pdes denoising deep-learning
 categories: research
 featured: true
+featured_project: 10_project.md
 ---
 
 Medical image denoising sounds simple until you actually care about the anatomy.

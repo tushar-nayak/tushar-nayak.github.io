@@ -6,6 +6,7 @@ description: Why anatomy that moves, stretches, and bends turns guidance into a 
 tags: surgical robotics medical-imaging deformation registration
 categories: research
 featured: true
+featured_project: 1_project.md
 ---
 
 Image-guided robotic surgery only works if the model of the body still makes sense once the procedure starts. That is where things get messy fast.

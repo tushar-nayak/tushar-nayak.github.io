@@ -5,6 +5,7 @@ date: 2026-01-15 10:00:00
 description: Why reconstructing a 3D heart from just a few echocardiography views is much more annoying than it sounds.
 tags: medical-imaging 3d-vision cardiac-reconstruction echocardiography
 categories: research
+featured_project: 4_project.md
 ---
 
 Reconstructing a 3D heart from a few 2D echo views sounds straightforward until you actually try to do it. Then the problem gets annoying in the usual research way.

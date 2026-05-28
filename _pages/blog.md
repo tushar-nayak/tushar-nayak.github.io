@@ -29,6 +29,41 @@ pagination:
   </div>
   {% endif %}
 
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
+{% assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+{% if posts_by_year.size > 0 %}
+
+  <section class="blog-calendar">
+    <div class="blog-calendar__header">
+      <h3>publishing calendar</h3>
+      <p>a small archive of when posts went up.</p>
+    </div>
+    <div class="blog-calendar__years">
+      {% for year_group in posts_by_year %}
+        <div class="blog-calendar__year">
+          <a class="blog-calendar__year-link" href="{{ year_group.name | prepend: '/blog/' | relative_url }}">{{ year_group.name }}</a>
+          <div class="blog-calendar__months">
+            {% for month_num in (1..12) %}
+              {% capture month_key %}{% if month_num < 10 %}0{% endif %}{{ month_num }}{% endcapture %}
+              {% assign post_count = 0 %}
+              {% for post in year_group.items %}
+                {% assign post_month = post.date | date: '%m' %}
+                {% if post_month == month_key %}
+                  {% assign post_count = post_count | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+              <div class="blog-calendar__month{% if post_count > 0 %} blog-calendar__month--active{% endif %}">
+                <span class="blog-calendar__month-label">{{ month_names[forloop.index0] }}</span>
+                <span class="blog-calendar__month-count">{{ post_count }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
   <div class="tag-category-list">

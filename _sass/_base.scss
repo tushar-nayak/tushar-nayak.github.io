@@ -788,6 +788,108 @@ footer.sticky-bottom {
   }
 }
 
+.blog-calendar {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1rem 0 1.25rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &__header {
+    margin-bottom: 0.9rem;
+
+    h3 {
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+      text-transform: lowercase;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: var(--global-text-color-light);
+      font-size: 0.9rem;
+    }
+  }
+
+  &__years {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  &__year {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  &__year-link {
+    width: fit-content;
+    font-weight: 600;
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+
+  &__months {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  &__month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.42rem 0.55rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.8rem;
+    background-color: var(--global-bg-color);
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+  }
+
+  &__month--active {
+    background-color: var(--global-card-bg-color);
+    color: var(--global-text-color);
+  }
+
+  &__month-label {
+    font-weight: 500;
+  }
+
+  &__month-count {
+    min-width: 1.15rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.post-featured-project {
+  margin-top: 2.5rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-calendar {
+    &__months {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
 .pagination {
   .page-item {
     .page-link {

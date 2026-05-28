@@ -5,6 +5,7 @@ date: 2025-12-14 10:00:00
 description: How image processing, pathology work, and medical AI gradually pulled me toward robotics.
 tags: robotics biomedical-engineering medical-imaging research journey
 categories: research
+featured_project: 1_project.md
 ---
 
 I did not start out thinking, “yes, clearly the destination is image-guided robotic surgery.”

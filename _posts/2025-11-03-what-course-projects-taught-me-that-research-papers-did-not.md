@@ -5,6 +5,7 @@ date: 2025-11-03 10:00:00
 description: A few things that only really sink in once you try to make the method run yourself.
 tags: research course-projects 3d-vision medical-imaging learning
 categories: research
+featured_project: 4_project.md
 ---
 
 Course projects are a good way to find out which parts of a paper you actually understood and which parts you just nodded at.

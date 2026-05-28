@@ -5,6 +5,7 @@ date: 2026-02-06 10:00:00
 description: Why putting segmentation, spatial preprocessing, and surface export in one pipeline is much more useful than training a model in isolation.
 tags: medical-imaging ct segmentation monai simpleitk vtk
 categories: research
+featured_project: 12_project.md
 ---
 
 Training a segmentation model is one thing. Building a pipeline you can actually run end to end on real CT volumes is another thing entirely.

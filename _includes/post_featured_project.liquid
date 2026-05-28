@@ -1,0 +1,12 @@
+{% if page.featured_project %}
+  {% assign featured_project_match = site.projects | where_exp: 'project', 'project.path contains page.featured_project' | first %}
+  {% if featured_project_match %}
+    <section class="post-featured-project">
+      <h2>featured project</h2>
+      <div class="row row-cols-1">
+        {% assign project = featured_project_match %}
+        {% include projects_horizontal.liquid %}
+      </div>
+    </section>
+  {% endif %}
+{% endif %}

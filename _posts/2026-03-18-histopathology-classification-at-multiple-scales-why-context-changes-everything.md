@@ -7,6 +7,7 @@ description: Why looking at pathology at more than one magnification can change 
 tags: pathology histopathology multi-scale classification deep-learning
 categories: research
 featured: true
+featured_project: 19_project.md
 ---
 
 Pathology is one of those places where the answer changes depending on how far in you zoom.

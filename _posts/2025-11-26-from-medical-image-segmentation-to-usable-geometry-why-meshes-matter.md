@@ -5,6 +5,7 @@ date: 2025-11-26 10:00:00
 description: Why a segmentation mask is often only the middle of the pipeline, not the end of it.
 tags: medical-imaging segmentation geometry meshes vtk surface-export
 categories: research
+featured_project: 12_project.md
 ---
 
 Segmentation gets a lot of attention because it is easy to explain and easy to score. Feed in an image, predict a mask, compute Dice, move on.
