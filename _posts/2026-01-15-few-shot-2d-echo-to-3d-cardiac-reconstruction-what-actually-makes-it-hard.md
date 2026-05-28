@@ -26,6 +26,28 @@ The first trap is thinking this is just a geometry problem. It is not. If you ha
 
 That means the model has to do two things at once. It has to fit the views you do have, and it has to fill in the rest without going off into fantasy land. That second part is where a lot of these methods fall apart.
 
+## A live look at the 3D part
+
+<iframe
+  src="https://tushar-nayak.github.io/cardiac-volume-reconstruction/checkpoints/html_visualizations2/MITEA_020_scan1_ED.nii_mixed_3d_mesh.html"
+  title="Interactive 3D cardiac reconstruction viewer"
+  loading="lazy"
+  style="width: 100%; height: min(72vh, 760px); border: 0; border-radius: 12px; background: white;"
+></iframe>
+
+<div class="caption">
+    The interactive 3D view makes the main issue pretty obvious: the reconstruction is only as good as the tiny set of slices you started with.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/l3d2.png" title="Middle slice ground truth versus reconstruction" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The slice-level comparison is the other half of the story. It is where you see whether the 3D shape is actually respecting the 2D evidence.
+</div>
+
 ## The views are sparse for a reason
 
 Echocardiography is widely available, which is great. The downside is that the data is not as clean or complete as you would like. You often only get a few standard views, and each one only shows a slice of the anatomy. So the model has to make a lot of educated guesses.
@@ -41,6 +63,14 @@ The obvious answer is to learn a shared cardiac prior from a bigger dataset. Tha
 But a global prior alone is not the full answer. Real patients are not average cases. Their anatomy has its own quirks, and the model still has to adapt to that. So if you stop at the population prior, you get something that is often plausible but not quite right for the person in front of you.
 
 That is why test-time refinement matters. It is basically the part where the model says, “okay, I know what hearts generally look like, but let me adjust this one to the actual patient instead of pretending they are all the same.”
+
+## Why the follow-up version exists
+
+The newer Gaussian occupancy version is basically trying to make the same story a little more stable.
+
+Instead of leaning only on an implicit shape prior, it uses stabilized Gaussian occupancy fields, differentiable slice supervision, and mesh extraction so the reconstruction is easier to inspect. That is useful because it gives you a more direct handle on what the model is doing when the slices are sparse and the pose is not perfect.
+
+The nice part is that the goal did not really change. It is still the same problem: get a believable 3D heart out of limited echo. The difference is that the newer formulation makes the reconstruction path a bit less fragile and the output easier to evaluate.
 
 ## Pose is half the battle
 
