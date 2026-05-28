@@ -9,6 +9,12 @@ nav_order: 6
 
 This page is mostly a record of the courses and workshops I have helped teach so far. A lot of it has been course support, technical mentoring, assignment design, and helping make difficult material feel a little less hostile.
 
+<p>
+  <a href="#open-horizon-robotics">open horizon</a> ·
+  <a href="#carnegie-mellon-university">cmu</a> ·
+  <a href="#manipal-institute-of-technology">manipal</a>
+</p>
+
 ## Open Horizon Robotics
 
 ### open-source perception curriculum [github](https://github.com/openhorizonrobotics/perception)
@@ -19,7 +25,8 @@ What I like about this kind of work is that it forces you to explain things clea
 
 ## Carnegie Mellon University
 
-### 1. Machine Learning in Experimental Biomedical Engineering Research
+<details open>
+  <summary><strong>1. Machine Learning in Experimental Biomedical Engineering Research</strong></summary>
 
 `Graduate` · `Spring 2026` · `Dr. Newell Washburn`  
 Department of Biomedical Engineering, College of Engineering
@@ -30,7 +37,10 @@ This course introduces students to machine learning in experimental BME settings
 
 What makes this course interesting is that it stays grounded in experimental constraints instead of pretending every biomedical problem comes with a huge clean dataset.
 
-### 2. Computer Vision for Engineers [course](https://www.andrew.cmu.edu/course/24-678/) [syllabus](https://tushar-nayak.github.io/assets/pdf/24678f25.pdf)
+</details>
+
+<details>
+  <summary><strong>2. Computer Vision for Engineers</strong> <a href="https://www.andrew.cmu.edu/course/24-678/">course</a> <a href="https://tushar-nayak.github.io/assets/pdf/24678f25.pdf">syllabus</a></summary>
 
 `Graduate` · `Fall 2025` · `Dr. Kenji Shimada`  
 Department of Mechanical Engineering, College of Engineering
@@ -39,7 +49,10 @@ This course covers the fundamentals of computer vision and their engineering app
 
 The nice part of this course is that it moves back and forth between theory and implementation. Students do not just learn the concepts in lecture, but also build computational methods through weekly assignments and project work.
 
-### 3. Fundamentals of Computational Biomedical Engineering [syllabus](https://tushar-nayak.github.io/assets/pdf/42675F25.pdf)
+</details>
+
+<details>
+  <summary><strong>3. Fundamentals of Computational Biomedical Engineering</strong> <a href="https://tushar-nayak.github.io/assets/pdf/42675F25.pdf">syllabus</a></summary>
 
 `Graduate` · `Fall 2025` · `Dr. Jason Szafron`  
 Department of Biomedical Engineering, College of Engineering
@@ -48,7 +61,10 @@ This course is meant as a bridge for students entering biomedical computing with
 
 I like courses like this because they do something very practical: they help students stop seeing computation as a separate skill and start using it as part of normal engineering work.
 
-### 4. Applied Deep Learning [syllabus](https://tushar-nayak.github.io/assets/pdf/17644s25.pdf)
+</details>
+
+<details>
+  <summary><strong>4. Applied Deep Learning</strong> <a href="https://tushar-nayak.github.io/assets/pdf/17644s25.pdf">syllabus</a></summary>
 
 `Graduate` · `Spring 2025` · `Dr. Clarence Worrell`  
 Department of Software and Societal Systems, School of Computer Science
@@ -57,9 +73,12 @@ This course introduces deep learning with a strong software-engineering angle. I
 
 The project-based structure is a big part of why the course works. Students see not just how models are built, but also where they break, overfit, or become awkward to deploy.
 
+</details>
+
 ## Manipal Institute of Technology
 
-### BioInnovate technical workshop series
+<details open>
+  <summary><strong>BioInnovate technical workshop series</strong></summary>
 
 Conducted through IEEE Engineering in Medicine and Biology Society, Student Chapter Manipal
 
@@ -89,3 +108,4 @@ That was probably my first real experience with teaching as something more than 
 <div class="caption">
     A few workshop photos from the BioInnovate series.
 </div>
+</details>
