@@ -72,37 +72,37 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-",
+            },{id: "post-histopathology-classification-at-multiple-scales-why-context-changes-everything",
         
-          title: "",
+          title: "histopathology classification at multiple scales: why context changes everything",
         
-        description: "",
+        description: "Why looking at pathology at more than one magnification can change the answer entirely.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-03-18-histopathology-classification-at-multiple-scales-why-context-changes-everything/";
+            window.location.href = "/blog/2026/histopathology-classification-at-multiple-scales-why-context-changes-everything/";
           
         },
-      },{id: "post-",
+      },{id: "post-neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising",
         
-          title: "",
+          title: "neural anisotropic diffusion: unrolling a pde for medical image denoising",
         
-        description: "",
+        description: "How an edge-aware PDE can be turned into a neural network that removes noise without destroying the anatomy that matters.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-03-15-neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising/";
+            window.location.href = "/blog/2026/neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising/";
           
         },
-      },{id: "post-",
+      },{id: "post-few-shot-2d-echo-to-3d-cardiac-reconstruction-what-actually-makes-it-hard",
         
-          title: "",
+          title: "few-shot 2d echo to 3d cardiac reconstruction: what actually makes it hard",
         
-        description: "",
+        description: "Why reconstructing a 3D heart from just a few echocardiography views is much more annoying than it sounds.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-01-15-few-shot-2d-echo-to-3d-cardiac-reconstruction-what-actually-makes-it-hard/";
+            window.location.href = "/blog/2026/few-shot-2d-echo-to-3d-cardiac-reconstruction-what-actually-makes-it-hard/";
           
         },
       },{id: "post-why-deformation-is-the-hard-problem-in-image-guided-robotic-surgery",
