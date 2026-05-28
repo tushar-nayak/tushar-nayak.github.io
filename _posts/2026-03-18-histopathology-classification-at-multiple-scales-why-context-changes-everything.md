@@ -13,6 +13,8 @@ Pathology is one of those places where the answer changes depending on how far i
 
 At low magnification, you see the bigger layout of the tissue. At high magnification, you start seeing the cellular details that separate one class from another. If you only use one view, you are basically asking the model to guess with part of the story missing.
 
+## histopathology classification at multiple scales
+
 ## Why context keeps changing the answer
 
 That’s why multi-scale histopathology matters.

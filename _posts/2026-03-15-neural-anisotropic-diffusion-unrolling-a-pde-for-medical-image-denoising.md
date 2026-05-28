@@ -13,6 +13,8 @@ Medical image denoising sounds simple until you actually care about the anatomy.
 
 A noisy MRI slice is not just annoying to look at. It can hide a boundary, blur a subtle texture, or make a downstream model less reliable. So the goal is not to make the image look cleaner in a cosmetic sense. The goal is to clean it up without messing with the bits that matter.
 
+## neural anisotropic diffusion
+
 ## Why denoising gets awkward fast
 
 That is where anisotropic diffusion starts to make sense.
