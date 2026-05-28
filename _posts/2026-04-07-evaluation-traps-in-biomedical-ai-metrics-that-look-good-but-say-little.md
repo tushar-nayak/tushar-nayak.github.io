@@ -17,17 +17,23 @@ If the dataset is imbalanced, accuracy can look excellent while the clinically i
 
 That is why sensitivity, specificity, precision, F1, ROC-AUC, and class-wise reporting matter. Even then, the numbers can still flatter the model if the split is easy or the data source is too homogeneous.
 
+Calibration also gets ignored more than it should. A model can have decent ranking metrics and still assign confidence in a way that is wildly unhelpful. In biomedical settings, that matters because a system that is confidently wrong is often more dangerous than one that is modestly uncertain.
+
 ## Tile-level success can overstate pathology performance
 
 Pathology is especially good at creating evaluation illusions. If you split at the tile level instead of the patient or slide level, the model can end up seeing almost the same specimen texture in both training and test. Then the score looks amazing and everyone acts surprised.
 
 The model may still have learned something real, but the evaluation is no longer answering the question you think it is answering.
 
+The same thing happens with augmentation and preprocessing leaks. If your normalization pipeline is tuned using information from the whole dataset, or if repeated crops from the same source specimen are spread across folds, the model gets quiet hints it should not have. These are not flashy mistakes, but they can easily inflate performance.
+
 ## Segmentation metrics do not guarantee usable outputs
 
 Dice and IoU are useful, but they are not enough on their own. A segmentation can get a strong overlap score and still produce ugly boundaries, poor topology, or a surface that becomes awkward once converted into geometry.
 
 That is why I like keeping surface-aware checks, distance metrics like HD95, and direct visual audits in the loop. If the downstream artifact is a shape, then the evaluation should eventually look at shape, not just overlap.
+
+Another trap is reporting only macro numbers on anatomies with very uneven difficulty. Large easy structures dominate. Small difficult boundaries get washed out. So if the method is supposed to support surgery, planning, or measurement, I want to know where the errors live spatially, not just what the average says.
 
 ## Classification scores do not tell you why the model won
 
@@ -37,11 +43,15 @@ When a classifier gets a great score on skin lesions, blood smears, or pathology
 
 Explainability is not a magic safety certificate, but it is a good way to catch models that are winning for the wrong reasons.
 
+I also think explainability is most useful when it is used adversarially rather than ceremonially. Not “look, the heatmap exists,” but “does this explanation make me more suspicious of the model?” If the answer is yes, that is already valuable. It means the explanation did its job.
+
 ## External validity is the actual exam
 
 The trap with many biomedical AI results is that the metric is answering, “how well did this model fit this dataset under this split?” The real question is closer to, “what happens when the scanner changes, the stain varies, the patient population shifts, or the workflow gets less curated?”
 
 That is why cross-site validation, patient-wise splits, calibration checks, and failure-case inspection matter so much more than a single pretty number in isolation.
+
+And if the model is meant to be used interactively or as decision support, latency and failure transparency matter too. A model that is slightly more accurate but opaque, brittle, and hard to interrogate may be worse than a simpler one that exposes its limits.
 
 ## Why I am suspicious of neat tables
 
