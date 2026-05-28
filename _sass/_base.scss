@@ -832,10 +832,6 @@ footer.sticky-bottom {
   margin: 2rem 0 2.25rem;
   padding: 1.1rem 0 0;
   border-top: 1px solid var(--global-divider-color);
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .research-map__header {
@@ -857,6 +853,7 @@ footer.sticky-bottom {
 
 .research-map__list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 0.75rem;
 }
 
@@ -869,17 +866,7 @@ footer.sticky-bottom {
   border-radius: 8px;
   color: var(--global-text-color);
   background: var(--global-card-bg-color);
-  transition:
-    transform 0.18s ease,
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
-
-  &:hover {
-    transform: translateY(-1px);
-    border-color: var(--global-theme-color);
-    box-shadow: 0 8px 20px rgba($black-color, 0.06);
-    color: var(--global-text-color);
-  }
+  cursor: default;
 }
 
 .research-map__icon {
@@ -897,6 +884,36 @@ footer.sticky-bottom {
     width: 1.5rem;
     height: 1.5rem;
   }
+}
+
+.research-map__icon--robot {
+  color: #b42318;
+  background: rgba(180, 35, 24, 0.08);
+}
+
+.research-map__icon--imaging {
+  color: #1f6feb;
+  background: rgba(31, 111, 235, 0.08);
+}
+
+.research-map__icon--recon {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.research-map__icon--pathology {
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.research-map__icon--vlm {
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.1);
+}
+
+.research-map__icon--pinn {
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
 }
 
 .research-map__item-main {
