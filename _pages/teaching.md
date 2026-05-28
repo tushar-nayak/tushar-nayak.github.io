@@ -5,6 +5,8 @@ title: teaching
 description: teaching, course support, and workshop work across robotics, vision, and biomedical engineering
 nav: true
 nav_order: 6
+images:
+  lightbox2: true
 ---
 
 This page is mostly a record of the courses and workshops I have helped teach so far. A lot of it has been course support, technical mentoring, assignment design, and helping make difficult material feel a little less hostile.
@@ -17,7 +19,7 @@ This page is mostly a record of the courses and workshops I have helped teach so
 
 ## Open Horizon Robotics
 
-### open-source perception curriculum [github](https://github.com/openhorizonrobotics/perception)
+### open-source perception curriculum <a class="btn btn-sm btn-outline-primary ml-1" href="https://github.com/openhorizonrobotics/perception">github</a>
 
 I am helping author an open-source computer vision course covering classical 2D vision, deep learning for vision, 3D computer vision, vision geometry, image-based localization and mapping, vision synthesis, and perception physics.
 
@@ -40,7 +42,7 @@ What makes this course interesting is that it stays grounded in experimental con
 </details>
 
 <details>
-  <summary><strong>2. Computer Vision for Engineers</strong> <a href="https://www.andrew.cmu.edu/course/24-678/">course</a> <a href="https://tushar-nayak.github.io/assets/pdf/24678f25.pdf">syllabus</a></summary>
+  <summary><strong>2. Computer Vision for Engineers</strong> <a class="btn btn-sm btn-outline-primary ml-1" href="https://www.andrew.cmu.edu/course/24-678/">course</a> <a class="btn btn-sm btn-outline-primary ml-1" href="https://tushar-nayak.github.io/assets/pdf/24678f25.pdf">syllabus</a></summary>
 
 `Graduate` · `Fall 2025` · `Dr. Kenji Shimada`  
 Department of Mechanical Engineering, College of Engineering
@@ -52,7 +54,7 @@ The nice part of this course is that it moves back and forth between theory and 
 </details>
 
 <details>
-  <summary><strong>3. Fundamentals of Computational Biomedical Engineering</strong> <a href="https://tushar-nayak.github.io/assets/pdf/42675F25.pdf">syllabus</a></summary>
+  <summary><strong>3. Fundamentals of Computational Biomedical Engineering</strong> <a class="btn btn-sm btn-outline-primary ml-1" href="https://tushar-nayak.github.io/assets/pdf/42675F25.pdf">syllabus</a></summary>
 
 `Graduate` · `Fall 2025` · `Dr. Jason Szafron`  
 Department of Biomedical Engineering, College of Engineering
@@ -64,7 +66,7 @@ I like courses like this because they do something very practical: they help stu
 </details>
 
 <details>
-  <summary><strong>4. Applied Deep Learning</strong> <a href="https://tushar-nayak.github.io/assets/pdf/17644s25.pdf">syllabus</a></summary>
+  <summary><strong>4. Applied Deep Learning</strong> <a class="btn btn-sm btn-outline-primary ml-1" href="https://tushar-nayak.github.io/assets/pdf/17644s25.pdf">syllabus</a></summary>
 
 `Graduate` · `Spring 2025` · `Dr. Clarence Worrell`  
 Department of Software and Societal Systems, School of Computer Science
@@ -88,24 +90,34 @@ The workshops introduced students to signal processing, image processing, deep l
 
 That was probably my first real experience with teaching as something more than just presenting slides. You learn pretty quickly that getting someone unstuck is a different skill from just knowing the material yourself.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bi-dl.jpg" title="workshop on neural networks" class="img-fluid rounded z-depth-1" %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+    <div class="col mb-4">
+        <a href="{{ 'assets/img/bi-dl.jpg' | relative_url }}" data-lightbox="teaching-gallery" data-title="workshop on neural networks">
+            {% include figure.liquid loading="eager" path="assets/img/bi-dl.jpg" title="workshop on neural networks" class="img-fluid rounded z-depth-1" %}
+        </a>
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bi-pr.jpg" title="workshop on programming" class="img-fluid rounded z-depth-1" %}
+    <div class="col mb-4">
+        <a href="{{ 'assets/img/bi-pr.jpg' | relative_url }}" data-lightbox="teaching-gallery" data-title="workshop on programming">
+            {% include figure.liquid loading="eager" path="assets/img/bi-pr.jpg" title="workshop on programming" class="img-fluid rounded z-depth-1" %}
+        </a>
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bi-mc.jpg" title="workshop on microcontrollers" class="img-fluid rounded z-depth-1" %}
+    <div class="col mb-4">
+        <a href="{{ 'assets/img/bi-mc.jpg' | relative_url }}" data-lightbox="teaching-gallery" data-title="workshop on microcontrollers">
+            {% include figure.liquid loading="eager" path="assets/img/bi-mc.jpg" title="workshop on microcontrollers" class="img-fluid rounded z-depth-1" %}
+        </a>
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bi-linux.jpg" title="workshop on linux" class="img-fluid rounded z-depth-1" %}
+    <div class="col mb-4">
+        <a href="{{ 'assets/img/bi-linux.jpg' | relative_url }}" data-lightbox="teaching-gallery" data-title="workshop on linux">
+            {% include figure.liquid loading="eager" path="assets/img/bi-linux.jpg" title="workshop on linux" class="img-fluid rounded z-depth-1" %}
+        </a>
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bi-ip.jpg" title="workshop on image processing" class="img-fluid rounded z-depth-1" %}
+    <div class="col mb-4">
+        <a href="{{ 'assets/img/bi-ip.jpg' | relative_url }}" data-lightbox="teaching-gallery" data-title="workshop on image processing">
+            {% include figure.liquid loading="eager" path="assets/img/bi-ip.jpg" title="workshop on image processing" class="img-fluid rounded z-depth-1" %}
+        </a>
     </div>
 </div>
 <div class="caption">
-    A few workshop photos from the BioInnovate series.
+    A few workshop photos from the BioInnovate series. Click any image to open the gallery.
 </div>
 </details>
