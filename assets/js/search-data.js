@@ -72,7 +72,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-histopathology-classification-at-multiple-scales-why-context-changes-everything",
+            },{id: "post-how-to-choose-between-explicit-geometry-implicit-fields-and-gaussian-splats",
+        
+          title: "how to choose between explicit geometry, implicit fields, and gaussian splats",
+        
+        description: "A practical way to think about 3D representations when you care about sparse clinical reconstruction and not just rendering demos.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-to-choose-between-explicit-geometry-implicit-fields-and-gaussian-splats/";
+          
+        },
+      },{id: "post-evaluation-traps-in-biomedical-ai-metrics-that-look-good-but-say-little",
+        
+          title: "evaluation traps in biomedical ai: metrics that look good but say little",
+        
+        description: "Why high scores in biomedical AI can still leave you with a model that explains very little and generalizes even less.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/evaluation-traps-in-biomedical-ai-metrics-that-look-good-but-say-little/";
+          
+        },
+      },{id: "post-histopathology-classification-at-multiple-scales-why-context-changes-everything",
         
           title: "histopathology classification at multiple scales: why context changes everything",
         
@@ -92,6 +114,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising/";
+          
+        },
+      },{id: "post-building-a-lung-ct-pipeline-with-monai-simpleitk-and-vtk",
+        
+          title: "building a lung ct pipeline with monai, simpleitk, and vtk",
+        
+        description: "Why putting segmentation, spatial preprocessing, and surface export in one pipeline is much more useful than training a model in isolation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-a-lung-ct-pipeline-with-monai-simpleitk-and-vtk/";
           
         },
       },{id: "post-few-shot-2d-echo-to-3d-cardiac-reconstruction-what-actually-makes-it-hard",
@@ -114,6 +147,50 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/why-deformation-is-hard-in-image-guided-robotic-surgery/";
+          
+        },
+      },{id: "post-how-i-moved-from-biomedical-engineering-into-robotic-surgery-research",
+        
+          title: "how i moved from biomedical engineering into robotic surgery research",
+        
+        description: "How image processing, pathology work, and medical AI gradually pulled me toward robotics.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/how-i-moved-from-biomedical-engineering-into-robotic-surgery-research/";
+          
+        },
+      },{id: "post-from-medical-image-segmentation-to-usable-geometry-why-meshes-matter",
+        
+          title: "from medical image segmentation to usable geometry: why meshes matter",
+        
+        description: "Why a segmentation mask is often only the middle of the pipeline, not the end of it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/from-medical-image-segmentation-to-usable-geometry-why-meshes-matter/";
+          
+        },
+      },{id: "post-what-course-projects-taught-me-that-research-papers-did-not",
+        
+          title: "what course projects taught me that research papers did not",
+        
+        description: "A few things that only really sink in once you try to make the method run yourself.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/what-course-projects-taught-me-that-research-papers-did-not/";
+          
+        },
+      },{id: "post-what-sparse-view-clinical-reconstruction-teaches-you-about-real-world-3d-vision",
+        
+          title: "what sparse-view clinical reconstruction teaches you about real-world 3d vision",
+        
+        description: "Why sparse clinical imaging is a very good way to stop romanticizing 3D vision.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/what-sparse-view-clinical-reconstruction-teaches-you-about-real-world-3d-vision/";
           
         },
       },{id: "books-the-godfather",
