@@ -72,7 +72,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-why-deformation-is-the-hard-problem-in-image-guided-robotic-surgery",
+            },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-03-18-histopathology-classification-at-multiple-scales-why-context-changes-everything/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-03-15-neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising/";
+          
+        },
+      },{id: "post-why-deformation-is-the-hard-problem-in-image-guided-robotic-surgery",
         
           title: "why deformation is the hard problem in image-guided robotic surgery",
         
