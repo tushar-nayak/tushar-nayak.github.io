@@ -147,32 +147,40 @@ pagination:
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}
       </p>
-      <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | relative_url }}">
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+      <p class="post-tags post-tags-index">
+        <span class="post-meta-year">
+          <a href="{{ year | prepend: '/blog/' | relative_url }}">
+            <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+          </a>
+        </span>
 
-          {% if tags != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-              {% endfor %}
-          {% endif %}
+        {% assign visible_categories = post.categories | where_exp: "category", "category != 'research'" %}
 
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-              {% endfor %}
-          {% endif %}
-    </p>
+        {% if tags != "" or visible_categories.size > 0 %}
+          <span class="post-tags-separator">&middot;</span>
+        {% endif %}
+
+        {% if tags != "" %}
+          <span class="post-tag-pills">
+            {% for tag in post.tags limit: 3 %}
+              <a class="post-tag-pill" href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
+                {{ tag }}
+              </a>
+            {% endfor %}
+          </span>
+        {% endif %}
+
+        {% if visible_categories.size > 0 %}
+          <span class="post-tags-separator">&middot;</span>
+          <span class="post-tag-pills post-category-pills">
+            {% for category in visible_categories %}
+              <a class="post-tag-pill post-category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
+                {{ category }}
+              </a>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </p>
 
 {% if post.thumbnail %}
 
