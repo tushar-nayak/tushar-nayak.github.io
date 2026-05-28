@@ -94,6 +94,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/2026-03-15-neural-anisotropic-diffusion-unrolling-a-pde-for-medical-image-denoising/";
           
         },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-01-15-few-shot-2d-echo-to-3d-cardiac-reconstruction-what-actually-makes-it-hard/";
+          
+        },
       },{id: "post-why-deformation-is-the-hard-problem-in-image-guided-robotic-surgery",
         
           title: "why deformation is the hard problem in image-guided robotic surgery",
