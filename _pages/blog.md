@@ -35,8 +35,11 @@ pagination:
 
   <section class="blog-calendar">
     <div class="blog-calendar__header">
-      <h3>publishing calendar</h3>
-      <p>a small archive of when posts went up.</p>
+      <div>
+        <h3>publishing calendar</h3>
+        <p>click a month to filter the blog list.</p>
+      </div>
+      <button class="blog-calendar__reset" type="button" data-blog-filter-reset>show all</button>
     </div>
     <div class="blog-calendar__years">
       {% for year_group in posts_by_year %}
@@ -52,15 +55,25 @@ pagination:
                   {% assign post_count = post_count | plus: 1 %}
                 {% endif %}
               {% endfor %}
-              <div class="blog-calendar__month{% if post_count > 0 %} blog-calendar__month--active{% endif %}">
+              {% capture filter_key %}{{ year_group.name }}-{{ month_key }}{% endcapture %}
+              <button
+                class="blog-calendar__month{% if post_count > 0 %} blog-calendar__month--active{% endif %}"
+                type="button"
+                {% if post_count > 0 %}
+                  data-blog-filter="{{ filter_key }}"
+                {% else %}
+                  disabled
+                {% endif %}
+              >
                 <span class="blog-calendar__month-label">{{ month_names[forloop.index0] }}</span>
                 <span class="blog-calendar__month-count">{{ post_count }}</span>
-              </div>
+              </button>
             {% endfor %}
           </div>
         </div>
       {% endfor %}
     </div>
+    <p class="blog-calendar__active-filter" data-blog-filter-label hidden></p>
   </section>
 {% endif %}
 
@@ -95,7 +108,7 @@ pagination:
 {% if featured_posts.size > 0 %}
 <br>
 
-<div class="container featured-posts">
+<div class="container featured-posts" data-featured-posts>
 {% assign is_even = featured_posts.size | modulo: 2 %}
 <div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
 {% for post in featured_posts %}
@@ -136,7 +149,7 @@ pagination:
 
 {% endif %}
 
-  <ul class="post-list">
+  <ul class="post-list" data-blog-post-list>
 
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}
@@ -152,10 +165,11 @@ pagination:
       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
     {% endif %}
     {% assign year = post.date | date: "%Y" %}
+    {% assign month = post.date | date: "%m" %}
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
 
-    <li>
+    <li data-post-month="{{ year }}-{{ month }}">
 
 {% if post.thumbnail %}
 
@@ -237,3 +251,55 @@ pagination:
 {% endif %}
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = Array.from(document.querySelectorAll("[data-blog-filter]"));
+    const resetButton = document.querySelector("[data-blog-filter-reset]");
+    const filterLabel = document.querySelector("[data-blog-filter-label]");
+    const posts = Array.from(document.querySelectorAll("[data-post-month]"));
+    const featuredPosts = document.querySelector("[data-featured-posts]");
+    const pagination = document.querySelector(".pagination");
+
+    if (!filterButtons.length || !posts.length) return;
+
+    function setFilter(monthKey, labelText) {
+      let visibleCount = 0;
+
+      posts.forEach(function (post) {
+        const isMatch = !monthKey || post.dataset.postMonth === monthKey;
+        post.hidden = !isMatch;
+        if (isMatch) visibleCount += 1;
+      });
+
+      filterButtons.forEach(function (button) {
+        button.classList.toggle("blog-calendar__month--selected", button.dataset.blogFilter === monthKey);
+      });
+
+      if (featuredPosts) featuredPosts.hidden = Boolean(monthKey);
+      if (pagination) pagination.hidden = Boolean(monthKey);
+
+      if (filterLabel) {
+        if (monthKey) {
+          filterLabel.hidden = false;
+          filterLabel.textContent = labelText + " · " + visibleCount + " post" + (visibleCount === 1 ? "" : "s");
+        } else {
+          filterLabel.hidden = true;
+          filterLabel.textContent = "";
+        }
+      }
+    }
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        setFilter(button.dataset.blogFilter, button.querySelector(".blog-calendar__month-label").textContent + " " + button.closest(".blog-calendar__year").querySelector(".blog-calendar__year-link").textContent);
+      });
+    });
+
+    if (resetButton) {
+      resetButton.addEventListener("click", function () {
+        setFilter("", "");
+      });
+    }
+  });
+</script>
