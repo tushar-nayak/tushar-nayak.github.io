@@ -1,6 +1,6 @@
 ---
 layout: post
-title: histopathology classification at multiple scales: why context changes everything
+title: "histopathology classification at multiple scales: why context changes everything"
 date: 2026-03-18 10:00:00
 last_updated: 2026-05-27 10:00:00
 description: Why looking at pathology at more than one magnification can change the answer entirely.

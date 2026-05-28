@@ -1,6 +1,6 @@
 ---
 layout: post
-title: few-shot 2d echo to 3d cardiac reconstruction: what actually makes it hard
+title: "few-shot 2d echo to 3d cardiac reconstruction: what actually makes it hard"
 date: 2026-01-15 10:00:00
 description: Why reconstructing a 3D heart from just a few echocardiography views is much more annoying than it sounds.
 tags: medical-imaging 3d-vision cardiac-reconstruction echocardiography
