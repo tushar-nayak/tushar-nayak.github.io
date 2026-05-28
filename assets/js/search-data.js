@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-why-deformation-is-the-hard-problem-in-image-guided-robotic-surgery",
+        
+          title: "why deformation is the hard problem in image-guided robotic surgery",
+        
+        description: "Why anatomy that moves, stretches, and bends turns guidance into a much harder vision problem than it first appears.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/why-deformation-is-hard-in-image-guided-robotic-surgery/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
