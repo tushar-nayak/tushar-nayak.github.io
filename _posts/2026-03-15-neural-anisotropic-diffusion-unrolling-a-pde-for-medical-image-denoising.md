@@ -2,9 +2,11 @@
 layout: post
 title: neural anisotropic diffusion: unrolling a pde for medical image denoising
 date: 2026-03-15 10:00:00
+last_updated: 2026-05-27 10:00:00
 description: How an edge-aware PDE can be turned into a neural network that removes noise without destroying the anatomy that matters.
 tags: medical-imaging pdes denoising deep-learning
 categories: research
+featured: true
 ---
 
 Medical image denoising sounds simple until you actually care about the anatomy.
