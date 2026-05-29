@@ -1,6 +1,6 @@
 ---
 layout: post
-title: why deformation is the hard problem in image-guided robotic surgery
+title: "why deformation is the hard problem in image-guided robotic surgery"
 date: 2025-12-27 10:00:00
 description: Why anatomy that moves, stretches, and bends turns guidance into a much harder vision problem than it first appears.
 tags: surgical robotics medical-imaging deformation registration
