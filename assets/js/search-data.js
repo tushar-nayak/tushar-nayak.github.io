@@ -72,7 +72,150 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-how-to-choose-between-explicit-geometry-implicit-fields-and-gaussian-splats",
+            },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-05-22-the-technical-thread-connecting-my-projects-geometry-imaging-and-intervention/";
+          
+        },
+      },{id: "post-sparse-view-clinical-reconstruction-explicit-vs-implicit-representations",
+        
+          title: "sparse-view clinical reconstruction: explicit vs implicit representations",
+        
+        description: "Why sparse clinical reconstruction makes representation choice feel less like taste and more like a failure-mode decision.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sparse-view-clinical-reconstruction-explicit-vs-implicit-representations/";
+          
+        },
+      },{id: "post-how-teaching-courses-changed-how-i-think-about-machine-learning-systems",
+        
+          title: "how teaching courses changed how i think about machine learning systems",
+        
+        description: "Why teaching deep learning made me care more about clarity, failure modes, and the parts of ML people usually skip.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-teaching-courses-changed-how-i-think-about-machine-learning-systems/";
+          
+        },
+      },{id: "post-what-i-look-for-in-a-strong-medical-ai-research-problem",
+        
+          title: "what i look for in a strong medical ai research problem",
+        
+        description: "Why the best medical AI problems usually have a real bottleneck, a clear failure mode, and a workflow that needs the output.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-i-look-for-in-a-strong-medical-ai-research-problem/";
+          
+        },
+      },{id: "post-the-gap-between-benchmark-performance-and-clinical-usefulness",
+        
+          title: "the gap between benchmark performance and clinical usefulness",
+        
+        description: "Why a high metric can still leave you with a model that is not ready for the workflow it claims to support.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-gap-between-benchmark-performance-and-clinical-usefulness/";
+          
+        },
+      },{id: "post-why-i-keep-returning-to-geometry-in-biomedical-ai",
+        
+          title: "why i keep returning to geometry in biomedical ai",
+        
+        description: "Why labels are useful, but shape, pose, deformation, and spatial structure keep feeling like the real problem.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/why-i-keep-returning-to-geometry-in-biomedical-ai/";
+          
+        },
+      },{id: "post-five-open-problems-i-care-about-in-image-guided-robotic-intervention",
+        
+          title: "five open problems i care about in image-guided robotic intervention",
+        
+        description: "Five technical problems that keep pulling me back toward surgical perception and geometry.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/five-open-problems-i-care-about-in-image-guided-robotic-intervention/";
+          
+        },
+      },{id: "post-a-short-guide-to-reading-papers-in-surgical-vision",
+        
+          title: "a short guide to reading papers in surgical vision",
+        
+        description: "How I try to read surgical vision papers without getting distracted by clean diagrams and impressive demos.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-short-guide-to-reading-papers-in-surgical-vision/";
+          
+        },
+      },{id: "post-what-makes-a-research-prototype-different-from-a-deployable-clinical-tool",
+        
+          title: "what makes a research prototype different from a deployable clinical tool",
+        
+        description: "Why a promising model still has a long way to go before it becomes something clinicians can rely on.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-makes-a-research-prototype-different-from-a-deployable-clinical-tool/";
+          
+        },
+      },{id: "post-reproducibility-lessons-from-building-multiple-medical-vision-pipelines",
+        
+          title: "reproducibility lessons from building multiple medical vision pipelines",
+        
+        description: "Why repeated pipeline work teaches you to respect paths, splits, metadata, and boring logs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/reproducibility-lessons-from-building-multiple-medical-vision-pipelines/";
+          
+        },
+      },{id: "post-how-i-structure-ablations-in-small-data-medical-imaging-projects",
+        
+          title: "how i structure ablations in small-data medical imaging projects",
+        
+        description: "Why ablations in medical imaging need to be boring, disciplined, and suspicious of lucky splits.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-i-structure-ablations-in-small-data-medical-imaging-projects/";
+          
+        },
+      },{id: "post-when-to-use-cnns-transformers-or-foundation-models-in-medical-imaging",
+        
+          title: "when to use cnns, transformers, or foundation models in medical imaging",
+        
+        description: "Why model choice in medical imaging should start with the data, not the trend.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/when-to-use-cnns-transformers-or-foundation-models-in-medical-imaging/";
+          
+        },
+      },{id: "post-neural-active-contours-why-old-geometry-ideas-still-matter-in-deep-segmentation",
+        
+          title: "neural active contours: why old geometry ideas still matter in deep segmentation",
+        
+        description: "Why contour evolution still has something useful to say in an era of deep segmentation models.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/neural-active-contours-why-old-geometry-ideas-still-matter-in-deep-segmentation/";
+          
+        },
+      },{id: "post-how-to-choose-between-explicit-geometry-implicit-fields-and-gaussian-splats",
         
           title: "how to choose between explicit geometry, implicit fields, and gaussian splats",
         
@@ -81,6 +224,116 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/how-to-choose-between-explicit-geometry-implicit-fields-and-gaussian-splats/";
+          
+        },
+      },{id: "post-federated-graph-learning-for-pathology-why-distribution-shift-matters-more-than-architecture",
+        
+          title: "federated graph learning for pathology: why distribution shift matters more than architecture",
+        
+        description: "Why pathology models fail across sites for reasons that are often bigger than the backbone.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/federated-graph-learning-for-pathology-why-distribution-shift-matters-more-than-architecture/";
+          
+        },
+      },{id: "post-open-vocabulary-surgical-tool-tracking-what-foundation-models-help-with-and-what-they-do-not",
+        
+          title: "open-vocabulary surgical tool tracking: what foundation models help with and what they do...",
+        
+        description: "Why foundation models are useful for surgical tool understanding, but not a replacement for tracking, geometry, and temporal discipline.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/open-vocabulary-surgical-tool-tracking-what-foundation-models-help-with-and-what-they-do-not/";
+          
+        },
+      },{id: "post-deformable-endoscopic-scene-reconstruction-where-current-3d-methods-break",
+        
+          title: "deformable endoscopic scene reconstruction: where current 3d methods break",
+        
+        description: "Why endoscopy is a difficult place for 3D reconstruction methods that assume the world stays still.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deformable-endoscopic-scene-reconstruction-where-current-3d-methods-break/";
+          
+        },
+      },{id: "post-sparse-view-coronary-vessel-reconstruction-from-cta-representation-tradeoffs",
+        
+          title: "sparse-view coronary vessel reconstruction from cta: representation tradeoffs",
+        
+        description: "Why coronary reconstruction depends as much on representation choice as it does on the model.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sparse-view-coronary-vessel-reconstruction-from-cta-representation-tradeoffs/";
+          
+        },
+      },{id: "post-designing-a-reproducible-medical-imaging-project-instead-of-a-one-off-notebook",
+        
+          title: "designing a reproducible medical imaging project instead of a one-off notebook",
+        
+        description: "Why medical imaging projects become more valuable when the pipeline can be rerun without guesswork.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/designing-a-reproducible-medical-imaging-project-instead-of-a-one-off-notebook/";
+          
+        },
+      },{id: "post-what-i-learned-benchmarking-skin-lesion-segmentation-beyond-u-net",
+        
+          title: "what i learned benchmarking skin lesion segmentation beyond u-net",
+        
+        description: "Why comparing skin lesion segmenters is less about naming the newest architecture and more about finding the failure modes.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-i-learned-benchmarking-skin-lesion-segmentation-beyond-u-net/";
+          
+        },
+      },{id: "post-turning-segmentation-masks-into-3d-anatomical-surfaces-for-navigation-workflows",
+        
+          title: "turning segmentation masks into 3d anatomical surfaces for navigation workflows",
+        
+        description: "Why the step from mask to mesh is where a segmentation project starts becoming useful anatomy.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/turning-segmentation-masks-into-3d-anatomical-surfaces-for-navigation-workflows/";
+          
+        },
+      },{id: "post-how-to-think-about-physics-informed-learning-without-the-hype",
+        
+          title: "how to think about physics-informed learning without the hype",
+        
+        description: "Why physics-informed learning is useful when it constrains the right thing, and annoying when it becomes branding.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-to-think-about-physics-informed-learning-without-the-hype/";
+          
+        },
+      },{id: "post-why-pathology-ai-is-not-just-classification-on-patches",
+        
+          title: "why pathology ai is not just classification on patches",
+        
+        description: "Why pathology models need context, scale, and careful evaluation before their scores mean very much.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/why-pathology-ai-is-not-just-classification-on-patches/";
+          
+        },
+      },{id: "post-what-makes-surgical-computer-vision-different-from-standard-vision-benchmarks",
+        
+          title: "what makes surgical computer vision different from standard vision benchmarks",
+        
+        description: "Why surgical vision is not just object detection with more expensive images.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-makes-surgical-computer-vision-different-from-standard-vision-benchmarks/";
           
         },
       },{id: "post-evaluation-traps-in-biomedical-ai-metrics-that-look-good-but-say-little",
