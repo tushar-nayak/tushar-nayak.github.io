@@ -5,7 +5,7 @@ date: 2026-05-09 10:00:00
 description: A practical way to think about 3D representations when you care about sparse clinical reconstruction and not just rendering demos.
 tags: 3d-vision geometry implicit-fields gaussian-splats cardiac-reconstruction
 categories: research
-featured_project: 17_project.md
+featured_project: 13_project.md
 ---
 
 One of the easiest ways to make a 3D vision project harder is to pick the wrong representation and only realize it halfway through.
