@@ -26,11 +26,52 @@ latest_posts:
   limit: 2 # leave blank to include all the blog posts
 ---
 
-I am a graduate student at [Carnegie Mellon University](https://www.cmu.edu/), pursuing a research-oriented master's in the [Biomedical Engineering](https://www.cmu.edu/bme/) department, advised by [Professor Kenji Shimada](https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html) at the [Computational Engineering & Robotics Lab](https://cerlab.cmu.edu), where I work on computer vision for image-guided robotic intervention.
+<section class="hero-panel">
+  <div class="hero-panel__content">
+    <p class="hero-panel__eyebrow">tushar nayak · carnegie mellon university</p>
+    <h2 class="hero-panel__title">Computer vision for image-guided robotic intervention.</h2>
+    <p class="hero-panel__lead">
+      I am a graduate student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, pursuing a research-oriented master's in <a href="https://www.cmu.edu/bme/">Biomedical Engineering</a>, advised by <a href="https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html">Professor Kenji Shimada</a> at the <a href="https://cerlab.cmu.edu">Computational Engineering & Robotics Lab</a>.
+    </p>
+    <p class="hero-panel__lead">
+      My work combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse clinical data for surgical and biomedical workflows.
+    </p>
+    <div class="hero-panel__actions">
+      <a class="hero-panel__action" href="{{ '/research/' | relative_url }}">Research</a>
+      <a class="hero-panel__action" href="{{ '/cv/' | relative_url }}">CV</a>
+      <a class="hero-panel__action" href="mailto:tusharn@andrew.cmu.edu">Contact</a>
+    </div>
+  </div>
+  <aside class="hero-panel__aside">
+    <p class="hero-panel__aside-title">Current focus</p>
+    <ul class="hero-panel__list">
+      <li>endovascular robotics and vessel deformation modeling</li>
+      <li>registration from fluoroscopy and pre-operative CTA</li>
+      <li>3D vision methods grounded in clinical constraints</li>
+    </ul>
+    <p class="hero-panel__aside-note">
+      Based in Pittsburgh. You can reach me at tusharn [at] andrew [dot] cmu [dot] edu or find me in the Steffey Robotics Lab space at <a href="https://maps.app.goo.gl/Vau7Cu9NhYost5q7A">Scaife Hall</a>.
+    </p>
+  </aside>
+</section>
 
-My research combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse or noisy clinical data.
-
-I build these methods for surgical and biomedical settings including endovascular robotics, 3D reconstruction, image-guided navigation, and learning systems grounded in real clinical workflows. Always happy to connect. Reach me at tusharn [at] andrew [dot] cmu [dot] edu [:mailbox:](mailto:tusharn@andrew.cmu.edu) or at the Steffey Robotics Lab space at [Scaife Hall](https://maps.app.goo.gl/Vau7Cu9NhYost5q7A).
+<section class="section-shell">
+  <p class="section-shell__eyebrow">research directions</p>
+  <div class="section-shell__grid section-shell__grid--three">
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">Intervention</p>
+      <p class="section-shell__text">Image-guided robotic intervention, intra-operative deformation, and tele-operated surgical systems.</p>
+    </div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">Vision</p>
+      <p class="section-shell__text">Geometric vision, registration, 3D reconstruction, and learning models that stay tied to measurement and physics.</p>
+    </div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">Biomedical ML</p>
+      <p class="section-shell__text">Segmentation, multimodal learning, and clinically grounded modeling for noisy biomedical data.</p>
+    </div>
+  </div>
+</section>
 
 {% include research_map.liquid %}
 

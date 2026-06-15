@@ -10,6 +10,25 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<section class="section-shell section-shell--intro">
+  <p class="section-shell__eyebrow">research themes</p>
+  <div class="section-shell__grid">
+    <div>
+      <h2 class="section-shell__title">Current work in image-guided intervention, medical imaging, and geometric learning.</h2>
+      <p class="section-shell__text">
+        These projects are grouped by where the work happened and what technical direction it served. The main thread is recovering useful structure from sparse, noisy, or clinically constrained visual data.
+      </p>
+    </div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">Core directions</p>
+      <ul class="section-shell__list">
+        <li>intra-operative deformation and registration</li>
+        <li>3D reconstruction and anatomical modeling</li>
+        <li>biomedical segmentation and multimodal learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

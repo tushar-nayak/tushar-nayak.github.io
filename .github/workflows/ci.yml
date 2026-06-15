@@ -55,3 +55,6 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
+
+      - name: Validate metadata
+        run: node bin/validate_site_metadata.mjs

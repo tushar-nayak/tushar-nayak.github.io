@@ -1,6 +1,6 @@
 <div class="col mb-4">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
+    <div class="card h-100 hoverable project-card project-card--horizontal">
       <div class="row no-gutters">
         {% if project.img %}
           <div class="col-md-6">
@@ -9,6 +9,9 @@
         {% endif %}
         <div class="{% if project.img %}col-md-6{% else %}col-md-12{% endif %}">
           <div class="card-body">
+            {% if project.category %}
+              <p class="project-card-kicker">{{ project.category }}</p>
+            {% endif %}
             <h3 class="card-title">{{ project.title }}</h3>
             {% if project.status or project.tags %}
               <div class="project-card-meta">
@@ -21,6 +24,7 @@
               </div>
             {% endif %}
             <p class="card-text">{{ project.description }}</p>
+            <p class="project-card-cta">Open project page</p>
           </div>
         </div>
       </div>

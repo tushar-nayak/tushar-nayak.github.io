@@ -10,6 +10,26 @@ horizontal: false
 
 <!-- pages/projects.md -->
 
+<section class="section-shell section-shell--intro">
+  <p class="section-shell__eyebrow">project archive</p>
+  <div class="section-shell__grid">
+    <div>
+      <h2 class="section-shell__title">Technical work organized as case studies instead of thumbnails.</h2>
+      <p class="section-shell__text">
+        This page collects research systems, medical imaging pipelines, and side builds that were substantial enough to deserve their own write-up. Each entry is meant to show the problem, the method, and the current result or status.
+      </p>
+    </div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">What to expect</p>
+      <ul class="section-shell__list">
+        <li>medical imaging, robotics, and geometric vision</li>
+        <li>ongoing research mixed with smaller independent builds</li>
+        <li>filters by topic, with direct links to the full project page</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 {% include project_filter.liquid %}
 
 <div class="projects">

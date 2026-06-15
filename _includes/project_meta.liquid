@@ -1,16 +1,39 @@
 {% if page.status or page.tags or page.website or page.github or page.report %}
-  <div class="project-meta">
-    {% if page.status or page.tags %}
-      <div class="project-meta__badges">
-        {% if page.status %}
-          <span class="project-meta__status">{{ page.status }}</span>
-        {% endif %}
-        {% for tag in page.tags %}
-          <span class="project-meta__tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
+  <div class="project-meta-shell">
+    <div class="project-meta">
+      {% if page.status or page.tags %}
+        <div class="project-meta__badges">
+          {% if page.status %}
+            <span class="project-meta__status">{{ page.status }}</span>
+          {% endif %}
+          {% for tag in page.tags %}
+            <span class="project-meta__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
 
-    {% include project_links.liquid %}
+      <div class="project-meta__facts">
+        {% if page.category %}
+          <div class="project-meta__fact">
+            <span class="project-meta__label">Category</span>
+            <span class="project-meta__value">{{ page.category }}</span>
+          </div>
+        {% endif %}
+        {% if page.importance %}
+          <div class="project-meta__fact">
+            <span class="project-meta__label">Priority</span>
+            <span class="project-meta__value">{{ page.importance }}</span>
+          </div>
+        {% endif %}
+        {% if page.featured %}
+          <div class="project-meta__fact">
+            <span class="project-meta__label">Site Role</span>
+            <span class="project-meta__value">Featured work</span>
+          </div>
+        {% endif %}
+      </div>
+
+      {% include project_links.liquid %}
+    </div>
   </div>
 {% endif %}

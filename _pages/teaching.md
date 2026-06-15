@@ -9,13 +9,25 @@ images:
   lightbox2: true
 ---
 
-This page is mostly a record of the courses and workshops I have helped teach so far. A lot of it has been course support, technical mentoring, assignment design, and helping make difficult material feel a little less hostile.
-
-<p>
-  <a href="#open-horizon-robotics">open horizon</a> ·
-  <a href="#carnegie-mellon-university">cmu</a> ·
-  <a href="#manipal-institute-of-technology">manipal</a>
-</p>
+<section class="section-shell section-shell--intro">
+  <p class="section-shell__eyebrow">teaching and mentoring</p>
+  <div class="section-shell__grid">
+    <div>
+      <h2 class="section-shell__title">Course support, technical mentoring, and workshop design across vision, robotics, and biomedical engineering.</h2>
+      <p class="section-shell__text">
+        Most of this work has involved helping students cross the gap between theory and implementation: writing assignments, debugging projects, clarifying difficult concepts, and keeping technical material grounded in how people actually build things.
+      </p>
+    </div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">Jump to</p>
+      <p class="section-nav">
+        <a href="#open-horizon-robotics">open horizon</a>
+        <a href="#carnegie-mellon-university">cmu</a>
+        <a href="#manipal-institute-of-technology">manipal</a>
+      </p>
+    </div>
+  </div>
+</section>
 
 ## Open Horizon Robotics
 
