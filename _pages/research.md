@@ -2,7 +2,7 @@
 layout: page
 title: research
 permalink: /research/
-description: #expanding on my homepage...
+description: Research portfolio organized by lab, institution, and theme, including Carnegie Mellon and earlier biomedical imaging work.
 nav: true
 nav_order: 2
 display_categories: [at carnegie mellon, at manipal, other]

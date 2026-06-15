@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: #expanding on my homepage...
+description: Selected technical projects spanning medical imaging, computer vision, geometric modeling, and robotic intervention.
 nav: true
 nav_order: 3
 horizontal: false

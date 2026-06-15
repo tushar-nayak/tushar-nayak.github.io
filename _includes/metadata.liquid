@@ -15,6 +15,14 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign page_description = page.description | default: site.description %}
+{% assign canonical_url = page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' %}
+{% assign og_image_path = page.og_image | default: site.og_image %}
+{% if og_image_path and og_image_path contains '://' %}
+  {% assign og_image_url = og_image_path %}
+{% elsif og_image_path %}
+  {% assign og_image_url = og_image_path | prepend: '/' | prepend: site.baseurl | prepend: site.url | replace: '//assets', '/assets' %}
+{% endif %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
@@ -39,7 +47,7 @@
   {% endif %}
 </title>
 <meta name="author" content="{{ author_name }}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{{ page_description }}">
 {% if page.keywords or site.keywords %}
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 {% endif %}
@@ -56,19 +64,19 @@
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:description" content="{{ page_description }}">
+  {% if og_image_url %}
+    <meta property="og:image" content="{{ og_image_url }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  {% if og_image_url %}
+    <meta name="twitter:image" content="{{ og_image_url }}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -223,22 +231,73 @@
     {% endcase %}
   {% endfor %}
 
+  {% capture profile_image_url %}{{ '/assets/img/prof_pic_color.jpg' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
   <script type="application/ld+json">
     {
-        "author":
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@type": "Person",
-            "name": "{{ author_name }}"
+          "@type": "Person",
+          "@id": "{{ site.url }}#person",
+          "name": "{{ author_name }}",
+          "url": "{{ site.url }}",
+          "image": "{{ profile_image_url }}",
+          "jobTitle": "Graduate Student Researcher",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Carnegie Mellon University",
+            "url": "https://www.cmu.edu/"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Manipal Institute of Technology",
+            "url": "https://www.manipal.edu/mit.html"
+          },
+          "worksFor": {
+            "@type": "ResearchOrganization",
+            "name": "Computational Engineering and Robotics Lab",
+            "url": "https://cerlab.cmu.edu/"
+          },
+          "email": "mailto:tushar@andrew.cmu.edu",
+          "knowsAbout": [
+            "Computer vision",
+            "Medical imaging",
+            "Image-guided robotic intervention",
+            "Endovascular robotics",
+            "3D reconstruction",
+            "Physics-aware machine learning"
+          }{% if sameaslinks != blank %},
+          "sameAs": {{ sameaslinks | jsonify }}{% endif %}
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks | jsonify }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        {
+          "@type": "{% if page.url == '/' %}ProfilePage{% elsif is_blog_post %}BlogPosting{% else %}WebPage{% endif %}",
+          "@id": "{{ canonical_url }}#webpage",
+          "url": "{{ canonical_url }}",
+          "name": "{% if page.title and page.url != '/' %}{{ page.title }}{% else %}{{ author_name }}{% endif %}",
+          "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+          "description": "{{ page_description }}",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}#website",
+            "name": "{{ site.title }}",
+            "url": "{{ site.url }}"
+          },
+          "about": {
+            "@id": "{{ site.url }}#person"
+          }{% if og_image_url %},
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "{{ og_image_url }}"
+          }{% endif %}
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}#website",
+          "name": "{{ site.title }}",
+          "url": "{{ site.url }}",
+          "description": "{{ site.description }}"
+        }
+      ]
     }
   </script>
 {% endif %}

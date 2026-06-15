@@ -4,6 +4,7 @@ set -euo pipefail
 
 SCRIPT_SOURCE="${BASH_SOURCE[0]:-$0}"
 BIN_DIR="$(cd "$(dirname "$SCRIPT_SOURCE")" && pwd)"
+REPO_ROOT="$(cd "$BIN_DIR/.." && pwd)"
 export PATH="$BIN_DIR:$PATH"
 
 if [[ -x /opt/homebrew/opt/ruby/bin/ruby ]]; then
@@ -11,3 +12,13 @@ if [[ -x /opt/homebrew/opt/ruby/bin/ruby ]]; then
 elif [[ -x /usr/local/opt/ruby/bin/ruby ]]; then
   export PATH="/usr/local/opt/ruby/bin:$PATH"
 fi
+
+if [[ ! -w "${HOME:-}" ]]; then
+  export HOME="$REPO_ROOT/.home"
+fi
+
+mkdir -p "$HOME"
+export BUNDLE_USER_HOME="$HOME/.bundle"
+export BUNDLE_USER_CACHE="$BUNDLE_USER_HOME/cache"
+export BUNDLE_USER_CONFIG="$BUNDLE_USER_HOME/config"
+mkdir -p "$BUNDLE_USER_HOME" "$BUNDLE_USER_CACHE"

@@ -1,0 +1,57 @@
+name: Site CI
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade nbconvert reportlab
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Prettier check
+        run: npx prettier . --check
+
+      - name: Generate resume PDF
+        run: |
+          python3 bin/generate_resume_pdf.py
+          git diff --exit-code -- assets/pdf/Resume.pdf
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build

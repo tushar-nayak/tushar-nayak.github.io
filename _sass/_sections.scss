@@ -1,0 +1,141 @@
+/******************************************************************************
+ * Shared section and page language
+ ******************************************************************************/
+
+:root {
+  --tn-surface: color-mix(in srgb, var(--global-card-bg-color) 88%, white 12%);
+  --tn-surface-strong: color-mix(in srgb, var(--global-card-bg-color) 72%, white 28%);
+  --tn-border: color-mix(in srgb, var(--global-divider-color) 72%, var(--global-theme-color) 28%);
+  --tn-muted: color-mix(in srgb, var(--global-text-color) 64%, transparent 36%);
+  --tn-accent-soft: color-mix(in srgb, var(--global-theme-color) 14%, transparent 86%);
+  --tn-shadow: 0 18px 40px rgb(15 23 42 / 0.06);
+}
+
+.post .post-header,
+.page .post-header {
+  margin-bottom: 2.5rem;
+  padding: 1.35rem 1.5rem 1.1rem;
+  border: 1px solid var(--tn-border);
+  border-radius: 1.1rem;
+  background: linear-gradient(135deg, var(--tn-accent-soft), transparent 42%), linear-gradient(180deg, var(--tn-surface-strong), var(--tn-surface));
+  box-shadow: var(--tn-shadow);
+}
+
+.post .post-title,
+.page .post-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.55rem;
+}
+
+.post-description {
+  margin-bottom: 0;
+  max-width: 58rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--tn-muted);
+}
+
+.post .card,
+.page .card,
+.projects .card,
+.publications .card {
+  border: 1px solid var(--tn-border);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tn-surface) 92%, white 8%), var(--tn-surface));
+  box-shadow: var(--tn-shadow);
+}
+
+.post .card-title,
+.page .card-title {
+  letter-spacing: -0.02em;
+}
+
+.projects .card,
+.projects .card.hoverable {
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.projects .card:hover,
+.projects .card.hoverable:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--global-theme-color) 36%, var(--global-divider-color) 64%);
+  box-shadow: 0 24px 52px rgb(15 23 42 / 0.11);
+}
+
+.projects .card .card-body,
+.cv .card .card-body,
+.publications .list-group-item,
+.repositories .repo {
+  position: relative;
+}
+
+.pub-profile-btn,
+.teaching-heading-link,
+.btn.btn-sm,
+a.btncv {
+  border-radius: 999px !important;
+}
+
+.pub-profile-btn,
+.teaching-heading-link {
+  border-color: color-mix(in srgb, var(--global-theme-color) 38%, var(--global-divider-color) 62%) !important;
+  background: color-mix(in srgb, var(--global-theme-color) 7%, transparent 93%);
+}
+
+.pub-profile-btn:hover,
+.teaching-heading-link:hover {
+  background: color-mix(in srgb, var(--global-theme-color) 13%, transparent 87%);
+  text-decoration: none !important;
+}
+
+.cv .card,
+.publications,
+.repositories,
+.featured-posts .card {
+  backdrop-filter: saturate(1.05);
+}
+
+.cv .list-group-item,
+.publications .list-group-item {
+  border-color: color-mix(in srgb, var(--global-divider-color) 86%, transparent 14%);
+}
+
+.caption {
+  color: var(--tn-muted);
+}
+
+details {
+  margin-top: 2rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--tn-border);
+  border-radius: 0.95rem;
+  background: linear-gradient(180deg, var(--tn-surface), transparent);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.category {
+  margin-top: 2.6rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--tn-border);
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .post .post-header,
+  .page .post-header {
+    padding: 1.1rem 1rem 0.95rem;
+    border-radius: 0.85rem;
+  }
+}
