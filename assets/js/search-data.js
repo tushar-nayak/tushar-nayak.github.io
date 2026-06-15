@@ -65,18 +65,7 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "https://www.linkedin.com/in/nayaktushar";
               },
-            },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2026-05-22-the-technical-thread-connecting-my-projects-geometry-imaging-and-intervention/";
-          
-        },
-      },{id: "post-sparse-view-clinical-reconstruction-explicit-vs-implicit-representations",
+            },{id: "post-sparse-view-clinical-reconstruction-explicit-vs-implicit-representations",
         
           title: "sparse-view clinical reconstruction: explicit vs implicit representations",
         
@@ -107,6 +96,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/what-i-look-for-in-a-strong-medical-ai-research-problem/";
+          
+        },
+      },{id: "post-the-technical-thread-connecting-my-projects-geometry-imaging-and-intervention",
+        
+          title: "the technical thread connecting my projects: geometry, imaging, and intervention",
+        
+        description: "How my work keeps coming back to the same question: how do we turn incomplete images into useful anatomical structure?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-technical-thread-connecting-my-projects-geometry-imaging-and-intervention/";
           
         },
       },{id: "post-the-gap-between-benchmark-performance-and-clinical-usefulness",
