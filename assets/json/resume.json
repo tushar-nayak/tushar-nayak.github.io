@@ -219,14 +219,7 @@
       "name": "Medical Imaging and Biomedical AI",
       "level": "Advanced",
       "icon": "fa-solid fa-stethoscope",
-      "keywords": [
-        "MRI",
-        "CT and CTA",
-        "Histopathology",
-        "Image-guided intervention",
-        "Tumor evolution modeling",
-        "Clinical data workflows"
-      ]
+      "keywords": ["MRI", "CT and CTA", "Histopathology", "Image-guided intervention", "Tumor evolution modeling", "Clinical data workflows"]
     },
     {
       "name": "Machine Learning",
@@ -245,24 +238,14 @@
       "name": "Teaching and Mentoring",
       "level": "Advanced",
       "icon": "fa-solid fa-chalkboard-user",
-      "keywords": [
-        "Teaching assistantships",
-        "Curriculum design",
-        "Technical mentoring",
-        "Workshop instruction"
-      ]
+      "keywords": ["Teaching assistantships", "Curriculum design", "Technical mentoring", "Workshop instruction"]
     }
   ],
   "interests": [
     {
       "name": "Outside the lab",
       "icon": "fa-solid fa-person-biking",
-      "keywords": [
-        "Mountain and trail biking",
-        "Piano",
-        "Gaming",
-        "Comics"
-      ]
+      "keywords": ["Mountain and trail biking", "Piano", "Gaming", "Comics"]
     }
   ]
 }
