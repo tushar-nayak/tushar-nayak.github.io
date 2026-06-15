@@ -2,58 +2,91 @@
   type: map
   contents:
     - name: Full Name
-      value: Tushar nayak
+      value: Tushar Nayak
+    - name: Email
+      value: tusharn@andrew.cmu.edu
+    - name: Website
+      value: https://tushar-nayak.github.io/
+    - name: Location
+      value: Pittsburgh, Pennsylvania
 
 - title: Education
   type: time_table
   contents:
     - title: Master of Science - Research
-      institution: Carnegie Mellon University, Pittsburgh PA
-      year: 2026
+      institution: Carnegie Mellon University, Pittsburgh, PA
+      year: 2024-2026
       description:
-        - Biomedical Engineering
-        - Computational Focus Area
-        - title: Relevant Coursework
-          contents:
-            - Computer Vision, Visual Learning & Recognition, Image-Based Computational Modelling and Analysis, Learning for 3D Vision, and Clinical Translations of AI.
-            - Planned - Physics-based Methods in Vision, Probabilistic Graphical Models
-    - title: Batchelor of Technology
-      institution: Manipal Institute of Technology
-      year: 2023
+        - Biomedical Engineering with a computational focus.
+        - Relevant coursework: Computer Vision, Visual Learning and Recognition, Image-Based Computational Modelling and Analysis, Learning for 3D Vision, Clinical Translations of AI.
+    - title: Bachelor of Technology
+      institution: Manipal Institute of Technology, Manipal, India
+      year: 2019-2023
       description:
-        - Major in Biomedical Engineering, specializing in Signal & Image Processing and Pattern Recognition
-        - Minor in Data Science
-        - title: Relevant Coursework
-          contents:
-            - Pattern Recognition, Digital Image Processing, Digital Signal Processing, Signals & Systems, Signal & Image Processing Lab
-            - Regression Models, Statistical Inference, Practical Machine Learning, and R Programming.
+        - Major in Biomedical Engineering, minor in Data Science.
+        - Relevant coursework: Pattern Recognition, Digital Image Processing, Digital Signal Processing, Signals and Systems, Statistical Inference and Machine Learning.
+
 - title: Experience
   type: time_table
   contents:
-    - title: Student Researcher - Image Guided Surgery - Tele-Operated Endovascular Robotic Surgical Platform
+    - title: Graduate Student Researcher, Computational Engineering and Robotics Lab
       institution: Carnegie Mellon University
-      year: 2024 - 2026
+      year: 2024-present
       description:
-        - Generated a mesh dataset using CTAs, with automated multi-branch centerline deformation without known control points.
-        - Estimating quantifiable deformation based on guidewire movement using physics-informed neural networks and registering deformation to preop volume.
-        - title: Research Outcomes
-          contents:
-            - Conducted an extensive review of the vision subsystems of existing literature, sent for and awaiting publication.
-            - Deformation estimation's work's manuscript writing is underway.
-    - title: Research Assistant
+        - Conducting master's thesis research in computer vision for image-guided robotic intervention and endovascular tele-surgery.
+        - Built synthetic vessel deformation and multi-view X-ray rendering pipelines for endovascular intervention research.
+        - Developed multimodal learning methods that fuse fluoroscopy with 3D geometry for vessel deformation prediction.
+    - title: Summer Researcher
+      institution: University of Pittsburgh, Surreality Lab
+      year: 2026-present
+      description:
+        - Working on real-time registration and 3D reconstruction of medical imaging data for surgical visualization settings.
+        - Collaborating with Rishi Basdeo under Professors Edward Andrews and Jacob Biehl.
+    - title: Graduate Research Assistant, Glioblastoma Evolution Prediction
+      institution: Carnegie Mellon University
+      year: 2025
+      description:
+        - Developed Neural ODE-based forecasting models for longitudinal multimodal MRI.
+        - Built attention U-Net and history-conditioned forecasting pipelines for glioblastoma progression modeling.
+        - Presented the work at Carnegie Mellon's 2025 Biomedical Engineering research forum.
+    - title: Teaching Assistant
       institution: Carnegie Mellon University
       year: 2025-present
       description:
-        - Developed a neural ordinary differential equation-based model to generate visual production of tumor growth with FLAIR, CT1, T1 & T2.
-        - Augmented the Neural ODE with U-Net and attention-gated convolutional blocks encoder-decoder structure.
-        - Visually predict a future timepoint, allowing for enhanced surgery planning. Working under the guidance of Dr. Pulkit G & Dr. Aswin S.
+        - Supported graduate courses in Applied Deep Learning, Fundamentals of Computational Biomedical Engineering, Computer Vision for Engineers, and Machine Learning in Experimental Biomedical Engineering Research.
 
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: Computer Vision for Open Horizon Robotics Edu
-      year: 2025-now
-      description: Designing a comprehensive series of open-source learning material in the domains of signal processing, image processing, pattern recognition, computer vision & deep learning (alongside material for the prerequisite math), mentoring and assisting student-led projects in the community.
+    - title: Physics-Informed Endovasculature Deformation Estimation and Registration
+      year: 2024-present
+      description:
+        - Master's thesis project on modeling vessel deformation from fluoroscopy for image-guided endovascular robotics.
+        - Includes synthetic vessel deformation generation, multi-view X-ray rendering, and geometry-aware multimodal learning.
+    - title: Spatiotemporal Glioblastoma Evolution Visual Prediction
+      year: 2025
+      description:
+        - Neural ODE-based forecasting of future glioblastoma appearance from longitudinal multimodal MRI.
+    - title: Open Horizon Robotics Perception Curriculum
+      year: 2025-present
+      description:
+        - Authoring open-source computer vision curriculum covering classical vision, deep learning, 3D vision, geometry, and perception physics.
+
+- title: Publications
+  type: time_table
+  contents:
+    - title: Automated histopathological detection and classification of lung cancer with an image pre-processing pipeline and spatial attention with deep neural networks
+      institution: Cogent Engineering
+      year: 2024
+    - title: An explainable artificial intelligence integrated system for automatic detection of dengue from images of blood smears using transfer learning
+      institution: IEEE Access
+      year: 2024
+    - title: Deep learning based detection of monkeypox virus using skin lesion images
+      institution: Medicine in Novel Technology and Devices
+      year: 2023
+    - title: Processing and Detection of Lung and Colon Cancer from Histopathological Images using Deep Residual Networks
+      institution: IEEE CONECCT
+      year: 2023
 
 - title: Honors and Awards
   type: time_table
@@ -63,24 +96,25 @@
         - Biomedical Engineering Department Head's Fellowship, Carnegie Mellon University
     - year: 2023
       items:
-        - Best Paper AI Track at the Second International Conference on Artificial Intelligence, Computational Electronics & Communication
+        - Best Paper, AI Track, Second International Conference on Artificial Intelligence, Computational Electronics and Communication
 
-- title: Academic Interests & Skills
+- title: Skills
   type: nested_list
   contents:
     - title: Computer Vision
       items:
-        - Feature detection, Feature description, Geometric Computer Vision, Camera Geometry, 3D Reconstruction, Stereovision, Motion Analysis and Optical Flow, Photometric Stereovision.
-        - Surface mesh manipulation, deformable models, registration, deformable registration, volume rendering & alignment.
-        - Image filtering, Feature enhancement, Feature extraction, Object detection, Texture analysis, Morphological analysis, Image Compression & Color processing.
-    - title: Pattern Recognition
+        - 3D reconstruction, image registration, geometric vision, motion analysis, fluoroscopy and X-ray modeling.
+    - title: Medical Imaging and Biomedical AI
       items:
-        - Convolution Neural Networks, Neural Ordinary Differential Equations, Attention Mechanisms & Transformer models, Physics-informed Neural Networks, Recurrent Neural Networks & Long-Short Term Memory, Encoder-Decoder, Explainable AI.
-        - Support Vector Machines, Random Forests, Decision Trees, Clustering, Principal Component & Time-Series Analysis.
-    - title: Biomedical Engineering
-        - Medical Image Analysis, Image-guided computer-aided surgical systems, Tumor Detection-Classification-Evolution Modelling, Pathological Data Processing, Biomedical Signal Processing, Neuro-imaging analysis - SPM, FSL, ITK-SNAP
+        - MRI, CT and CTA, histopathology, image-guided intervention, tumor evolution modeling, clinical data workflows.
+    - title: Machine Learning
+      items:
+        - Neural ODEs, physics-informed learning, attention mechanisms, convolutional neural networks, encoder-decoder models.
+    - title: Teaching and Mentoring
+      items:
+        - Teaching assistantships, curriculum design, technical mentoring, workshop instruction.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Mountain & Trail Biking, Gaming, Piano, Reading comicbooks (yes!) etc.
+    - Mountain and trail biking, piano, gaming, and comics.

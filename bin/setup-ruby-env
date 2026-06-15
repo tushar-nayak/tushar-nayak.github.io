@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ -x /opt/homebrew/opt/ruby/bin/ruby ]]; then
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+elif [[ -x /usr/local/opt/ruby/bin/ruby ]]; then
+  export PATH="/usr/local/opt/ruby/bin:$PATH"
+fi
+

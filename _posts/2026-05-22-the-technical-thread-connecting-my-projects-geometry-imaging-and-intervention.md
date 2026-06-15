@@ -2,7 +2,7 @@
 layout: post
 title: "the technical thread connecting my projects: geometry, imaging, and intervention"
 date: 2026-05-22 10:00:00
-description: How my work keeps coming back to the same question: how do we turn incomplete images into useful anatomical structure?
+description: "How my work keeps coming back to the same question: how do we turn incomplete images into useful anatomical structure?"
 tags: research-identity medical-imaging geometry intervention robotics
 categories: research
 featured: true

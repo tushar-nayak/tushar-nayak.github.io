@@ -26,12 +26,20 @@ This repo currently expects a modern Ruby/Bundler setup. If you want to run it n
 
 - Ruby `>= 3.1`
 - Bundler `2.6.9`
+- Homebrew Ruby on macOS is supported by the repo scripts via `bin/setup-ruby-env`
 
 Then install dependencies and serve:
 
 ```bash
+source bin/setup-ruby-env
 bundle install
 bundle exec jekyll serve
+```
+
+To run a production-style local build:
+
+```bash
+./bin/cibuild
 ```
 
 ## Formatting

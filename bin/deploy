@@ -45,6 +45,8 @@ done
 # Exit if any subcommand fails
 set -e
 
+source "$(dirname "$0")/setup-ruby-env"
+
 echo "Deploying..."
 echo "Source branch: $SRC_BRANCH"
 echo "Deploy branch: $DEPLOY_BRANCH"
