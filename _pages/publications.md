@@ -7,26 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-<section class="section-shell section-shell--intro">
-  <p class="section-shell__eyebrow">publication overview</p>
-  <div class="section-shell__grid">
-    <div>
-      <h2 class="section-shell__title">Papers across medical imaging, biomedical AI, and clinically oriented computer vision.</h2>
-      <p class="section-shell__text">
-        The publication list spans pathology, dermatology, infectious disease screening, and imaging-based diagnosis. The common thread is building practical image-analysis systems that can still hold up under clinical constraints and limited deployment settings.
-      </p>
-    </div>
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">selected first</p>
-      <ul class="section-shell__list">
-        <li><a href="https://doi.org/10.1080/23311916.2024.2357182">lung cancer histopathology classification</a></li>
-        <li><a href="https://doi.org/10.1016/j.medntd.2023.100243">binary mpox detection from lesion images</a></li>
-        <li><a href="https://doi.org/10.1109/ACCESS.2024.3378516">dengue detection from blood smears</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <section class="section-shell">
   <p class="section-shell__eyebrow">selected publications</p>
   <div class="section-shell__grid section-shell__grid--three">
@@ -84,23 +64,6 @@ aria-label="View ORCID profile"
 {% include bib_search.liquid %}
 
 <div class="publications">
-
-<section class="section-shell">
-  <p class="section-shell__eyebrow">under review</p>
-</section>
-
-{% bibliography --query @unpublished* %}
-
-<section class="section-shell">
-  <p class="section-shell__eyebrow">forum presentations</p>
-</section>
-
-{% bibliography --query @misc* %}
-
-<section class="section-shell">
-  <p class="section-shell__eyebrow">published work</p>
-</section>
-
-{% bibliography --query @article|@inproceedings|@incollection* %}
+{% bibliography %}
 
 </div>
