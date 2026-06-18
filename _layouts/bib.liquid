@@ -3,20 +3,8 @@
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
-      {% assign badge_label = entry.abbr %}
-      {% if entry.category == 'under-review' or entry.type == 'unpublished' %}
-        {% assign badge_label = 'under review' %}
-      {% elsif entry.category == 'forum' %}
-        {% assign badge_label = 'forum' %}
-      {% elsif entry.category == 'poster' %}
-        {% assign badge_label = 'poster' %}
-      {% elsif entry.type == 'article' %}
-        {% assign badge_label = 'journal' %}
-      {% elsif entry.type == 'inproceedings' or entry.type == 'incollection' %}
-        {% assign badge_label = 'conference' %}
-      {% endif %}
-      {%- if badge_label -%}
-        {%- if entry.abbr and site.data.venues[entry.abbr] -%}
+      {%- if entry.abbr -%}
+        {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
           {% if site.data.venues[entry.abbr].color != blank %}
             {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
@@ -27,10 +15,14 @@
               {{ venue_style }}
             {% endif -%}
           >
-            <div>{{- badge_label -}}</div>
+            {% if site.data.venues[entry.abbr].url %}
+              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+            {% else %}
+              <div>{{- entry.abbr -}}</div>
+            {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100">{{ badge_label }}</abbr>
+          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
       {% if entry.preview %}
@@ -159,10 +151,24 @@
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+    {% assign publication_kind = '' %}
+    {% if entry.category == 'under-review' or entry.type == 'unpublished' %}
+      {% assign publication_kind = 'under review' %}
+    {% elsif entry.category == 'forum' %}
+      {% assign publication_kind = 'forum' %}
+    {% elsif entry.category == 'poster' %}
+      {% assign publication_kind = 'poster' %}
+    {% elsif entry.type == 'article' %}
+      {% assign publication_kind = 'journal' %}
+    {% elsif proceedings contains entry.type %}
+      {% assign publication_kind = 'conference' %}
+    {% endif %}
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+    {% elsif entry.type == 'misc' %}
+      {% capture entrytype %}<em>{{ entry.howpublished }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
@@ -185,13 +191,19 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
-      {{ periodical | strip }}
-    </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% if publication_kind != '' and entrytype_text != '' %} &middot; {{ publication_kind }}{% endif %}{% endcapture %}
+    {% assign periodical_text = periodical | strip_html | strip %}
+    {% if periodical_text != '' %}
+      <div class="periodical">
+        {{ periodical | strip }}
+      </div>
+    {% endif %}
+    {% if entry.note %}
+      {% capture note_line %}{{ entry.note }}{% if publication_kind != '' and entrytype_text == '' %} &middot; {{ publication_kind }}{% endif %}{% endcapture %}
+      <div class="periodical">
+        {{ note_line | strip }}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
