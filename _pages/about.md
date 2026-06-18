@@ -21,8 +21,6 @@ latest_posts:
 
 <section class="hero-panel">
   <div class="hero-panel__content">
-    <p class="hero-panel__eyebrow">tushar nayak · carnegie mellon university</p>
-    <h2 class="hero-panel__title">Computer vision for image-guided robotic intervention.</h2>
     <p class="hero-panel__lead">
       I am a graduate student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, pursuing a research-oriented master's in <a href="https://www.cmu.edu/bme/">Biomedical Engineering</a>, advised by <a href="https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html">Professor Kenji Shimada</a> at the <a href="https://cerlab.cmu.edu">Computational Engineering & Robotics Lab</a>. My work combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse clinical data for surgical and biomedical workflows.
     </p>

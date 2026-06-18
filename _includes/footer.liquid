@@ -2,6 +2,7 @@
 
 {% capture footer_contents %}
   <div class="site-footer">
+    <div class="site-footer__prompt">status: connected</div>
     <div class="site-footer__links">
       {% if social_data.email %}
         <a href="mailto:{{ social_data.email | encode_email }}">email</a>
@@ -28,10 +29,11 @@
 
     <div class="site-footer__meta">
       <span>
-        &copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+        user: {{ site.first_name | downcase }} {{ site.last_name | downcase }}
       </span>
+      <span>&copy; {{ site.time | date: '%Y' }}</span>
       {% if site.last_updated %}
-        <span>Last updated: {{ 'now' | date: '%B %d, %Y' }}</span>
+        <span>updated: {{ 'now' | date: '%Y-%m-%d' }}</span>
       {% endif %}
     </div>
   </div>

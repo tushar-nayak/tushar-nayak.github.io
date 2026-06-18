@@ -5,6 +5,7 @@
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
+            <span class="navbar-brand__prompt">~/</span>
             {% if site.first_name %}
               <span class="font-weight-bold">
                 {{- site.first_name -}}
@@ -17,6 +18,7 @@
               {{- site.last_name -}}
             {% endif %}
           {% else %}
+            <span class="navbar-brand__prompt">~/</span>
             {{- site.title -}}
           {% endif %}
         </a>

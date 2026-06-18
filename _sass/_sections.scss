@@ -74,6 +74,18 @@ p {
   text-transform: lowercase;
 }
 
+.navbar-brand__prompt,
+.nav-link__prompt {
+  display: inline-block;
+  margin-right: 0.45rem;
+  color: var(--global-theme-color);
+}
+
+.navbar-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+}
+
 .navbar-nav .nav-item .nav-link,
 .dropdown-item {
   text-transform: lowercase;
@@ -388,6 +400,12 @@ details summary {
   font-weight: 700;
 }
 
+.section-nav a::before {
+  content: "->";
+  margin-right: 0.45rem;
+  color: var(--global-theme-color);
+}
+
 .featured-projects__group + .featured-projects__group {
   margin-top: 2rem;
 }
@@ -416,6 +434,21 @@ details summary {
   font-size: 1.1rem;
   line-height: 1.2;
   font-weight: 700;
+}
+
+.project-card-path {
+  margin-bottom: -0.15rem;
+  color: var(--global-theme-color);
+  font-family: var(--tn-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.project-card-path::before {
+  content: "~/";
+  margin-right: 0.15rem;
 }
 
 .project-card .card-text {
@@ -501,12 +534,18 @@ details summary {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: var(--global-theme-color);
+}
+
+.project-meta__label::before {
+  content: "$ ";
 }
 
 .project-meta__value {
   font-weight: 600;
+  font-family: var(--tn-mono);
+  text-transform: lowercase;
 }
 
 .project-link-list {
@@ -587,6 +626,50 @@ details summary {
   font-size: 0.93rem;
 }
 
+.site-footer {
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--tn-border);
+  font-family: var(--tn-mono);
+}
+
+.site-footer__prompt {
+  color: var(--global-theme-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.site-footer__prompt::before {
+  content: "$ ";
+}
+
+.site-footer__links,
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+  font-family: var(--tn-mono);
+  font-size: 0.82rem;
+}
+
+.site-footer__links a::before {
+  content: "-> ";
+  color: var(--global-theme-color);
+}
+
+.site-footer__meta span {
+  color: var(--tn-muted);
+}
+
+.site-footer__meta span::before {
+  content: "> ";
+  color: var(--global-theme-color);
+}
+
 @media (max-width: 768px) {
   .profile,
   .profile.float-right,
@@ -618,6 +701,10 @@ details summary {
   .hero-panel__action {
     justify-content: center;
     width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    justify-content: flex-end;
   }
 
   .post .post-header,
