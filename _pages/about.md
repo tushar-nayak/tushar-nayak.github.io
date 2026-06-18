@@ -45,21 +45,6 @@ latest_posts:
 </section>
 
 <section class="section-shell">
-  <p class="section-shell__eyebrow">selected work</p>
-  <div class="section-shell__grid">
-    <div><h2 class="section-shell__title">Selected projects.</h2></div>
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">recommended path</p>
-      <p class="section-nav">
-        <a href="{{ '/projects/1_project/' | relative_url }}">endovascular deformation</a>
-        <a href="{{ '/projects/2_project/' | relative_url }}">glioblastoma forecasting</a>
-        <a href="{{ '/projects/4_project/' | relative_url }}">cardiac reconstruction</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section-shell">
   <p class="section-shell__eyebrow">research directions</p>
   <div class="section-shell__grid section-shell__grid--three">
     <div class="section-shell__panel">
