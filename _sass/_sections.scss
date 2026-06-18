@@ -320,6 +320,15 @@ details summary {
   background: transparent;
 }
 
+.hero-panel__portrait {
+  display: block;
+  width: 100%;
+  max-width: 18rem;
+  margin: 0 0 1rem auto;
+  border: 1px solid var(--tn-border);
+  border-radius: 0.45rem;
+}
+
 .hero-panel__aside-title,
 .section-shell__panel-title {
   margin-bottom: 0.65rem;
@@ -459,16 +468,18 @@ details summary {
   font-size: 0.74rem;
   font-weight: 600;
   font-family: var(--tn-mono);
+  color: var(--global-text-color);
 }
 
 .project-meta__status,
 .project-card-status {
-  background: transparent;
+  background: color-mix(in srgb, var(--global-theme-color) 12%, var(--global-card-bg-color) 88%);
+  border-color: color-mix(in srgb, var(--global-theme-color) 35%, var(--global-divider-color) 65%);
 }
 
 .project-meta__tag,
 .project-card-tag {
-  background: transparent;
+  background: color-mix(in srgb, var(--global-card-bg-color) 92%, var(--global-theme-color) 8%);
 }
 
 .project-meta__facts {
@@ -577,6 +588,38 @@ details summary {
 }
 
 @media (max-width: 768px) {
+  .profile,
+  .profile.float-right,
+  .profile.float-left {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .profile img {
+    max-width: 18rem;
+    margin: 0 auto;
+  }
+
+  .hero-panel {
+    margin-top: 1rem;
+  }
+
+  .hero-panel__title,
+  .section-shell__title {
+    max-width: none;
+  }
+
+  .hero-panel__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-panel__action {
+    justify-content: center;
+    width: 100%;
+  }
+
   .post .post-header,
   .page .post-header {
     padding-bottom: 0.95rem;
@@ -587,5 +630,22 @@ details summary {
   .section-shell__grid--three,
   .case-study-hero {
     grid-template-columns: 1fr;
+  }
+
+  .hero-panel__aside,
+  .section-shell__panel {
+    padding-top: 0.9rem;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--tn-border);
+  }
+
+  .hero-panel__portrait {
+    max-width: 14rem;
+    margin: 0 auto 1rem;
+  }
+
+  .hero-panel__aside-note {
+    margin-bottom: 0;
   }
 }

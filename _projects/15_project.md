@@ -11,17 +11,15 @@ status: active extension
 tags: [Medical Imaging, Dermatology, Segmentation, Benchmarking]
 ---
 
-    ---
-    project status: completed baseline + active extensions
-    ---
+## summary
 
-## Overview
+DermaSeg is a reproducible skin-lesion segmentation benchmark built around ISIC 2018. Rather than training a single model in isolation, the project is structured as a full workflow for comparing classical CNNs, transformer-style models, and promptable segmentation systems under a shared evaluation setup.
 
-**DermaSeg** is a medical image segmentation project focused on automated skin lesion boundary detection from dermoscopic images. The project is built around the **ISIC 2018 Task 1 lesion segmentation benchmark** and is designed as a reproducible comparison framework across classical CNN segmentation models, attention-based architectures, lightweight transformer models, and promptable foundation-model baselines.
+## problem
 
-Rather than training a single model in isolation, DermaSeg is structured as a complete segmentation workflow: dataset loading, preprocessing, supervised training, validation-based checkpoint selection, test-set evaluation, qualitative visualization, and metric summarization.
+Skin lesion segmentation is often presented through isolated model results that are hard to compare fairly. The practical need here is a benchmark that keeps preprocessing, training, validation, metrics, and qualitative inspection consistent across model families.
 
-## Current Status: Strong ISIC Baseline
+## approach
 
 The current completed experiment uses a **DeepLabV3 model with a pretrained ResNet-50 backbone** for binary lesion-vs-background segmentation.
 
@@ -31,24 +29,22 @@ The current completed experiment uses a **DeepLabV3 model with a pretrained ResN
 
 These results come from a local run on the official ISIC 2018 split, not from copied leaderboard values. The best checkpoint is selected using validation threshold Jaccard and then evaluated on the held-out test set.
 
-## Technical Approach
+The project uses a supervised two-class segmentation setup:
 
-The project uses a supervised 2-class segmentation setup:
+- **Dataset:** ISIC 2018 Task 1 lesion boundary segmentation
+- **Input:** RGB dermoscopic images resized to `320 × 320`
+- **Model:** DeepLabV3 with a pretrained ResNet-50 backbone
+- **Loss:** combined cross-entropy and Dice loss
+- **Selection metric:** validation threshold Jaccard
+- **Outputs:** checkpoints, metrics JSON, Markdown experiment summaries, and qualitative prediction panels
 
-- **Dataset:** ISIC 2018 Task 1 lesion boundary segmentation.
-- **Input:** RGB dermoscopic images resized to `320 × 320`.
-- **Model:** DeepLabV3 with a pretrained ResNet-50 backbone.
-- **Loss:** Combined cross-entropy and Dice loss.
-- **Selection Metric:** Validation threshold Jaccard.
-- **Outputs:** Saved checkpoints, metrics JSON files, Markdown experiment summaries, and qualitative prediction panels.
+DeepLabV3 was chosen as the first strong baseline because it provides a serious non-U-Net comparison point while still handling multi-scale lesion context well.
 
-DeepLabV3 was chosen as the first strong baseline because it provides a serious non-U-Net comparison point. Its atrous convolutions and ASPP module allow the model to capture multi-scale lesion context, which is useful for irregular lesion boundaries and variable lesion sizes.
-
-## Model Coverage
+## result
 
 DermaSeg is designed to compare multiple segmentation model families under a shared training and evaluation pipeline.
 
-### Supervised Segmentation Models
+### supervised segmentation models
 
 - U-Net
 - Attention U-Net
@@ -58,43 +54,35 @@ DermaSeg is designed to compare multiple segmentation model families under a sha
 - SwinUNetLite
 - SegFormerLite
 
-### Promptable Foundation-Model Extensions
+### promptable foundation-model extensions
 
 - SAM
 - MedSAM
-- Box-prompted evaluation workflow
-- Separate promptable evaluation path to avoid mixing supervised and foundation-model comparisons unfairly
+- box-prompted evaluation workflow
+- a separate promptable evaluation path to avoid unfairly mixing supervised and foundation-model comparisons
 
-## Qualitative Evaluation
+## qualitative evaluation
 
-The repository also exports qualitative prediction panels from the saved DeepLabV3 checkpoint. Each panel compares:
+The repository exports qualitative prediction panels from the saved DeepLabV3 checkpoint. Each panel compares:
 
-1. the original dermoscopic input image,
-2. the ground-truth lesion mask overlay, and
-3. the predicted lesion mask overlay.
+1. the original dermoscopic input image
+2. the ground-truth lesion mask overlay
+3. the predicted lesion mask overlay
 
-This makes the project more interpretable than a metrics-only benchmark and allows direct inspection of boundary quality, under-segmentation, over-segmentation, and lesion-shape errors.
+That makes the project interpretable as a benchmark rather than just a metrics table.
 
-## Why This Project Matters
+## limitations
 
-DermaSeg demonstrates practical medical image segmentation beyond a one-off notebook. It shows that the same dataset and evaluation protocol can be used to compare classical encoder-decoder CNNs, atrous-convolution models, transformer-style architectures, and promptable segmentation models.
+- only the DeepLabV3 baseline is fully completed so far
+- lesion datasets remain smaller and noisier than ideal for large model comparisons
+- promptable foundation-model evaluation is still an extension path rather than a finished benchmark
 
-For my broader work in medical imaging and computer vision, this project strengthens my experience with:
+## next steps
 
-- reproducible segmentation pipelines,
-- medical benchmark datasets,
-- lesion boundary detection,
-- Dice/IoU/Jaccard-based evaluation,
-- qualitative model inspection,
-- CNN and transformer segmentation architectures,
-- and foundation-model extensions for medical image analysis.
+The next phase of DermaSeg will focus on:
 
-## Next Steps
-
-The next phase of DermaSeg will focus on making the benchmark more complete and clinically meaningful:
-
-1. **Loss Ablations:** Compare cross-entropy + Dice, Tversky, and focal Tversky losses for imbalanced lesion segmentation.
-2. **Architecture Benchmarking:** Run full evaluations across U-Net, Attention U-Net, U-Net++, DeepLabV3, SwinUNetLite, and SegFormerLite.
-3. **Promptable Segmentation:** Evaluate SAM and MedSAM using box prompts derived from lesion masks.
-4. **Failure-Mode Analysis:** Categorize segmentation errors by lesion size, contrast, boundary ambiguity, and image artifacts.
-5. **Portfolio Visualization:** Add qualitative result panels directly to the project page for visual comparison across models.
+1. comparing cross-entropy + Dice, Tversky, and focal Tversky losses
+2. running full evaluations across U-Net, Attention U-Net, U-Net++, DeepLabV3, SwinUNetLite, and SegFormerLite
+3. evaluating SAM and MedSAM with box prompts derived from lesion masks
+4. categorizing failure modes by lesion size, contrast, and artifact profile
+5. adding direct qualitative result panels to the project page

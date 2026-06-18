@@ -12,33 +12,35 @@ tags: [3D Vision, Medical Imaging, Cardiac Reconstruction, Course Project]
 featured: true
 ---
 
----
+## summary
 
-## project status: completed
+This course project built a framework for reconstructing patient-specific 3D ventricular geometry from sparse 2D echocardiography. The key idea was to combine a learned global shape prior with test-time refinement so the model could stay data-efficient without losing patient-specific detail.
 
-Developed a unified framework to reconstruct patient-specific 3D ventricular shapes from sparse 2D echocardiography views. Moving beyond simple per-scan optimization, this work introduces a Test-Time Optimization strategy where a globally learned neural shape prior is fine-tuned on sparse patient data. This approach combines the generalization power of dataset-wide learning with the precision of patient-specific optimization. The core innovation is a "Hybrid" learning strategy that alternates between estimating slice poses and refining a 3D Implicit Neural Representation (INR). The framework supports three distinct operating modes to balance speed and accuracy:
+## problem
 
-Frameworks
+Echocardiography is widely available, but most routine exams provide only a small number of 2D views. Recovering a high-fidelity 3D cardiac shape from that sparse data is hard because large parts of the anatomy are never directly observed.
 
-- Local: Trains a fresh INR from scratch for every single patient. Accurate but slow and prone to overfitting sparse views.
-- Global: Learns a single shared cardiac shape prior across the entire training population. Fast inference but lacks patient-specific detail.
-- Mixed (Proposed):
-  1.  Pre-training: A global shape prior is learned on the training set.
-  2.  Inference: For a new, unseen patient, we initialize the network with the global prior and run a rapid "refinement" optimization loop on the patient's sparse 2D slices. This adapts the generic heart shape to fit the specific patient's anatomy in real-time.
+## approach
 
-Architecture
+The project supports three operating modes to balance speed and accuracy:
 
-- Representation: Coordinate-based Multi-Layer Perceptron (MLP) representing occupancy signed distance function.
-- Differentiable Rendering: A custom vectorized projection layer maps the 3D implicit shape to 2D slice planes (A2C, A4C, PSAX) for direct supervision against clinical contours.
-- Pose Refinement: Jointly optimizes rigid slice pose parameters (SE(3)) alongside shape, correcting for acquisition misalignment.
-- Meta-Learning Approach (Reptile): Implementation of Reptile-based meta-learning to find an initialization that adapts rapidly to new cardiac geometries with minimal gradient steps.
+- **Local**: train a fresh INR from scratch for every patient
+- **Global**: learn one shared prior across the training population
+- **Mixed**: start from a global prior and refine it at test time on sparse patient-specific slices
 
-Observations
+The technical stack combines:
 
-- Test-Time Refinement: Demonstrates that "overfitting" to a specific patient at test time (via fine-tuning) significantly boosts reconstruction accuracy compared to static inference.
-- Implicit Shape Priors: Uses population-level learning to regularize reconstruction in regions where 2D data is missing, preventing the "shape explosion" common in sparse-view reconstruction.
-- Strict Slice Selection: Automated stratifiction strategy to select optimal diagnostic views (ED/ES frames) from raw volumetric data.
-- Clinical Validation: Evaluates performance using rigorous medical metrics: 3D Dice Coefficient, IoU (Intersection over Union), and clinical volume estimation (End-Diastolic/End-Systolic volumes).
+- **Representation**: coordinate-based MLP representing occupancy / signed-distance geometry
+- **Differentiable rendering**: a vectorized projection layer mapping the 3D implicit shape to clinical slice planes
+- **Pose refinement**: joint optimization of rigid slice pose and shape
+- **Meta-learning**: a Reptile-style initialization that adapts quickly to new cardiac geometries
+
+## result
+
+- Test-time refinement significantly improved patient-specific reconstruction compared with static inference
+- Population-level shape priors regularized anatomy in unobserved regions
+- Automated slice selection improved the diagnostic consistency of the sparse views
+- Evaluation used 3D Dice, IoU, and clinically meaningful ventricular volume estimates
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
@@ -49,6 +51,18 @@ Observations
     </div>
 </div>
 
-The method bridges the gap between widely available 2D ultrasound and expensive 3D imaging. By leveraging Test-Time Optimization, we achieve high-fidelity 3D meshes from as few as 3 standard views. The framework handles the inherent sparsity of echocardiography by relying on the learned global prior to "hallucinate" plausible geometry in unobserved regions, while the patient-specific refinement ensures the reconstruction adheres tightly to the observed clinical data.
+The method bridges the gap between widely available 2D ultrasound and expensive 3D imaging. By leveraging test-time optimization, the framework can recover plausible 3D meshes from as few as three standard views while keeping the final shape tied to the observed clinical data.
 
 Collaborators: [Vivek Dhara](https://www.linkedin.com/in/vivek-dhara/) and [Vaibhav Parekh](https://www.linkedin.com/in/vaibhavparekh9/)
+
+## limitations
+
+- Reconstruction quality still depends on slice selection and pose quality
+- Sparse-view supervision leaves some ambiguity in unobserved regions
+- The framework is a research prototype rather than a clinically validated reconstruction tool
+
+## next steps
+
+- compare the hybrid mode more rigorously against newer Gaussian-field variants
+- improve robustness to poor acquisition geometry
+- evaluate on larger and more heterogeneous echo cohorts

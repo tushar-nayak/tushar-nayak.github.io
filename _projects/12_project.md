@@ -11,44 +11,29 @@ status: completed
 tags: [Medical Imaging, CT, Segmentation, Surface Export]
 ---
 
-    ---
-    project status: complete
-    ---
+## summary
 
-# LungVolSeg: A Reproducible Full-Volume Lung CT Segmentation and Surface Export Pipeline
+LungVolSeg is a reproducible engineering pipeline for full-volume chest CT lung segmentation, surface extraction, and metric reporting. The goal was to build something closer to a navigation-prep system than a one-off segmentation notebook.
 
-## Abstract
+## problem
 
-**Background:** CT-based planning for lung navigation workflows depends on reliable volumetric preprocessing, segmentation, surface extraction, and validation. This project implements a compact, reproducible pipeline for full-volume chest CT lung segmentation using open-source medical imaging tools.
+Robotic bronchoscopy and related lung navigation workflows rely on CT-derived anatomical understanding. Before navigation, a CT scan is commonly used for planning, segmentation, registration, and 3D visualization. A practical navigation-prep pipeline therefore has to manage spatial metadata correctly, segment anatomy in 3D, export geometric surfaces, and report quantitative validation metrics.
 
-**Objective:** The objective was to build a working engineering pipeline that downloads a public real CT dataset, prepares 3D volumes, trains a 3D segmentation model, exports anatomical surfaces, computes validation metrics, and generates documentation artifacts suitable for navigation-prep experimentation.
+## approach
 
-**Methods:** The pipeline uses the COVID-19 CT Lung and Infection Segmentation Dataset from Zenodo, containing 20 labeled CT scans. Lung masks are converted into a binary lung segmentation target. SimpleITK handles image IO, cropping, normalization, and resampling. MONAI provides a 3D UNet segmentation model and training/inference utilities. VTK converts predicted labels into 3D mesh surfaces exported as `.stl` and `.vtp`. Validation uses Dice similarity and 95th percentile Hausdorff distance.
-
-**Results:** A full run on all 20 CT cases trained for 25 epochs produced a mean lung Dice score of `0.9243`, mean lung HD95 of `10.5909`, and best validation Dice of `0.9539`. The pipeline generated checkpoints, predictions, VTK meshes, metrics, and a model card.
-
-**Conclusion:** The project provides a complete real-data lung CT navigation-prep pipeline with reproducible dataset download, model training, mesh export, and validation. The current implementation is intended for research and engineering demonstration, not clinical use.
-
-## Introduction
-
-Robotic bronchoscopy and related lung navigation workflows rely on CT-derived anatomical understanding. Before navigation, a CT scan is commonly used for planning, segmentation, registration, and 3D visualization. A practical navigation-prep pipeline should therefore handle medical image spatial metadata, support 3D segmentation, produce geometric surfaces, and report quantitative validation metrics.
-
-This project focuses on the engineering substrate for that workflow. The goal is not to claim clinical performance, but to demonstrate an end-to-end reproducible pipeline built from commonly used medical imaging tools:
+The pipeline focuses on the engineering substrate of that workflow rather than claiming clinical deployment. It is built from standard open-source imaging tools:
 
 - SimpleITK for medical image IO and spatial preprocessing
 - MONAI for 3D medical image segmentation
 - VTK for surface extraction and mesh export
 - PyTorch for model optimization
 
-The first real-data target is binary lung segmentation from full-volume CT scans. Lung segmentation is a useful navigation-prep target because it provides a stable organ-level anatomical surface and avoids the severe imbalance of small lesion labels.
+The first real-data target is binary lung segmentation from full-volume CT scans because it provides a stable organ-level surface for navigation-prep experiments.
 
-## Methods
-
-### Dataset
+### dataset
 
 The pipeline uses the **COVID-19 CT Lung and Infection Segmentation Dataset** hosted on Zenodo.
 
-- Zenodo record: `https://zenodo.org/records/3757476`
 - DOI: `10.5281/zenodo.3757476`
 - License: `CC-BY-4.0`
 - Cases: 20 labeled full CT scans
@@ -59,121 +44,41 @@ The original dataset includes left lung, right lung, and infection annotations. 
 - `0`: background
 - `1`: lung
 
-This choice was made because binary lung segmentation is the strongest fit for CT navigation-prep surface generation and provides a stable validation target for a compact engineering run.
-
-### Pipeline Overview
-
-The primary command is:
-
-```bash
-python3 scripts/run_zenodo_lung_pipeline.py \
-  --workspace outputs/zenodo_lung \
-  --epochs 8 \
-  --target-depth 96 \
-  --target-height 128 \
-  --target-width 128
-```
-
-The same code is mirrored under root `code/`:
-
-```bash
-PYTHONPATH=code python3 code/scripts/run_zenodo_lung_pipeline.py \
-  --workspace outputs/zenodo_lung \
-  --epochs 8
-```
+### pipeline
 
 The workflow performs the following steps:
 
-1. Download CT and lung-mask archives from Zenodo.
-2. Verify archive MD5 checksums.
-3. Extract NIfTI volumes.
-4. Pair CT volumes with lung masks.
-5. Crop around the lung-mask bounding box.
-6. Clip CT intensities to `[-1000, 400]` HU and normalize to `[0, 1]`.
-7. Resize each case to a compact 3D target shape.
-8. Train a MONAI 3D UNet.
-9. Run inference on prepared cases.
-10. Export predicted lung surfaces as `.stl` and `.vtp`.
-11. Compute Dice and HD95 metrics.
-12. Generate a model card.
+1. Download CT and lung-mask archives from Zenodo
+2. Verify archive MD5 checksums
+3. Extract NIfTI volumes
+4. Pair CT volumes with lung masks
+5. Crop around the lung-mask bounding box
+6. Clip CT intensities to `[-1000, 400]` HU and normalize to `[0, 1]`
+7. Resize each case to a compact 3D target shape
+8. Train a MONAI 3D UNet
+9. Run inference on prepared cases
+10. Export predicted lung surfaces as `.stl` and `.vtp`
+11. Compute Dice and HD95 metrics
+12. Generate a model card
 
-### Preprocessing
+The default target shape is `96 x 128 x 128`. A smaller validation run uses `64 x 96 x 96`.
 
-Images are loaded with SimpleITK and converted to NumPy arrays in `z, y, x` order. Lung masks are binarized so that any nonzero lung annotation becomes foreground. The pipeline computes a lung bounding box with a small margin, crops the CT and mask to that region, clips CT intensity values to a lung-appropriate window, normalizes intensities, and resizes volumes to a configured target shape.
+### model and export
 
-The default target shape is:
+The segmentation model is a MONAI 3D UNet with `in_channels=1`, `out_channels=2`, channel schedule `(16, 32, 64, 128)`, residual blocks, and `0.1` dropout. Training uses `DiceCELoss` with Adam at learning rate `1e-3`.
 
-```text
-96 x 128 x 128
-```
-
-The smaller validation run used:
-
-```text
-64 x 96 x 96
-```
-
-### Model
-
-The model is a MONAI 3D UNet with:
-
-- `spatial_dims=3`
-- `in_channels=1`
-- `out_channels=2`
-- channels `(16, 32, 64, 128)`
-- strides `(2, 2, 2)`
-- two residual units per level
-- dropout `0.1`
-
-Training uses Dice plus cross-entropy loss through MONAI's `DiceCELoss`, with Adam optimization and learning rate `1e-3`.
-
-### Inference and Surface Export
-
-Inference uses MONAI sliding-window inference with a window matching the prepared target shape. Predicted class labels are written back as NIfTI volumes with SimpleITK.
-
-VTK extracts mesh surfaces from predicted labels using discrete marching cubes, applies windowed-sinc smoothing, and writes:
+Inference uses sliding-window prediction. VTK then extracts and smooths surfaces and exports:
 
 - `lung.stl`
 - `lung.vtp`
 
-Preview rendering is disabled by default because many server and CI environments do not provide a working X/GL context.
+## result
 
-### Validation Metrics
+A full run over all 20 CT cases trained for 25 epochs produced:
 
-Validation computes:
-
-- Dice similarity coefficient for the lung foreground class
-- 95th percentile Hausdorff distance for the lung foreground class
-
-Metrics are saved to:
-
-```text
-outputs/zenodo_lung/metrics.json
-```
-
-## Results
-
-A completed full run was executed with:
-
-```bash
-python3 scripts/run_zenodo_lung_pipeline.py \
-  --workspace outputs/zenodo_lung_full_e25 \
-  --epochs 25 \
-  --target-depth 96 \
-  --target-height 128 \
-  --target-width 128
-```
-
-The run completed end to end and generated:
-
-- prepared NIfTI cases
-- model checkpoint
-- prediction volumes
-- VTK lung meshes
-- metrics JSON
-- model card
-
-### Quantitative Results
+- mean lung Dice: `0.9243`
+- mean lung HD95: `10.5909`
+- best validation Dice: `0.9539`
 
 | Case              |  Dice Lung |   HD95 Lung |
 | ----------------- | ---------: | ----------: |
@@ -199,34 +104,23 @@ The run completed end to end and generated:
 | `zenodo_lung_020` |     0.8456 |     19.0000 |
 | **Mean**          | **0.9243** | **10.5909** |
 
-The first half of the dataset is near-perfect, while a weaker subgroup appears in the second half. That pattern suggests structured case difficulty rather than random optimization noise.
+The first half of the dataset is near-perfect, while a weaker subgroup appears in the second half. That points to structured case difficulty rather than random optimization noise.
 
-## Discussion
+## limitations
 
-The pipeline demonstrates a practical path from real CT data to navigation-prep artifacts. The lung segmentation target provides a useful 3D anatomical boundary that can be exported for visualization, QA, registration experiments, and planning-interface prototypes.
+- The reported top-line result averages predictions over all 20 prepared cases, not a strict external test set
+- Compact resizing sacrifices native scanner resolution
+- The current split protocol should be hardened into an explicit held-out evaluation
+- The target is binary lung, not airway, vessel, lobe, or lesion anatomy
+- The generated meshes are suitable for engineering demonstration but are not validated for procedural planning
 
-Several engineering choices were made to keep the project reproducible and tractable:
+## next steps
 
-- The dataset is downloaded by script instead of stored in Git.
-- MD5 checks verify archive integrity.
-- Generated data and outputs are ignored by Git.
-- The model uses compact 3D volumes to keep training feasible on limited hardware.
-- Mesh export is included in the main pipeline rather than treated as a separate visualization demo.
+- harden the held-out evaluation protocol
+- inspect the weak subgroup of CT cases directly
+- extend the pipeline toward navigation-specific anatomy such as airways or lobes
 
-The 25-epoch full run shows that the pipeline can achieve strong lung overlap on this dataset with a compact 3D UNet. The weaker subgroup of cases indicates that the current preprocessing and split strategy are not uniformly robust across the full dataset, so the next evaluation should keep a fixed held-out protocol and inspect the lower-performing cases directly.
-
-## Limitations
-
-This work has several limitations:
-
-- The reported top-line result averages predictions over all 20 prepared cases, not a strict external test set.
-- The default pipeline performs compact resizing, which sacrifices native scanner resolution.
-- The current evaluation uses an internal `13 / 7` train/validation split determined by script order and should be hardened into an explicit protocol.
-- The segmentation target is binary lung, not airway, vessel, lobe, or lesion navigation anatomy.
-- The generated meshes are suitable for engineering demonstration but are not validated for procedural planning.
-- The project is not a medical device and is not intended for clinical decision-making.
-
-## Reproducibility
+## reproducibility
 
 Install dependencies:
 
@@ -245,45 +139,3 @@ python3 scripts/run_zenodo_lung_pipeline.py \
   --target-height 128 \
   --target-width 128
 ```
-
-Run the smaller validation configuration:
-
-```bash
-python3 scripts/run_zenodo_lung_pipeline.py \
-  --workspace outputs/zenodo_lung_smoke \
-  --epochs 2 \
-  --target-depth 64 \
-  --target-height 96 \
-  --target-width 96 \
-  --max-cases 4
-```
-
-Run from the mirrored root code:
-
-```bash
-PYTHONPATH=code python3 code/scripts/run_zenodo_lung_pipeline.py \
-  --workspace outputs/zenodo_lung \
-  --epochs 8
-```
-
-## Data and Code Availability
-
-The dataset is publicly available from Zenodo:
-
-```text
-https://zenodo.org/records/3757476
-```
-
-The working code is available in two layouts:
-
-- installable package: `src/lungvolseg/`
-- root mirror: `code/lungvolseg/`
-
-Command-line entrypoints are available in:
-
-- `scripts/`
-- `code/scripts/`
-
-## Conclusion
-
-This project implements a real-data, full-volume lung CT segmentation pipeline for navigation-prep engineering. It downloads a public CT dataset, prepares 3D volumes, trains a MONAI segmentation model, exports VTK lung surfaces, computes validation metrics, and generates documentation artifacts. The documented full run demonstrates end-to-end operation with mean lung Dice of `0.9243` and best validation Dice of `0.9539`, giving the project a credible real-data baseline for lung CT segmentation and surface generation.

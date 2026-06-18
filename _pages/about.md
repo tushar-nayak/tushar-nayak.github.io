@@ -5,13 +5,6 @@ permalink: /
 subtitle: computer vision focused biomedical engineer turned roboticist working in robotic surgery
 description: Research homepage for Tushar Nayak, focused on computer vision, medical imaging, and image-guided robotic intervention.
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Pittsburgh PA</p>
-
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
@@ -31,18 +24,16 @@ latest_posts:
     <p class="hero-panel__eyebrow">tushar nayak · carnegie mellon university</p>
     <h2 class="hero-panel__title">Computer vision for image-guided robotic intervention.</h2>
     <p class="hero-panel__lead">
-      I am a graduate student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, pursuing a research-oriented master's in <a href="https://www.cmu.edu/bme/">Biomedical Engineering</a>, advised by <a href="https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html">Professor Kenji Shimada</a> at the <a href="https://cerlab.cmu.edu">Computational Engineering & Robotics Lab</a>.
+      I am a graduate student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, pursuing a research-oriented master's in <a href="https://www.cmu.edu/bme/">Biomedical Engineering</a>, advised by <a href="https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html">Professor Kenji Shimada</a> at the <a href="https://cerlab.cmu.edu">Computational Engineering & Robotics Lab</a>. My work combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse clinical data for surgical and biomedical workflows.
     </p>
-    <p class="hero-panel__lead">
-      My work combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse clinical data for surgical and biomedical workflows.
-    </p>
+    <p class="hero-panel__signal">Current work spans endovascular robotics, fluoroscopy-to-CTA registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision systems.</p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action" href="{{ '/research/' | relative_url }}">Research</a>
-      <a class="hero-panel__action" href="{{ '/cv/' | relative_url }}">CV</a>
-      <a class="hero-panel__action" href="mailto:tusharn@andrew.cmu.edu">Contact</a>
+      <a class="hero-panel__action" href="{{ '/publications/' | relative_url }}">Publications</a>
     </div>
   </div>
   <aside class="hero-panel__aside">
+    <img class="hero-panel__portrait" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Tushar Nayak">
     <p class="hero-panel__aside-title">Current focus</p>
     <ul class="hero-panel__list">
       <li>endovascular robotics and vessel deformation modeling</li>
@@ -53,6 +44,21 @@ latest_posts:
       Based in Pittsburgh. You can reach me at tusharn [at] andrew [dot] cmu [dot] edu or find me in the Steffey Robotics Lab space at <a href="https://maps.app.goo.gl/Vau7Cu9NhYost5q7A">Scaife Hall</a>.
     </p>
   </aside>
+</section>
+
+<section class="section-shell">
+  <p class="section-shell__eyebrow">selected work</p>
+  <div class="section-shell__grid">
+    <div><h2 class="section-shell__title">Selected projects.</h2></div>
+    <div class="section-shell__panel">
+      <p class="section-shell__panel-title">recommended path</p>
+      <p class="section-nav">
+        <a href="{{ '/projects/1_project/' | relative_url }}">endovascular deformation</a>
+        <a href="{{ '/projects/2_project/' | relative_url }}">glioblastoma forecasting</a>
+        <a href="{{ '/projects/4_project/' | relative_url }}">cardiac reconstruction</a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="section-shell">
