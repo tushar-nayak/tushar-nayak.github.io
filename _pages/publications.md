@@ -85,6 +85,22 @@ aria-label="View ORCID profile"
 
 <div class="publications">
 
-{% bibliography %}
+<section class="section-shell">
+  <p class="section-shell__eyebrow">under review</p>
+</section>
+
+{% bibliography --query @unpublished* %}
+
+<section class="section-shell">
+  <p class="section-shell__eyebrow">forum presentations</p>
+</section>
+
+{% bibliography --query @misc* %}
+
+<section class="section-shell">
+  <p class="section-shell__eyebrow">published work</p>
+</section>
+
+{% bibliography --query @article|@inproceedings|@incollection* %}
 
 </div>
