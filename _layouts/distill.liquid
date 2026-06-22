@@ -72,15 +72,21 @@
             <nav class="l-text figcaption">
               <h3>Contents</h3>
               {% for section in page.toc %}
-                <div>
-                  <a href="#{{ section.name | slugify }}">{{ section.name }}</a>
-                </div>
+                {% assign section_name = section.name | to_s | strip %}
+                {% if section_name != '' %}
+                  <div>
+                    <a href="#{{ section_name | slugify }}">{{ section_name }}</a>
+                  </div>
+                {% endif %}
                 {% if section.subsections %}
                   <ul>
                     {% for subsection in section.subsections %}
-                      <li>
-                        <a href="#{{ subsection.name | slugify }}">{{ subsection.name }}</a>
-                      </li>
+                      {% assign subsection_name = subsection.name | to_s | strip %}
+                      {% if subsection_name != '' %}
+                        <li>
+                          <a href="#{{ subsection_name | slugify }}">{{ subsection_name }}</a>
+                        </li>
+                      {% endif %}
                     {% endfor %}
                   </ul>
                 {% endif %}

@@ -31,6 +31,7 @@ pagination:
 
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
 {% assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+{% assign blog_archive_links_enabled = false %}
 {% if posts_by_year.size > 0 %}
 
   <section class="blog-calendar">
@@ -83,7 +84,7 @@ pagination:
     <ul class="p-0 m-0">
       {% for tag in site.display_tags %}
         <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -94,7 +95,7 @@ pagination:
       {% endif %}
       {% for category in site.display_categories %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -212,9 +213,7 @@ pagination:
         {% if tags != "" %}
           <span class="post-tag-pills">
             {% for tag in post.tags limit: 3 %}
-              <a class="post-tag-pill" href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
-                {{ tag }}
-              </a>
+              <span class="post-tag-pill">{{ tag }}</span>
             {% endfor %}
           </span>
         {% endif %}
@@ -223,9 +222,7 @@ pagination:
           <span class="post-tags-separator">&middot;</span>
           <span class="post-tag-pills post-category-pills">
             {% for category in visible_categories %}
-              <a class="post-tag-pill post-category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-                {{ category }}
-              </a>
+              <span class="post-tag-pill post-category-pill">{{ category }}</span>
             {% endfor %}
           </span>
         {% endif %}

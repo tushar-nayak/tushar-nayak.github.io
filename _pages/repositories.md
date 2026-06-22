@@ -3,7 +3,7 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: Selected GitHub repositories and codebases.
-nav: true
+nav: false
 nav_order: 5
 ---
 

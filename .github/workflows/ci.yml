@@ -41,5 +41,8 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
 
+      - name: Validate internal links
+        run: node bin/validate_internal_links.mjs
+
       - name: Validate metadata
         run: node bin/validate_site_metadata.mjs
