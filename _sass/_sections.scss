@@ -9,8 +9,8 @@
   --tn-muted: color-mix(in srgb, var(--global-text-color) 64%, transparent 36%);
   --tn-accent-soft: color-mix(in srgb, var(--global-theme-color) 6%, transparent 94%);
   --tn-accent-strong: color-mix(in srgb, var(--global-theme-color) 10%, transparent 90%);
-  --tn-shadow: 0 10px 24px rgb(15 23 42 / 0.04);
-  --tn-sans: "Avenir Next", "Helvetica Neue", "Segoe UI", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --tn-shadow: 0 10px 24px rgb(15 23 42 / 0.06);
+  --tn-sans: "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --tn-mono: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 }
 
@@ -74,12 +74,6 @@ p {
   text-transform: lowercase;
 }
 
-.navbar-brand__prompt,
-.nav-link__prompt {
-  display: inline-block;
-  margin-right: 0.45rem;
-  color: var(--global-theme-color);
-}
 
 .navbar-nav .nav-link {
   display: inline-flex;
@@ -254,12 +248,6 @@ details summary {
   font-family: var(--tn-mono);
 }
 
-.hero-panel__eyebrow::before,
-.section-shell__eyebrow::before,
-.project-card-kicker::before,
-.case-study-hero__kicker::before {
-  content: "> ";
-}
 
 .hero-panel__title,
 .section-shell__title {
@@ -317,11 +305,6 @@ details summary {
   text-decoration: none;
 }
 
-.hero-panel__action::before,
-.project-link::before {
-  content: "$";
-  color: var(--global-theme-color);
-}
 
 .hero-panel__aside,
 .section-shell__panel {
@@ -338,7 +321,7 @@ details summary {
   max-width: 18rem;
   margin: 0 0 1rem auto;
   border: 1px solid var(--tn-border);
-  border-radius: 0.45rem;
+  border-radius: 1.15rem;
 }
 
 .hero-panel__aside-title,
@@ -351,11 +334,6 @@ details summary {
   font-family: var(--tn-mono);
 }
 
-.hero-panel__aside-title::before,
-.section-shell__panel-title::before {
-  content: "~/ ";
-  color: var(--global-theme-color);
-}
 
 .hero-panel__list,
 .section-shell__list {
@@ -400,11 +378,6 @@ details summary {
   font-weight: 700;
 }
 
-.section-nav a::before {
-  content: "->";
-  margin-right: 0.45rem;
-  color: var(--global-theme-color);
-}
 
 .featured-projects__group + .featured-projects__group {
   margin-top: 2rem;
@@ -446,10 +419,6 @@ details summary {
   text-transform: lowercase;
 }
 
-.project-card-path::before {
-  content: "~/";
-  margin-right: 0.15rem;
-}
 
 .project-card .card-text {
   color: var(--tn-muted);
@@ -466,9 +435,6 @@ details summary {
   font-family: var(--tn-mono);
 }
 
-.project-card-cta::before {
-  content: "-> ";
-}
 
 .project-meta-shell {
   padding-top: 0.5rem;
@@ -538,9 +504,6 @@ details summary {
   color: var(--global-theme-color);
 }
 
-.project-meta__label::before {
-  content: "$ ";
-}
 
 .project-meta__value {
   font-weight: 600;
@@ -656,19 +619,11 @@ details summary {
   text-align: right;
 }
 
-.site-footer__links a::before {
-  content: "-> ";
-  color: var(--global-theme-color);
-}
 
 .site-footer__meta span {
   color: var(--tn-muted);
 }
 
-.site-footer__meta span::before {
-  content: "> ";
-  color: var(--global-theme-color);
-}
 
 @media (max-width: 768px) {
   .profile,
