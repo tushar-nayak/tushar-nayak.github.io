@@ -69,7 +69,7 @@ latest_posts:
 <details>
   <summary>Read more...</summary>
   
- I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgerical platform as part of my masters thesis with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluroscopy angiograms and register the deformation to the pre-operative computer tomography angiographs.
+ I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgical platform as part of my masters thesis with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluoroscopy angiograms and register the deformation to the pre-operative computer tomography angiograms.
 
 <br><br>
 
