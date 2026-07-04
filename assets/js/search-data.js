@@ -539,7 +539,7 @@ ninja.data = [{
               window.location.href = "/projects/6_project/";
             },},{id: "projects-monkeypox-virus-detection-using-skin-lesion-images",
           title: 'Monkeypox Virus Detection Using Skin Lesion Images',
-          description: "Prelimnary project at Biomedical Computing Lab",
+          description: "Preliminary project at Biomedical Computing Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-cta-to-mesh-amp-point-cloud-coronary-artery-segmentation-using-residual-3d-u-net",
