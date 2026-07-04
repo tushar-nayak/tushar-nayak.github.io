@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Monkeypox Virus Detection Using Skin Lesion Images
-description: Prelimnary project at Biomedical Computing Lab
+description: Preliminary project at Biomedical Computing Lab
 img: assets/img/mpxc.png
 importance: 1
 category: at manipal

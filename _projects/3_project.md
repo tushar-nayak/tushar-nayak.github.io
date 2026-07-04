@@ -3,7 +3,6 @@ layout: page
 title: Neural Correlates Associated to Images for Emotional Response
 description: Course Project for Fundamentals of MRI and Neuroimaging Analysis
 img: assets/img/fmri.png
-# redirect: https://unsplash.com
 importance: 6
 category: course projects
 report: https://tushar-nayak.github.io/assets/pdf/42668.pdf
@@ -15,10 +14,10 @@ This project maps how the brain processes emotionally positive, negative, and ne
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ica1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ica1.png" title="ICA component map 1" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ica2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ica2.png" title="ICA component map 2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -26,7 +25,7 @@ This project maps how the brain processes emotionally positive, negative, and ne
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/glm.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/glm.png" title="GLM contrast map" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
