@@ -437,11 +437,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
             },},{id: "news-embarking-on-my-first-ta-position-for-applied-deep-learning-at-carnegie-mellon-university",
           title: 'Embarking on my first TA position, for Applied Deep Learning at Carnegie Mellon...',
           description: "",
@@ -522,8 +517,8 @@ ninja.data = [{
           description: "Research at The ∀ Lab &amp; Image Science Lab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-neural-correlates-associated-to-images-for-emtional-response",
-          title: 'Neural Correlates Associated to Images for Emtional Response',
+            },},{id: "projects-neural-correlates-associated-to-images-for-emotional-response",
+          title: 'Neural Correlates Associated to Images for Emotional Response',
           description: "Course Project for Fundamentals of MRI and Neuroimaging Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
