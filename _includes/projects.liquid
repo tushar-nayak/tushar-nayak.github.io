@@ -15,7 +15,6 @@
         {% if project.category %}
           <p class="project-card-kicker">{{ project.category }}</p>
         {% endif %}
-        <p class="project-card-path">projects/{{ project.slug | default: project.title | slugify }}</p>
         <h2 class="card-title">{{ project.title }}</h2>
         {% if project.status or project.tags %}
           <div class="project-card-meta">
