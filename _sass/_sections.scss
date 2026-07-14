@@ -380,14 +380,27 @@ details summary {
 }
 
 .hero-panel__signal {
+  position: relative;
   max-width: 48rem;
-  margin: 0.9rem 0 0;
+  margin: 1.35rem 0 0;
+  padding-top: 0.75rem;
   color: var(--global-highlight-color);
   font-family: var(--tn-mono);
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.6;
+}
+
+.hero-panel__signal::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--global-theme-color);
+  content: "";
+  animation: tn-signal-line 700ms 500ms ease-out forwards;
 }
 
 .hero-panel__contact {
@@ -400,16 +413,6 @@ details summary {
 
 .hero-panel__contact a {
   color: inherit;
-}
-
-.hero-panel__eyebrow::after,
-.section-shell__eyebrow::after,
-.project-card-kicker::after {
-  display: inline-block;
-  margin-left: 0.35rem;
-  color: var(--global-theme-color);
-  content: "▌";
-  animation: tn-cursor-blink 1.05s steps(1, end) infinite;
 }
 
 .about-page .post-header,
@@ -485,6 +488,15 @@ details summary {
   color: var(--global-hover-text-color);
 }
 
+.hero-panel__action span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+.hero-panel__action:hover span[aria-hidden="true"] {
+  transform: translate(3px, -2px);
+}
+
 .hero-panel__aside,
 .section-shell__panel {
   padding: 0.9rem 0 0 1.15rem;
@@ -501,6 +513,14 @@ details summary {
   margin: 0 0 1rem auto;
   border: 1px solid var(--tn-border);
   border-radius: 1.15rem;
+  transition:
+    filter 240ms ease,
+    transform 240ms ease;
+}
+
+.hero-panel__portrait:hover {
+  filter: saturate(1.08) contrast(1.03);
+  transform: translateY(-2px) scale(1.01);
 }
 
 .hero-panel__aside-title,
@@ -685,17 +705,6 @@ details summary {
   }
 }
 
-@keyframes tn-cursor-blink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  46%,
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes tn-modal-in {
   from {
     opacity: 0;
@@ -704,6 +713,12 @@ details summary {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tn-signal-line {
+  to {
+    width: 5.5rem;
   }
 }
 
