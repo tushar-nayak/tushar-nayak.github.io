@@ -28,5 +28,5 @@
     // Continue without persistence when sessionStorage is unavailable.
   }
 
-  window.setTimeout(dismiss, 760);
+  window.setTimeout(dismiss, 2000);
 })();
