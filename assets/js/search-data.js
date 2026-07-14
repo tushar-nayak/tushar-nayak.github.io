@@ -30,35 +30,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
+        },{id: "nav-writing",
+          title: "writing",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/teaching/";
+            window.location.href = "/blog/";
           },
-        },{id: "dropdown-resume",
-              title: "resume",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "https://tushar-nayak.github.io/resume/tushar-nayak-resume.pdf";
-              },
-            },{id: "dropdown-github",
-              title: "github",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "https://github.com/tushar-nayak";
-              },
-            },{id: "dropdown-linkedin",
-              title: "linkedin",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "https://www.linkedin.com/in/nayaktushar";
-              },
-            },{id: "post-sparse-view-clinical-reconstruction-explicit-vs-implicit-representations",
+        },{id: "nav-cv",
+          title: "cv",
+          description: "Research CV and resume for Tushar Nayak, covering education, research, teaching, publications, and selected technical work.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-sparse-view-clinical-reconstruction-explicit-vs-implicit-representations",
         
           title: "sparse-view clinical reconstruction: explicit vs implicit representations",
         
