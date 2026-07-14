@@ -2,6 +2,7 @@
 layout: page
 title: Neural Active Contours
 description: A non U-Net segmentation approach for medical images
+img: assets/img/pointcloud1.gif
 importance: 1
 category: personal projects
 github: https://github.com/tushar-nayak/neural-active-contours/

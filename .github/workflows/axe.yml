@@ -1,20 +1,11 @@
 name: Axe accessibility testing
 
 on:
-  # if you want to run this on every push uncomment the following lines
-  # push:
-  #   branches:
-  #     - master
-  #     - main
-  # pull_request:
-  #   branches:
-  #     - master
-  #     - main
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
   workflow_dispatch:
-    inputs:
-      url:
-        description: "URL to be checked (e.g.: blog/)"
-        required: false
 
 env:
   URL: ""
@@ -71,4 +62,4 @@ jobs:
           npm install -g @axe-core/cli
           npm install -g http-server
           http-server _site/ &
-          axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit
+          axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ env.URL }} --load-delay=1500 --exit

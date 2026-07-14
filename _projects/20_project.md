@@ -2,6 +2,7 @@
 layout: page
 title: Federated Graph Learning for Pathology Images
 description: A pathology learning pipeline that combines self-supervised image encoding, patient-level federated training, graph reasoning, and concept-bottleneck classification.
+img: assets/img/glm.png
 importance: 4
 category: personal projects
 github: https://github.com/tushar-nayak/glass-path

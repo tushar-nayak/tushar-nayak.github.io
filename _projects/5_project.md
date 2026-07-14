@@ -2,7 +2,7 @@
 layout: page
 title: Multi-Model Oral Squamous Cell Carcinoma Detection
 description: Undergraduate thesis
-img: assets/img/oscc.jpg
+img: assets/img/oscc.png
 importance: 3
 category: at manipal
 status: completed

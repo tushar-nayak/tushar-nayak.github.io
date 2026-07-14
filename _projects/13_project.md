@@ -2,6 +2,7 @@
 layout: page
 title: Deformable 3D Surgical Scene Reconstruction
 description: A surgical vision prototype that combines depth-based point clouds, deformable 3D Gaussian splatting, and VLM-guided semantic querying for endoscopic scenes.
+img: assets/img/mesh1.gif
 importance: 1
 category: personal projects
 github: https://github.com/tushar-nayak/endo-splat/

@@ -1,0 +1,51 @@
+name: Site quality
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  quality:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      - name: Validate project metadata
+        run: node bin/validate_project_metadata.mjs
+
+      - name: Validate CV consistency
+        run: node bin/validate_cv_consistency.mjs
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2.1.0
+        with:
+          fail: true
+          args: --verbose --no-progress --max-retries 3 --retry-wait-time 2 --timeout 20 "_site/**/*.html"

@@ -2,6 +2,7 @@
 layout: page
 title: Neural Morphological Analysis of Fungi
 description: A microscopy project for fungal species classification and future neural-field modeling of morphology from high-resolution biological image patches.
+img: assets/img/bi-ip.jpg
 importance: 3
 category: personal projects
 github: https://github.com/tushar-nayak/fungal-neo/
