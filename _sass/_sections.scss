@@ -17,7 +17,7 @@
 body {
   font-family: var(--tn-sans);
   letter-spacing: -0.01em;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1,
@@ -67,7 +67,7 @@ p {
 .dropdown-item {
   font-size: 0.92rem;
   letter-spacing: 0.02em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .navbar-brand {
@@ -284,14 +284,14 @@ details summary {
 }
 
 .about-page .post-title {
-  max-width: 10ch;
+  max-width: 12ch;
   margin-bottom: 0.65rem;
   color: var(--global-text-color);
   font-family: var(--tn-sans);
-  font-size: clamp(3.2rem, 9vw, 6.8rem);
-  font-weight: 800;
-  letter-spacing: -0.085em;
-  line-height: 0.88;
+  font-size: clamp(2.7rem, 7vw, 5.3rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.92;
   text-transform: none;
 }
 
@@ -323,7 +323,7 @@ details summary {
 .case-study-hero__kicker {
   margin-bottom: 0.55rem;
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--global-theme-color);
@@ -342,9 +342,9 @@ details summary {
 }
 
 .hero-panel__title {
-  max-width: 14ch;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 0.98;
+  max-width: 18ch;
+  font-size: clamp(1.65rem, 3vw, 2.65rem);
+  line-height: 1.04;
 }
 
 .hero-panel__lead,
@@ -352,8 +352,8 @@ details summary {
 .hero-panel__aside-note {
   color: var(--tn-muted);
   line-height: 1.8;
-  font-size: 0.97rem;
-  font-weight: 500;
+  font-size: 0.93rem;
+  font-weight: 400;
 }
 
 .hero-panel__signal {
@@ -361,8 +361,8 @@ details summary {
   margin: 0.9rem 0 0;
   color: var(--global-highlight-color);
   font-family: var(--tn-mono);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.76rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.6;
 }
@@ -397,8 +397,8 @@ details summary {
   border-radius: 0.35rem;
   background: transparent;
   color: inherit;
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 600;
   font-family: var(--tn-mono);
   text-decoration: none;
   appearance: none;
@@ -450,7 +450,7 @@ details summary {
 .section-shell__panel-title {
   margin-bottom: 0.65rem;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-family: var(--tn-mono);
@@ -524,9 +524,9 @@ details summary {
 .project-card .card-title {
   margin-bottom: 0;
   font-family: var(--tn-sans);
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .projects .row {
