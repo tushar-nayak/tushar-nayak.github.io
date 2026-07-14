@@ -94,6 +94,7 @@ latest_posts:
     <p>Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the
     <a href="https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf">BME department's ambassador</a>,
     going trailbiking, playing the piano or continuing work on this website!</p>
+
   </div>
 </dialog>
 
