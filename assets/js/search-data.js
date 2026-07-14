@@ -11,28 +11,28 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "research",
-          description: "Research portfolio organized by lab, institution, and theme, including Carnegie Mellon and earlier biomedical imaging work.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "Selected technical projects spanning medical imaging, computer vision, geometric modeling, and robotic intervention.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-publications",
           title: "publications",
-          description: "Publications, conference papers, and journal articles by Tushar Nayak across medical imaging, biomedical AI, and computer vision.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "teaching, course support, and workshop work across robotics, vision, and biomedical engineering",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
