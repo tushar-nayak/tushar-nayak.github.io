@@ -534,6 +534,14 @@ footer.sticky-bottom {
   color: var(--global-footer-link-color) !important;
 }
 
+// footer.sticky-bottom sits directly on the page background rather than the
+// dark band footer.fixed-bottom provides, so the meta text needs a color
+// that contrasts with the page instead of the footer-link color.
+footer.sticky-bottom .site-footer__meta,
+footer.sticky-bottom .site-footer__meta span {
+  color: var(--tn-muted) !important;
+}
+
 @media (max-width: 767px) {
   .site-footer {
     flex-direction: column;

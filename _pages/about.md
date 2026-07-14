@@ -28,6 +28,7 @@ latest_posts:
     <div class="hero-panel__actions">
       <a class="hero-panel__action" href="{{ '/research/' | relative_url }}">Research</a>
       <a class="hero-panel__action" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <button type="button" class="hero-panel__action" id="bio-more-trigger" aria-haspopup="dialog" aria-controls="bio-more-dialog">Read more...</button>
     </div>
   </div>
   <aside class="hero-panel__aside">
@@ -66,36 +67,34 @@ latest_posts:
 
 {% include featured_projects.liquid %}
 
-<details>
-  <summary>Read more...</summary>
-  
- I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgical platform as part of my masters thesis with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluoroscopy angiograms and register the deformation to the pre-operative computer tomography angiograms.
+<dialog id="bio-more-dialog" class="bio-modal">
+  <form method="dialog" class="bio-modal__close-row">
+    <button type="submit" class="bio-modal__close" aria-label="Close">&times;</button>
+  </form>
+  <div class="bio-modal__body">
+    <p>I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgical platform as part of my masters thesis with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluoroscopy angiograms and register the deformation to the pre-operative computer tomography angiograms.</p>
 
-<br><br>
+    <p>Before Pittsburgh, I completed my undergrad at
+    <a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a>
+    with a major in
+    <a href="https://www.manipal.edu/mit/department-faculty/department-list/biomedical.html">Biomedical Engineering</a>,
+    focusing on pattern recognition and image processing, and a minor in Data Science.
+    Over the second half of my undergrad, I worked under
+    <a href="https://researcher.manipal.edu/en/persons/niranjana-s">Professor Niranjana S</a>
+    and
+    <a href="https://researcher.manipal.edu/en/persons/krishnaraj-chadaga">Dr. Krishnaraj Chadaga</a>
+    at the Biomedical Computing Lab on projects ranging from skin lesion image-based viral infection detection to multi-stage and multi-modal cancer detection.</p>
 
-Before Pittsburgh, I completed my undergrad at
-<a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a>
-with a major in
-<a href="https://www.manipal.edu/mit/department-faculty/department-list/biomedical.html">Biomedical Engineering</a>,
-focusing on pattern recognition and image processing, and a minor in Data Science.
-Over the second half of my undergrad, I worked under
-<a href="https://researcher.manipal.edu/en/persons/niranjana-s">Professor Niranjana S</a>
-and
-<a href="https://researcher.manipal.edu/en/persons/krishnaraj-chadaga">Dr. Krishnaraj Chadaga</a>
-at the Biomedical Computing Lab on projects ranging from skin lesion image-based viral infection detection to multi-stage and multi-modal cancer detection.
+    <p>Between my bachelors and masters, I also spent a year as a researcher at
+    <a href="https://www.iith.ac.in/">IIT Hyderabad</a>
+    working on motion-capture & electromyography analysis for exercise and the
+    <a href="https://www.icmr.gov.in/">Indian Council of Medical Research</a>
+    where I worked on an ultrasound-based fetal anomaly system.</p>
 
-<br><br>
+    <p>Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the
+    <a href="https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf">BME department's ambassador</a>,
+    going trailbiking, playing the piano or continuing work on this website!</p>
+  </div>
+</dialog>
 
-Between my bachelors and masters, I also spent a year as a researcher at
-<a href="https://www.iith.ac.in/">IIT Hyderabad</a>
-working on motion-capture & electromyography analysis for exercise and the
-<a href="https://www.icmr.gov.in/">Indian Council of Medical Research</a>
-where I worked on an ultrasound-based fetal anomaly system.
-
-<br><br>
-
-Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the
-<a href="https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf">BME department's ambassador</a>,
-going trailbiking, playing the piano or continuing work on this website!
-
-</details>
+<script defer src="{{ '/assets/js/bio_modal.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
