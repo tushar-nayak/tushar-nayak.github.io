@@ -79,6 +79,23 @@ p {
   align-items: center;
 }
 
+.navbar-nav .nav-item.active > .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-item.active > .nav-link::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.15rem;
+  left: 0.75rem;
+  height: 2px;
+  background: var(--global-theme-color);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: tn-line-in 420ms 180ms ease-out forwards;
+}
+
 .navbar-nav .nav-item .nav-link,
 .dropdown-item {
   text-transform: lowercase;
@@ -220,8 +237,16 @@ details summary {
   box-shadow: var(--tn-shadow);
 }
 
+.bio-modal[open] {
+  animation: tn-modal-in 220ms ease-out both;
+}
+
 .bio-modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.bio-modal[open]::backdrop {
+  animation: tn-backdrop-in 220ms ease-out both;
 }
 
 .bio-modal__close-row {
@@ -379,6 +404,40 @@ details summary {
   color: inherit;
 }
 
+.hero-panel__eyebrow::after,
+.section-shell__eyebrow::after,
+.project-card-kicker::after {
+  display: inline-block;
+  margin-left: 0.35rem;
+  color: var(--global-theme-color);
+  content: "▌";
+  animation: tn-cursor-blink 1.05s steps(1, end) infinite;
+}
+
+.about-page .post-header,
+.about-page .hero-panel,
+.about-page .section-shell,
+.about-page .research-map,
+.about-page .featured-projects {
+  animation: tn-rise-in 520ms ease-out both;
+}
+
+.about-page .hero-panel {
+  animation-delay: 100ms;
+}
+
+.about-page .section-shell {
+  animation-delay: 180ms;
+}
+
+.about-page .research-map {
+  animation-delay: 260ms;
+}
+
+.about-page .featured-projects {
+  animation-delay: 340ms;
+}
+
 .hero-panel__actions {
   display: flex;
   flex-wrap: wrap;
@@ -531,6 +590,152 @@ details summary {
 
 .projects .row {
   row-gap: 1.25rem;
+}
+
+.project-card,
+.featured-project {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.project-card:hover,
+.featured-project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgb(15 23 42 / 0.08);
+}
+
+.research-map__item {
+  animation: tn-rise-in 420ms ease-out both;
+}
+
+.research-map__item:nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.research-map__item:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.research-map__item:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.research-map__item:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.research-map__item:nth-child(5) {
+  animation-delay: 360ms;
+}
+
+.research-map__item:nth-child(6) {
+  animation-delay: 420ms;
+}
+
+.featured-projects__grid .featured-project:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.featured-projects__grid .featured-project:nth-child(2) {
+  animation-delay: 260ms;
+}
+
+.featured-projects__grid .featured-project:nth-child(3) {
+  animation-delay: 340ms;
+}
+
+.featured-projects__grid .featured-project:nth-child(4) {
+  animation-delay: 420ms;
+}
+
+.featured-project figure,
+.project-card figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-project figure::after,
+.project-card figure::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30%;
+  width: 24%;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.24), transparent);
+  content: "";
+  pointer-events: none;
+  transform: skewX(-18deg);
+  animation: tn-image-scan 900ms 400ms ease-out both;
+}
+
+@keyframes tn-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tn-line-in {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes tn-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tn-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tn-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tn-image-scan {
+  from {
+    transform: translateX(0) skewX(-18deg);
+  }
+  to {
+    transform: translateX(600%) skewX(-18deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .project-card-path {
