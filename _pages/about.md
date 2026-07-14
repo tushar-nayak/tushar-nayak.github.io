@@ -21,15 +21,18 @@ latest_posts:
 
 <section class="hero-panel">
   <div class="hero-panel__content">
+    <p class="hero-panel__eyebrow">biomedical vision / robotic intervention</p>
+    <h2 class="hero-panel__title">Recovering structure from incomplete clinical data.</h2>
     <p class="hero-panel__lead">
-      I am a graduate student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, pursuing a research-oriented master's in <a href="https://www.cmu.edu/bme/">Biomedical Engineering</a>, advised by <a href="https://www.meche.engineering.cmu.edu/directory/bios/shimada-kenji.html">Professor Kenji Shimada</a> at the <a href="https://cerlab.cmu.edu">Computational Engineering & Robotics Lab</a>. My work combines medical imaging, geometric vision, and physics-aware learning models to recover structure, motion, and deformation from sparse clinical data for surgical and biomedical workflows.
+      I am a graduate student researcher at <a href="https://www.cmu.edu/">Carnegie Mellon University</a> working across medical imaging, geometric vision, and physics-aware learning. I build vision systems that turn sparse measurements into useful anatomy, motion, and deformation estimates for surgical workflows.
     </p>
-    <p class="hero-panel__signal">Current work spans endovascular robotics, fluoroscopy-to-CTA registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision systems.</p>
+    <p class="hero-panel__signal">Current work: endovascular robotics, fluoroscopy-to-CTA registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision.</p>
     <div class="hero-panel__actions">
-      <a class="hero-panel__action" href="{{ '/research/' | relative_url }}">Research</a>
-      <a class="hero-panel__action" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
+      <a class="hero-panel__action" href="{{ '/resume/tushar-nayak-resume.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
       <button type="button" class="hero-panel__action" id="bio-more-trigger" aria-haspopup="dialog" aria-controls="bio-more-dialog">Read more...</button>
     </div>
+    <p class="hero-panel__contact">Pittsburgh, PA · <a href="mailto:tusharn@andrew.cmu.edu">tusharn@andrew.cmu.edu</a></p>
   </div>
   <aside class="hero-panel__aside">
     <img class="hero-panel__portrait" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Tushar Nayak">
@@ -39,9 +42,7 @@ latest_posts:
       <li>registration from fluoroscopy and pre-operative CTA</li>
       <li>3D vision methods grounded in clinical constraints</li>
     </ul>
-    <p class="hero-panel__aside-note">
-      Based in Pittsburgh. You can reach me at tusharn [at] andrew [dot] cmu [dot] edu or find me in the Steffey Robotics Lab space at <a href="https://maps.app.goo.gl/Vau7Cu9NhYost5q7A">Scaife Hall</a>.
-    </p>
+    <p class="hero-panel__aside-note">Steffey Robotics Lab · Scaife Hall · Carnegie Mellon University</p>
   </aside>
 </section>
 

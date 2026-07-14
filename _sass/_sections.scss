@@ -18,6 +18,10 @@ body {
   font-family: var(--tn-sans);
   letter-spacing: -0.01em;
   font-weight: 500;
+  background-image: linear-gradient(to right, color-mix(in srgb, var(--global-text-color) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--global-text-color) 4%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
 }
 
 h1,
@@ -277,11 +281,44 @@ details summary {
   box-shadow: none;
 }
 
+.about-page .post-header {
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--tn-border);
+}
+
+.about-page .post-title {
+  max-width: 10ch;
+  margin-bottom: 0.65rem;
+  color: var(--global-text-color);
+  font-family: var(--tn-sans);
+  font-size: clamp(3.2rem, 9vw, 6.8rem);
+  font-weight: 800;
+  letter-spacing: -0.085em;
+  line-height: 0.88;
+  text-transform: none;
+}
+
+.about-page .desc {
+  max-width: 38rem;
+  margin: 0;
+  color: var(--global-theme-color);
+  font-family: var(--tn-mono);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
 .hero-panel {
   display: grid;
   grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
   gap: 1.5rem;
   align-items: start;
+  padding: clamp(1.2rem, 3vw, 2.3rem);
+  border: 1px solid var(--tn-border);
+  background: color-mix(in srgb, var(--global-card-bg-color) 86%, transparent);
+  box-shadow: var(--tn-shadow);
 }
 
 .hero-panel__eyebrow,
@@ -308,6 +345,12 @@ details summary {
   text-transform: none;
 }
 
+.hero-panel__title {
+  max-width: 14ch;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.98;
+}
+
 .hero-panel__lead,
 .section-shell__text,
 .hero-panel__aside-note {
@@ -315,6 +358,29 @@ details summary {
   line-height: 1.8;
   font-size: 0.97rem;
   font-weight: 500;
+}
+
+.hero-panel__signal {
+  max-width: 48rem;
+  margin: 0.9rem 0 0;
+  color: var(--global-highlight-color);
+  font-family: var(--tn-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.hero-panel__contact {
+  margin: 1.25rem 0 0;
+  color: var(--tn-muted);
+  font-family: var(--tn-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-panel__contact a {
+  color: inherit;
 }
 
 .hero-panel__actions {
@@ -353,6 +419,17 @@ details summary {
   border-color: color-mix(in srgb, var(--global-theme-color) 40%, var(--global-divider-color) 60%);
   background: var(--tn-accent-soft);
   text-decoration: none;
+}
+
+.hero-panel__action--primary {
+  border-color: var(--global-theme-color);
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+}
+
+.hero-panel__action--primary:hover {
+  background: var(--global-hover-color);
+  color: var(--global-hover-text-color);
 }
 
 .hero-panel__aside,
@@ -454,6 +531,10 @@ details summary {
   font-size: 1.1rem;
   line-height: 1.2;
   font-weight: 700;
+}
+
+.projects .row {
+  row-gap: 1.25rem;
 }
 
 .project-card-path {
