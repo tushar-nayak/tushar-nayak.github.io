@@ -26,7 +26,7 @@ latest_posts:
     <p class="hero-panel__lead">
       I am a scientist at the <a href="https://surgbiomech.github.io">SurgBioMech / Pocivavsek Lab</a> at the <a href="https://www.uchicago.edu/">University of Chicago</a>. After completing my master's in Biomedical Engineering at Carnegie Mellon University, I continue working across medical imaging, geometric vision, and physics-aware learning to turn sparse measurements into useful anatomy, motion, and deformation estimates for surgical workflows.
     </p>
-    <p class="hero-panel__signal">Current work: endovascular robotics, fluoroscopy-to-CTA registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision.</p>
+    <p class="hero-panel__signal">Current work: endovascular robotics, fluoroscopy-to-CTA deformable registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision.</p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
       <a class="hero-panel__action" href="{{ '/resume/tushar-nayak-resume.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
