@@ -24,7 +24,7 @@ latest_posts:
     <p class="hero-panel__eyebrow">biomedical vision / robotic intervention</p>
     <h2 class="hero-panel__title">Recovering structure from incomplete clinical data.</h2>
     <p class="hero-panel__lead">
-      I am a graduate student researcher at <a href="https://www.cmu.edu/">Carnegie Mellon University</a> working across medical imaging, geometric vision, and physics-aware learning. I build vision systems that turn sparse measurements into useful anatomy, motion, and deformation estimates for surgical workflows.
+      I am a scientist at the <a href="https://surgbiomech.github.io">SurgBioMech / Pocivavsek Lab</a> at the <a href="https://www.uchicago.edu/">University of Chicago</a>. After completing my master's in Biomedical Engineering at Carnegie Mellon University, I continue working across medical imaging, geometric vision, and physics-aware learning to turn sparse measurements into useful anatomy, motion, and deformation estimates for surgical workflows.
     </p>
     <p class="hero-panel__signal">Current work: endovascular robotics, fluoroscopy-to-CTA registration, sparse-view 3D reconstruction, and clinically grounded biomedical vision.</p>
     <div class="hero-panel__actions">
@@ -32,7 +32,7 @@ latest_posts:
       <a class="hero-panel__action" href="{{ '/resume/tushar-nayak-resume.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
       <button type="button" class="hero-panel__action" id="bio-more-trigger" aria-haspopup="dialog" aria-controls="bio-more-dialog">Read more...</button>
     </div>
-    <p class="hero-panel__contact">Pittsburgh, PA · <a href="mailto:tusharn@andrew.cmu.edu">tusharn@andrew.cmu.edu</a></p>
+    <p class="hero-panel__contact">Chicago, IL · <a href="https://surgbiomech.github.io">SurgBioMech / Pocivavsek Lab</a></p>
   </div>
   <aside class="hero-panel__aside">
     <img class="hero-panel__portrait" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Tushar Nayak">
@@ -42,7 +42,7 @@ latest_posts:
       <li>registration from fluoroscopy and pre-operative CTA</li>
       <li>3D vision methods grounded in clinical constraints</li>
     </ul>
-    <p class="hero-panel__aside-note">Steffey Robotics Lab · Scaife Hall · Carnegie Mellon University</p>
+    <p class="hero-panel__aside-note">SurgBioMech / Pocivavsek Lab · University of Chicago</p>
   </aside>
 </section>
 
@@ -73,7 +73,7 @@ latest_posts:
     <button type="submit" class="bio-modal__close" aria-label="Close">&times;</button>
   </form>
   <div class="bio-modal__body">
-    <p>I work on the vision sub-system of a haptically enabled endovascular robotic tele-surgical platform as part of my masters thesis with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My main area of focus is investigating physics informed neural networks and neural ordinary differential equations to quantify deformation from 2D fluoroscopy angiograms and register the deformation to the pre-operative computer tomography angiograms.</p>
+    <p>During my master's at Carnegie Mellon University, I worked on the vision subsystem of a haptically enabled endovascular robotic tele-surgical platform with doctoral candidate <a href="https://www.rishibasdeo.com/">Rishi Basdeo</a>. My work investigated physics-informed neural networks and neural ordinary differential equations for quantifying deformation from 2D fluoroscopy angiograms and registering it to pre-operative computed tomography angiograms.</p>
 
     <p>Before Pittsburgh, I completed my undergrad at
     <a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a>
@@ -92,7 +92,7 @@ latest_posts:
     <a href="https://www.icmr.gov.in/">Indian Council of Medical Research</a>
     where I worked on an ultrasound-based fetal anomaly system.</p>
 
-    <p>Besides lab-work, I'm also usually giving/boring people with my usual spiel as one of the
+    <p>Besides lab work, I am also usually giving/boring people with my usual spiel as one of the
     <a href="https://www.cmu.edu/bme/Admissions/resources/tushar-nayak-ambassador-pdf.pdf">BME department's ambassador</a>,
     going trailbiking, playing the piano or continuing work on this website!</p>
 
