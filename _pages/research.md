@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 nav: true
 nav_order: 1
-display_categories: [at carnegie mellon, at manipal, other]
+display_categories: [at carnegie mellon, at uni of chicago, at manipal, other]
 horizontal: false
 ---
 
