@@ -32,7 +32,7 @@ latest_posts:
       <a class="hero-panel__action" href="{{ '/resume/tushar-nayak-resume.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
       <button type="button" class="hero-panel__action" id="bio-more-trigger" aria-haspopup="dialog" aria-controls="bio-more-dialog">Read more...</button>
     </div>
-    <p class="hero-panel__contact">Chicago, IL · <a href="https://surgbiomech.github.io">SurgBioMech / Pocivavsek Lab</a></p>
+    <p class="hero-panel__contact">Abbott Memorial Hall · Chicago, IL</p>
   </div>
   <aside class="hero-panel__aside">
     <img class="hero-panel__portrait" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Tushar Nayak">
@@ -42,7 +42,7 @@ latest_posts:
       <li>registration from fluoroscopy and pre-operative CTA</li>
       <li>3D vision methods grounded in clinical constraints</li>
     </ul>
-    <p class="hero-panel__aside-note">SurgBioMech / Pocivavsek Lab · University of Chicago</p>
+    <p class="hero-panel__aside-note">SurgBioMech / Pocivavsek Lab · Abbott Memorial Hall · University of Chicago</p>
   </aside>
 </section>
 
