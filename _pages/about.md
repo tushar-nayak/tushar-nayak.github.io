@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: computer vision focused biomedical engineer turned roboticist working in robotic surgery
+subtitle: researcher working at the intersection of surgical biomechanics, computer vision, and medical imaging
 description: Research homepage for Tushar Nayak, focused on computer vision, medical imaging, and image-guided robotic intervention.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
