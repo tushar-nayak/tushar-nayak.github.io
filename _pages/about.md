@@ -52,10 +52,6 @@ latest_posts:
       <h2 class="section-shell__title">Scientist at the SurgBioMech / Pocivavsek Lab.</h2>
       <p class="section-shell__text">I work on surgical biomechanics, computer vision, and medical imaging at the University of Chicago, with a focus on geometry-aware methods for clinical data.</p>
     </div>
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">based in</p>
-      <p class="section-shell__text">Abbott Memorial Hall<br>Chicago, Illinois</p>
-    </div>
   </div>
 </section>
 
