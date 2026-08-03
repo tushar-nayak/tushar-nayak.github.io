@@ -224,64 +224,6 @@ details summary {
   letter-spacing: -0.01em;
 }
 
-.bio-modal {
-  max-width: 640px;
-  width: 90vw;
-  max-height: 80vh;
-  margin: auto;
-  padding: 1.5rem 1.75rem 1.75rem;
-  border: 1px solid var(--tn-border);
-  border-radius: 0.95rem;
-  background: var(--tn-surface);
-  color: var(--global-text-color);
-  box-shadow: var(--tn-shadow);
-}
-
-.bio-modal[open] {
-  animation: tn-modal-in 220ms ease-out both;
-}
-
-.bio-modal::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.bio-modal[open]::backdrop {
-  animation: tn-backdrop-in 220ms ease-out both;
-}
-
-.bio-modal__close-row {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.bio-modal__close {
-  border: none;
-  background: transparent;
-  color: var(--tn-muted);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0.25rem;
-}
-
-.bio-modal__close:hover {
-  color: var(--global-theme-color);
-}
-
-.bio-modal__body {
-  overflow-y: auto;
-  max-height: calc(80vh - 4rem);
-  line-height: 1.7;
-}
-
-.bio-modal__body p {
-  margin-bottom: 1rem;
-}
-
-.bio-modal__body p:last-child {
-  margin-bottom: 0;
-}
-
 .category {
   margin-top: 3rem;
   padding-bottom: 0.55rem;
@@ -705,29 +647,9 @@ details summary {
   }
 }
 
-@keyframes tn-modal-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
 @keyframes tn-signal-line {
   to {
     width: 5.5rem;
-  }
-}
-
-@keyframes tn-backdrop-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
