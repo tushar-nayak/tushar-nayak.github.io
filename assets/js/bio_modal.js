@@ -1,1 +1,0 @@
-!function(){var e=document.getElementById("bio-more-dialog"),t=document.getElementById("bio-more-trigger");e&&t&&(t.addEventListener("click",(function(){e.showModal()})),e.addEventListener("click",(function(t){var n=e.getBoundingClientRect();n.top<=t.clientY&&t.clientY<=n.top+n.height&&n.left<=t.clientX&&t.clientX<=n.left+n.width||e.close()})))}();
