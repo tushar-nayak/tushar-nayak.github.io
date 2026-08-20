@@ -28,8 +28,7 @@
       <button
         class="navbar-toggler collapsed ml-auto"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
+        data-nav-toggle
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -103,11 +102,13 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          {% if site.search_enabled %}
+          {% if site.search_enabled and page.enable_search != false %}
             <!-- Search -->
             <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              <button id="search-toggle" type="button" title="Search" data-search-toggle>
+                <span class="nav-link"
+                  ><span class="search-shortcut" aria-hidden="true">⌘ K</span><span class="sr-only">Search</span> <i class="ti ti-search"></i
+                ></span>
               </button>
             </li>
           {% endif %}
@@ -125,9 +126,9 @@
       </div>
     </div>
   </nav>
-  {% if site.enable_progressbar %}
+  {% if site.enable_progressbar and page.enable_progressbar != false %}
     <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
+    <progress id="progress" value="0" aria-label="Page reading progress">
       <div class="progress-container">
         <span class="progress-bar"></span>
       </div>

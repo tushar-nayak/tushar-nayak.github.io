@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Physics-Informed Endovasculature Deformation Estimation And Registration
-description: Research at CERLAB (master's thesis)
+description: Estimates intra-operative neurovascular deformation by registering sparse fluoroscopy with pre-operative CTA.
 img: assets/img/newplotx.png
 importance: 1
 category: at carnegie mellon
@@ -10,6 +10,8 @@ status: ongoing
 tags: [Surgical Robotics, Medical Imaging, 3D Vision, Physics-Informed ML]
 featured: true
 featured_kind: research
+homepage_featured: true
+homepage_order: 1
 related_publications: false
 ---
 

@@ -6,7 +6,7 @@
       {% if social_data.email %}
         <a href="mailto:{{ social_data.email | encode_email }}">email</a>
       {% endif %}
-      <a href="https://tushar-nayak.github.io/resume/tushar-nayak-resume.pdf">resume</a>
+      <a href="{{ '/output/pdf/Tushar_Nayak_Resume.pdf' | relative_url }}">resume</a>
       {% if social_data.github_username %}
         <a href="https://github.com/{{ social_data.github_username }}" target="_blank" rel="noopener noreferrer">github</a>
       {% endif %}
@@ -27,13 +27,7 @@
     </div>
 
     <div class="site-footer__meta">
-      <span>
-        user: {{ site.first_name | downcase }} {{ site.last_name | downcase }}
-      </span>
       <span>&copy; {{ site.time | date: '%Y' }}</span>
-      {% if site.last_updated %}
-        <span>updated: {{ 'now' | date: '%Y-%m-%d' }}</span>
-      {% endif %}
     </div>
   </div>
 {% endcapture %}

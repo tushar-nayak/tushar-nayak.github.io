@@ -1,67 +1,22 @@
-{% assign featured_research = site.projects | where: 'featured_kind', 'research' | sort: 'importance' %}
-{% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
-{% assign featured_nonresearch = featured_projects | where_exp: 'project', "project.featured_kind != 'research'" %}
+{% assign homepage_featured = site.projects | where: 'homepage_featured', true | sort: 'homepage_order' %}
 
-{% assign total_featured = featured_research.size | plus: featured_nonresearch.size %}
-
-{% if total_featured > 0 %}
+{% if homepage_featured.size > 0 %}
   <section class="featured-projects">
-    {% if featured_research.size > 0 %}
-      <div class="featured-projects__group">
-        <h2>
-          <a href="{{ '/projects/' | relative_url }}" style="color: inherit">featured research</a>
-        </h2>
-        <div class="featured-projects__grid">
-          {% for project in featured_research %}
-            <a class="featured-project" href="{{ project.url | relative_url }}">
-              {% if project.img %}
-                {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 992px) 320px, 100vw" alt=project.title class="featured-project__image" %}
-              {% endif %}
-              <div class="featured-project__body">
-                <div class="featured-project__meta">
-                  {% if project.status %}
-                    <span class="project-card-status">{{ project.status }}</span>
-                  {% endif %}
-                  {% for tag in project.tags limit: 2 %}
-                    <span class="project-card-tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-              </div>
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
-
-    {% if featured_nonresearch.size > 0 %}
-      <div class="featured-projects__group">
-        <h2>
-          <a href="{{ '/projects/' | relative_url }}" style="color: inherit">featured projects</a>
-        </h2>
-        <div class="featured-projects__grid">
-          {% for project in featured_nonresearch limit: 2 %}
-            <a class="featured-project" href="{{ project.url | relative_url }}">
-              {% if project.img %}
-                {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 992px) 320px, 100vw" alt=project.title class="featured-project__image" %}
-              {% endif %}
-              <div class="featured-project__body">
-                <div class="featured-project__meta">
-                  {% if project.status %}
-                    <span class="project-card-status">{{ project.status }}</span>
-                  {% endif %}
-                  {% for tag in project.tags limit: 2 %}
-                    <span class="project-card-tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-              </div>
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
+    <div class="featured-projects__heading-row">
+      <p class="section-shell__eyebrow">selected work</p>
+      <a class="section-shell__inline-link" href="{{ '/projects/' | relative_url }}">all projects <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="featured-projects__list">
+      {% for project in homepage_featured limit: 3 %}
+        <a class="featured-project" href="{{ project.url | relative_url }}">
+          <span class="featured-project__index">0{{ forloop.index }}</span>
+          <div class="featured-project__body">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+          <span class="featured-project__arrow" aria-hidden="true">↗</span>
+        </a>
+      {% endfor %}
+    </div>
   </section>
 {% endif %}

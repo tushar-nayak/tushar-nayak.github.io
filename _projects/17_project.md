@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gaussian Occupancy Cardiac Reconstruction
-description: A sparse-view echocardiography project that recovers 3D cardiac anatomy with Gaussian occupancy fields, differentiable slice supervision, and mesh evaluation.
+description: Reconstructs 3D cardiac anatomy from sparse echocardiography using differentiable Gaussian occupancy fields.
 img: assets/img/gxa.png
 importance: 2
 category: personal projects
@@ -10,6 +10,8 @@ website: https://tushar-nayak.github.io/cardiac-reconstruction-evolved/
 status: active extension
 tags: [3D Vision, Medical Imaging, Cardiac Reconstruction, Gaussian Fields]
 featured: true
+homepage_featured: true
+homepage_order: 3
 ---
 
 ## project status: active extension

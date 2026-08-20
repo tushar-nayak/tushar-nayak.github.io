@@ -5,4 +5,4 @@ inline: true
 related_posts: true
 ---
 
-After graduating from Carnegie Mellon University, I am excited to be starting as a Scientist at the [SurgBioMech / Pocivavsek Lab](https://surgbiomech.github.io) at the University of Chicago, led by [Dr. Luka Pocivavsek](https://surgbiomech.github.io).
+After graduating from Carnegie Mellon University, I am excited to be starting as a Scientist at the [SurgBioMech / Pocivavsek Lab](https://surgbiomech.uchicago.edu) at the University of Chicago, led by [Dr. Luka Pocivavsek](https://surgbiomech.uchicago.edu).

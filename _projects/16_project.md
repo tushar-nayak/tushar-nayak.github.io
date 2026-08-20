@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Open-Vocabulary Surgical Tool Detection and Tracking
-description: A real endoscopy pipeline that turns text prompts into surgical tool boxes, masks, tracking overlays, and evaluation metrics using Grounding DINO and SAM2.
+description: Detects and tracks surgical instruments from open-vocabulary prompts for adaptable intra-operative perception.
 img: assets/img/project_thumbnails/surgi-prompt.jpg
 importance: 1
 category: personal projects
@@ -10,6 +10,8 @@ website: https://tushar-nayak.github.io/surgi-prompt/
 status: active prototype
 tags: [Surgical Robotics, Tool Tracking, Open-Vocabulary AI, Segmentation]
 featured: true
+homepage_featured: true
+homepage_order: 2
 ---
 
 ## project status: active prototype
