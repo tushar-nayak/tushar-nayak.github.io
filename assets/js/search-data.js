@@ -480,12 +480,12 @@ ninja.data = [{
               window.location.href = "/projects/15_project/";
             },},{id: "projects-open-vocabulary-surgical-tool-detection-and-tracking",
           title: 'Open-Vocabulary Surgical Tool Detection and Tracking',
-          description: "A real endoscopy pipeline that turns text prompts into surgical tool boxes, masks, tracking overlays, and evaluation metrics using Grounding DINO and SAM2.",
+          description: "Detects and tracks surgical instruments from open-vocabulary prompts for adaptable intra-operative perception.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/16_project/";
             },},{id: "projects-gaussian-occupancy-cardiac-reconstruction",
           title: 'Gaussian Occupancy Cardiac Reconstruction',
-          description: "A sparse-view echocardiography project that recovers 3D cardiac anatomy with Gaussian occupancy fields, differentiable slice supervision, and mesh evaluation.",
+          description: "Reconstructs 3D cardiac anatomy from sparse echocardiography using differentiable Gaussian occupancy fields.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/17_project/";
             },},{id: "projects-sparse-view-coronary-vessel-reconstruction",
@@ -500,7 +500,7 @@ ninja.data = [{
               window.location.href = "/projects/19_project/";
             },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
           title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
-          description: "Research at CERLAB (master&#39;s thesis)",
+          description: "Estimates intra-operative neurovascular deformation by registering sparse fluoroscopy with pre-operative CTA.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-federated-graph-learning-for-pathology-images",
@@ -553,7 +553,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%75%73%68%61%72%6E@%75%63%68%69%63%61%67%6F.%65%64%75", "_blank");
+          window.open("mailto:%74%75%73%68%61%72@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
         },
       },{
         id: 'social-github',
