@@ -62,7 +62,7 @@ enable_framework_scripts: false
     <a class="selected-publication" href="{{ '/publications/' | relative_url }}#kite2026systematic_review_glioma_recurrence">
       <span class="selected-publication__year">2026</span>
       <span class="selected-publication__title">The Use of Artificial Intelligence and Machine Learning to Predict Tumor Recurrence in High-Grade Gliomas: A Systematic Review</span>
-      <span class="selected-publication__venue">accepted <span aria-hidden="true">↗</span></span>
+      <span class="selected-publication__venue">Neurosurgical Review <span aria-hidden="true">↗</span></span>
     </a>
     <a class="selected-publication" href="{{ '/publications/' | relative_url }}#nayak2026elsr_workshop">
       <span class="selected-publication__year">2026</span>
