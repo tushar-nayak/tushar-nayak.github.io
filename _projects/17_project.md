@@ -10,7 +10,7 @@ status: manuscript in preparation
 tags: [3D Vision, Medical Imaging, Cardiac Reconstruction, Gaussian Fields]
 featured: true
 homepage_featured: true
-homepage_order: 3
+homepage_order: 2
 ---
 
 ## summary

@@ -43,7 +43,7 @@ enable_framework_scripts: false
     </p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
-      <a class="hero-panel__action" href="https://github.com/tushar-nayak/cv">Download CV <span aria-hidden="true">↓</span></a>
+      <a class="hero-panel__action" href="https://github.com/tushar-nayak/cv/blob/main/tushar-nayak-cv.pdf">Download CV <span aria-hidden="true">↓</span></a>
     </div>
   </div>
   <aside class="hero-panel__aside">
@@ -66,8 +66,8 @@ enable_framework_scripts: false
     </a>
     <a class="selected-publication" href="{{ '/publications/' | relative_url }}#nayak2026elsr_workshop">
       <span class="selected-publication__year">2026</span>
-      <span class="selected-publication__title">Toward Real-Time 3D Vascular State Estimation from Monocular Fluoroscopy for Endovascular Robotic Neurosurgery</span>
-      <span class="selected-publication__venue">workshop <span aria-hidden="true">↗</span></span>
+      <span class="selected-publication__title">Toward Real-Time 3D Vascular State Estimation from Monocular Fluoroscopy for Endovascular Robotic Surgery</span>
+      <span class="selected-publication__venue">IROS 2026 <span aria-hidden="true">↗</span></span>
     </a>
     <a class="selected-publication" href="{{ '/publications/' | relative_url }}#basdeo2025review_robotics_neuroendovascular">
       <span class="selected-publication__year">2025</span>

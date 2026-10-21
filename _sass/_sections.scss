@@ -561,6 +561,76 @@ html[data-theme="dark"] .hero-panel__action--primary:hover {
   text-decoration: none;
 }
 
+.about-page .featured-projects__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.about-page .featured-projects .featured-project {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr) 1rem;
+  align-items: start;
+  gap: 0.7rem;
+  min-width: 0;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--tn-border);
+  border-radius: 0.3rem;
+  background: var(--tn-surface);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease;
+}
+
+.about-page .featured-projects .featured-project:hover {
+  border-color: color-mix(in srgb, var(--global-theme-color) 42%, var(--tn-border) 58%);
+  background: var(--tn-surface-strong);
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.about-page .featured-project__index {
+  padding-top: 0.08rem;
+  color: var(--global-theme-color);
+  font-family: var(--tn-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.about-page .featured-project__body {
+  min-width: 0;
+  padding: 0;
+}
+
+.about-page .featured-project__body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.about-page .featured-project__body p {
+  margin: 0;
+  color: var(--tn-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.about-page .featured-project__arrow {
+  justify-self: end;
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 991px) {
+  .about-page .featured-projects__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .selected-publications__list {
   display: grid;
   border-top: 1px solid var(--tn-border);
@@ -1013,5 +1083,15 @@ html[data-theme="dark"] .hero-panel__action--primary:hover {
 
   .selected-publication__venue {
     grid-column: 2;
+  }
+
+  .about-page .featured-projects__list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .about-page .featured-projects .featured-project {
+    min-height: 0;
+    padding: 0.9rem;
   }
 }

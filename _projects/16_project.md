@@ -11,7 +11,7 @@ status: active
 tags: [Surgical Robotics, Tool Tracking, Open-Vocabulary AI, Segmentation]
 featured: true
 homepage_featured: true
-homepage_order: 2
+homepage_order: 3
 ---
 
 ## summary
