@@ -1,21 +1,11 @@
 ---
-layout: page
-title: projects
+layout: default
 permalink: /projects/
+title: projects
+description: Project work has moved to the research page.
+redirect: /research/
 nav: false
-nav_order: 2
-horizontal: false
+sitemap: false
 ---
 
-<!-- pages/projects.md -->
-
-{% include project_filter.liquid %}
-
-<div class="projects">
-  {% assign sorted_projects = site.projects | sort: "importance" %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-</div>
+Project work now lives on the [research]({{ '/research/' | relative_url }}) page. You will be redirected there shortly.

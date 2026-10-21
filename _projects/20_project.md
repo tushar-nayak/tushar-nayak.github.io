@@ -6,11 +6,9 @@ img: assets/img/glm.png
 importance: 4
 category: personal projects
 github: https://github.com/tushar-nayak/glass-path
-status: prototype
+status: active
 tags: [Pathology, Federated Learning, Graph Learning, Concept Bottlenecks]
 ---
-
-## project status: prototype
 
 GLASS Path is a graph-based learning architecture for spatial structures in pathology.
 

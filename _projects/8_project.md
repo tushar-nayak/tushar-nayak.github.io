@@ -10,7 +10,6 @@ status: completed
 tags: [Medical Imaging, 3D Vision, CT, Course Project]
 ---
 
-project status: completed
 [:link:](https://tushar-nayak.github.io/assets/pdf/42640.pdf) [Project Report](https://tushar-nayak.github.io/assets/pdf/42640.pdf)
 
 This project builds an end-to-end 3D deep learning pipeline for automatic coronary artery segmentation and geometric reconstruction from CT angiography (CTA). Using a ResUNet3D backbone with hybrid Dice–BCE loss and a dedicated geometric post-processing stage, the system outputs clean 3D meshes and point clouds of the coronary tree suitable for surgical planning and simulation.

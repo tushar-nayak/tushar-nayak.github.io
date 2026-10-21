@@ -7,8 +7,8 @@ dropdown: true
 children:
   - title: resume
     permalink: https://github.com/tushar-nayak/cv
-  - title: projects
-    permalink: https://tushar-nayak.github.io/projects/
+  - title: research
+    permalink: https://tushar-nayak.github.io/research/
   - title: divider
   - title: github
     permalink: https://github.com/tushar-nayak

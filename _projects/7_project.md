@@ -10,10 +10,6 @@ tags: [Medical Imaging, Dermatology, Classification, Explainable AI]
 related_publications: true
 ---
 
----
-
-## Project Status: Completed
-
 Built unified deep learning pipelines for automated monkeypox detection, handling both binary classification (Mpox vs. others) {% cite nayak2023deep %} and multiclass (Mpox, Chickenpox, Measles, Healthy) {% cite nayak2023detection %} tasks from skin lesion images. Leveraged curated Kaggle datasets, enriching them with extensive augmentation methods for better model robustness. Used transfer learning to deploy ResNet-18, ResNet-50, ResNet-101, and SqueezeNet architectures in MATLAB, experimenting on consumer GPUs with careful tuning of mini-batch size and learning rate to maximize accuracy.
 
 <div class="row">

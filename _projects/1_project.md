@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Physics-Informed Endovasculature Deformation Estimation And Registration
-description: Estimates intra-operative neurovascular deformation by registering sparse fluoroscopy with pre-operative CTA.
+title: "FluoroGRID: Real-Time 3D Vascular Deformation from Monocular Fluoroscopy"
+description: Estimates patient-specific 3D neurovascular deformation from a single fluoroscopic view by fusing image evidence, pre-operative anatomy, and camera geometry.
 img: assets/img/newplotx.png
 importance: 1
 category: at carnegie mellon
 github: https://github.com/katahar/telesurgery_cerlab/tree/deformation-graph/cv/deformable_registration
-status: ongoing
+status: manuscript in preparation
 tags: [Surgical Robotics, Medical Imaging, 3D Vision, Physics-Informed ML]
 featured: true
 featured_kind: research
@@ -17,15 +17,19 @@ related_publications: false
 
 ## summary
 
-I am building the computer vision subsystem for an endovascular robotic telesurgery platform at CERLAB under Dr. Kenji Shimada and doctoral candidate Rishi Basdeo, with collaborators at the University of Pittsburgh and UPMC. The goal is to estimate intra-operative vessel deformation from fluoroscopy and register that motion back to pre-operative vascular anatomy.
+My master's thesis work at CERLAB under Dr. Kenji Shimada, with doctoral candidate Rishi Basdeo and collaborators at the University of Pittsburgh and UPMC. **FluoroGRID** estimates patient-specific 3D vascular deformation from monocular fluoroscopy in real time, combining live image evidence with pre-operative anatomy, camera geometry, and sparse vascular control points.
+
+Initial results were presented at the [2nd International Workshop on the Evolving Landscape of Surgical Robotics (ELSR), IEEE/RSJ IROS 2026]({{ '/publications/' | relative_url }}#nayak2026elsr_workshop), and a full manuscript is in preparation for IPCAI 2027 / IJCARS.
 
 ## problem
 
 During endovascular procedures, a guidewire is navigated through blood vessels under live X-ray. As the wire advances, it deforms the vessel wall. Predicting that deformation before it becomes unsafe requires recovering 3D vessel displacement from a 2D fluoroscopic projection, which is a severely ill-posed inverse problem.
 
+The clinical constraint makes it harder: intra-operative guidance is only useful if the estimate arrives in real time, and only trustworthy if the predicted deformation is physically plausible rather than merely well-fit to the image.
+
 ## approach
 
-Since ground-truth intra-operative 3D vessel deformation data does not exist at scale, I generate it synthetically using physics simulation.
+Since ground-truth intra-operative 3D vessel deformation does not exist at scale, I generate it synthetically using physics simulation.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -36,42 +40,44 @@ Since ground-truth intra-operative 3D vessel deformation data does not exist at 
     Synthetic centerline deformations generated via free-form deformation (FFD). Each frame captures a unique vessel state driven by guidewire interaction physics.
 </div>
 
-Each simulated frame yields:
+The pipeline produced **over 370,000 paired 3D–2D training examples** spanning diverse viewing geometries and deformation conditions. Each simulated frame yields:
 
-- **Sparse 3D displacement fields** at 20 control points along the centerline
+- **Sparse 3D displacement fields** at control points along the vessel centerline
 - **Multi-view synthetic X-rays** across clinically relevant projections such as `AP`, `Lateral`, `LAO45`, `RAO45`, `Spider`, and `RAO30_Caudal20`
 - **Physics metrics** including maximum displacement, mesh strain ratio, and vessel straightening percentage
 
 I built an auditing tool to validate the physics integrity of the generated dataset, verifying that mesh strain stays within the clinical safety threshold of **1.15** and that the simulated deformations remain physically meaningful.
 
-The learning model is **MorphPINN**, a multimodal network that fuses 2D X-ray image features with 3D geometric context to predict full 3D vessel deformation from a single fluoroscopy frame.
+### quad-encoder architecture
 
-The architecture has three branches:
+FluoroGRID is a geometric deep learning system with four encoders, each supplying a different kind of evidence about the same vessel state:
 
-- **Vision backbone**: a ResNet-18 modified for single-channel fluoroscopy
-- **Geometry and camera encoder**: an MLP over rest-state centerline points and projection geometry
-- **Fusion predictor**: a deformation regressor over the combined image and geometric features
+- **Image encoder** — ResNet features from the single-channel fluoroscopic frame
+- **Graph encoder** — ordered-chain graph representation of the vessel centerline, preserving its connectivity
+- **Mesh encoder** — sampled geometry from the patient's pre-operative vascular surface
+- **Acquisition encoder** — fluoroscopic camera and projection metadata
 
-Training uses a composite loss that enforces both accuracy and physical plausibility:
+Fusing anatomy and acquisition geometry alongside the image is what makes the inverse problem tractable: the network is not asked to hallucinate depth from pixels alone, but to deform a known patient-specific geometry consistently with what the projection shows.
 
-$$\mathcal{L} = w_{\text{mse}} \cdot \mathcal{L}_{\text{MSE}} + w_{\text{smooth}} \cdot \mathcal{L}_{\text{smooth}} + w_{\text{proj}} \cdot \mathcal{L}_{\text{proj}}$$
+### geometry-aware objectives
 
-| Term                            | Weight | Purpose                                                     |
-| ------------------------------- | ------ | ----------------------------------------------------------- |
-| $$\mathcal{L}_{\text{MSE}}$$    | 1.0    | Penalizes deviation from ground-truth displacement          |
-| $$\mathcal{L}_{\text{smooth}}$$ | 0.1    | Enforces deformation smoothness along the centerline        |
-| $$\mathcal{L}_{\text{proj}}$$   | 1e-5   | Penalizes geometric inconsistency with the X-ray projection |
+Training uses a composite objective that enforces both accuracy and physical plausibility:
 
-A hard strain cap of **1.15** is embedded in the loss, directly encoding the clinical safety constraint that prevents predictions from implying unsafe force thresholds on the vessel wall.
+- **Differentiable projection** — predicted 3D deformation must reproject consistently onto the observed fluoroscopic view
+- **Structural smoothness** — deformation varies smoothly along the centerline rather than jumping between adjacent points
+- **Curvature constraints** — discrete differential geometry terms keep the deformed vessel shape anatomically plausible
+- **Strain capping** — the clinical safety threshold of 1.15 is embedded directly in the loss, preventing predictions that would imply unsafe force on the vessel wall
 
 ## current result
 
-The current system already covers the full engineering loop: synthetic deformation generation, multi-view X-ray rendering, dataset auditing, multimodal model training, and a literature review on robotic endovascular vision systems with the vision subsection written for a journal submission currently under review at _Journal of Intelligent and Robotic Systems_.
+FluoroGRID achieves **sub-millimeter reconstruction precision at real-time inference speed**, which is the combination that matters for intra-operative use. The system covers the full loop: physics-grounded synthetic deformation generation, multi-view X-ray rendering, dataset auditing, quad-encoder model training, and evaluation across viewing geometries.
+
+Related outputs from this thread include a [CMU Graduate Research Forum poster]({{ '/assets/pdf/tusharn-poster.pdf' | relative_url }}) on physics-regularized deep graph networks for thrombectomy deformation, and a [review of robotics in autonomous and remote neuroendovascular intervention]({{ '/publications/' | relative_url }}#basdeo2025review_robotics_neuroendovascular) currently under review at the _Journal of Intelligent and Robotic Systems_, for which I wrote the vision subsection.
 
 ## limitations
 
-- No large-scale real intra-operative ground-truth deformation dataset exists yet
-- The current setup focuses on centerline motion rather than full vessel wall mechanics
+- No large-scale real intra-operative ground-truth deformation dataset exists yet, so validation leans on synthetic physics
+- The current formulation focuses on centerline motion rather than full vessel wall mechanics
 - Blood flow and force thresholds are not yet coupled to the deformation estimate
 
 ## next steps
@@ -79,8 +85,9 @@ The current system already covers the full engineering loop: synthetic deformati
 - [x] Physics-informed synthetic data generation (FFD + guidewire kinematics)
 - [x] Multi-view X-ray rendering pipeline (6 clinical projections via gVXR)
 - [x] Dataset physics auditing and validation
-- [x] MorphPINN architecture and training pipeline
-- [x] Comprehensive literature review (under review, JIRS)
+- [x] Quad-encoder FluoroGRID architecture and training pipeline
+- [x] Workshop presentation at ELSR, IEEE/RSJ IROS 2026
+- [ ] Full manuscript submission (IPCAI 2027 / IJCARS)
 - [ ] Synthetic contrast injection to reduce chemical contrast agent dose
 - [ ] Blood flow fluid dynamics integration for force threshold estimation
-- [ ] Full intra-operative vessel motion prediction from guidewire state
+- [ ] Validation against real intra-operative fluoroscopy sequences

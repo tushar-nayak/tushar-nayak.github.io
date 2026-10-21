@@ -393,14 +393,12 @@ details summary {
 .about-page .hero-panel,
 .about-page .section-shell,
 .about-page .research-map,
-.about-page .featured-projects {
+.about-page .featured-projects-list {
   animation: none;
 }
 
-.about-page .featured-projects {
+.about-page .featured-projects-list {
   margin: 0 0 1.65rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--tn-border);
 }
 
 .hero-panel__actions {
@@ -644,63 +642,32 @@ html[data-theme="dark"] .hero-panel__action--primary:hover {
   font-weight: 700;
 }
 
-.featured-projects__list {
-  border-top: 1px solid var(--tn-border);
-}
-
-.featured-project {
-  display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr) auto;
-  gap: 1rem;
-  align-items: baseline;
-  min-height: 0;
-  padding: 1rem 0;
-  overflow: visible;
-  border: 0;
-  border-bottom: 1px solid var(--tn-border);
-  border-radius: 0;
-  background: transparent;
-  color: var(--global-text-color);
-  box-shadow: none;
-}
-
-.featured-project__index,
-.featured-project__arrow {
-  color: var(--global-theme-color);
-  font-family: var(--tn-mono);
-  font-size: 0.76rem;
-  font-weight: 600;
-}
-
-.featured-project__body {
+.featured-projects-list {
+  list-style: none;
   padding: 0;
+  margin-top: 0;
 }
 
-.featured-project__body h3 {
-  margin: 0 0 0.25rem;
-  font-family: var(--tn-sans);
-  font-size: 1rem;
-  line-height: 1.35;
+.featured-project-entry {
+  margin-bottom: 1rem;
 }
 
-.featured-project__body p {
-  margin: 0;
-  color: var(--tn-muted);
-  font-size: 0.88rem;
-  line-height: 1.55;
+.featured-project-entry .title {
+  font-weight: bolder;
 }
 
-.featured-project:hover {
-  transform: none;
-  border-color: var(--tn-border);
-  background: transparent;
+.featured-project-entry .title a {
   color: var(--global-text-color);
-  box-shadow: none;
   text-decoration: none;
 }
 
-.featured-project:hover h3 {
+.featured-project-entry .title a:hover {
   color: var(--global-theme-color);
+}
+
+.featured-project-entry .periodical {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
 }
 
 .project-card .card-body {
@@ -1046,14 +1013,5 @@ html[data-theme="dark"] .hero-panel__action--primary:hover {
 
   .selected-publication__venue {
     grid-column: 2;
-  }
-
-  .featured-project {
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.75rem;
-  }
-
-  .featured-project__arrow {
-    display: none;
   }
 }

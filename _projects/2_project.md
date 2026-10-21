@@ -7,7 +7,7 @@ importance: 2
 category: at carnegie mellon
 github: https://github.com/tushar-nayak/glioblastoma-evolution
 website: https://tushar-nayak.github.io/glioblastoma-evolution/
-status: paused
+status: archived
 tags: [Medical Imaging, Neural ODEs, MRI, Forecasting]
 featured: true
 featured_kind: research

@@ -7,7 +7,7 @@ first_name: Tushar
 middle_name:
 last_name: Nayak
 contact_note: >
-  Reach me at tusharn [at] uchicago [dot] edu
+  Reach me at tusharnayak128 [at] gmail [dot] com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Tushar Nayak | Image-Guided Robotic Surgery | Learning-models based 3D Computer Vision enthusiast
 footer_text: >
@@ -615,21 +615,25 @@ third_party_libraries:
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
+# Disabled: when site.data.resume is set, _layouts/cv.liquid renders
+# assets/json/resume.json instead of _data/cv.yml, which silently made every
+# edit to _data/cv.yml invisible on /cv/. _data/cv.yml is the maintained
+# source now; re-enable only if resume.json is updated to match it.
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+# jekyll_get_json:
+#   - data: resume
+#     json: assets/json/resume.json # it can also be an url
 
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
+# jsonresume:
+#   - basics
+#   - work
+#   - education
+#   - publications
+#   - projects
+#   - volunteer
+#   - awards
+#   - certificates
+#   - skills
+#   - languages
+#   - interests
+#   - references

@@ -17,7 +17,7 @@
   pdf={mpox-quad.pdf},
   url={https://doi.org/10.1080/23311916.2024.2357182},
   google_scholar_id={zYLM7Y9cAGgC},
-  selected={true},
+  selected={false},
 }
 
 @article{nayak2023deep,
@@ -172,7 +172,8 @@
   title={A Review of Robotics in Achieving Autonomous and Remote Neuroendovascular Intervention},
   note={Under review at Journal of Intelligent \& Robotic Systems, Springer Nature},
   year={2025},
-  category={under-review}
+  category={under-review},
+  selected={true},
 }
 
 @article{kite2026systematic_review_glioma_recurrence,
@@ -182,7 +183,8 @@
   journal={Neurosurgical Review},
   publisher={Springer Nature},
   note={Accepted},
-  year={2026}
+  year={2026},
+  selected={true},
 }
 
 @inproceedings{nayak2026elsr_workshop,
@@ -191,7 +193,8 @@
   title={Toward Real-Time 3D Vascular State Estimation from Monocular Fluoroscopy for Endovascular Robotic Neurosurgery},
   booktitle={2nd International Workshop on the Evolving Landscape of Surgical Robotics (ELSR), IEEE/RSJ IROS 2026},
   year={2026},
-  category={workshop}
+  category={workshop},
+  selected={true},
 }
 
 @unpublished{nayak2026fluorogrid_manuscript,
@@ -205,9 +208,11 @@
 
 @unpublished{nayak2026echo_manuscript,
   abbr={echo-recon-manuscript},
-  author={Tushar Nayak},
-  title={Approaches in Sparse-View 2D Echocardiography to 3D Cardiac Volume Reconstruction Using Neural Implicit Representations and Gaussian Occupancy Fields},
+  author={Tushar Nayak and Vivek Dhara and Vaibhav Parekh},
+  title={Sparse-View Cardiac Reconstruction with Neural Implicit Representations},
+  abstract={Recovering cardiac geometry from sparse annotated sections requires a representation that fits the observed anatomy while constraining unobserved regions. We study coordinate-based implicit neural representations (INRs) for completing the left-ventricular label of the MITEA dataset from three known sections, scoring only voxels outside the observed sections. A compact per-subject Fourier-feature INR fitted to three orthogonal sections reaches unobserved-voxel Dice of 0.932 on a development subject, against 0.899 for a Gaussian occupancy field trained on identical observations. Mesh diagnostics show that this overlap coexists with small disconnected fragments, and that integrated Gaussian curvature differences in this setting are dominated by single-voxel holes in the reference labels rather than by anatomy. We describe the evaluation protocol, the diagnostics, and their failure modes, and report preliminary hybrid-supervised population and meta-learned initialization experiments separately in an appendix.},
   note={Manuscript in preparation},
   year={2026},
+  code={https://github.com/tushar-nayak/heart-maker},
   category={in-prep}
 }

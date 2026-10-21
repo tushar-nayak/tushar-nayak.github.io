@@ -12,10 +12,6 @@ tags: [Medical Imaging, Mammography, Classification, Course Project]
 featured: true
 ---
 
-    ---
-    project status: Complete!
-    ---
-
 ### [Project Report](https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Report.pdf)
 
 This project presents a deep learning pipeline for automatic alignment and classification of dual-view mammograms using Spatial Transformer Networks (STNs) and transfer learning.

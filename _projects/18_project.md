@@ -6,11 +6,9 @@ img: assets/img/cma.png
 importance: 2
 category: at carnegie mellon
 github: https://github.com/tushar-nayak/vascular-reconstruction
-status: research prototype
+status: active
 tags: [3D Vision, Medical Imaging, Vascular Reconstruction, Differentiable Rendering]
 ---
-
-## project status: research prototype
 
 This project explores sparse-view 3D coronary vessel reconstruction from angiographic projections.
 

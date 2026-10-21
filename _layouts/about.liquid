@@ -40,6 +40,14 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Featured projects -->
+    {% if page.featured_projects %}
+      <h2>
+        <a href="{{ '/research/' | relative_url }}" style="color: inherit">featured projects</a>
+      </h2>
+      {% include featured_projects.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>

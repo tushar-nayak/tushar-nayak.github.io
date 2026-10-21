@@ -7,11 +7,9 @@ importance: 3
 category: personal projects
 github: https://github.com/tushar-nayak/lobe-ranger
 website: https://tushar-nayak.github.io/lobe-ranger/
-status: prototype
+status: active
 tags: [Pathology, Histopathology, Attention, Classification]
 ---
-
-## project status: prototype
 
 Lobe Ranger is a multi-scale ordinal pathology foundation network for whole-slide lung histopathology.
 

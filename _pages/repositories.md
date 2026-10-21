@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 This page collects the main public repositories behind my project work, experiments, and website.
-For a broader project overview with descriptions and results, see the [projects](/projects/) page.
+For a broader project overview with descriptions and results, see the [research](/research/) page.
 
 <p>
   <a class="btn btn-sm z-depth-0" href="https://github.com/tushar-nayak" role="button" target="_blank" rel="noopener noreferrer">

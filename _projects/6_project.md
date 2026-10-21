@@ -10,10 +10,6 @@ tags: [Pathology, Histopathology, Cancer Detection, Deep Learning]
 related_publications: true
 ---
 
----
-
-## project status: completed and published/presented.
-
 My undergraduate research was anchored and centered around my work with building deep learning models that combined explainable AI with attention mechanisms for robust neural networks that visually explained model predictions. I paired this with my work in image pre-processing for improving training using feature engineering and removing training biases.
 
 <div class="row">

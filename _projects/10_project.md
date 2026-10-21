@@ -11,8 +11,6 @@ status: completed
 tags: [Medical Imaging, PDEs, Denoising, Course Project]
 ---
 
-Project Status: Completed
-
 ## Project Overview
 
 Medical image denoising faces a strict tradeoff: removing heavy noise without erasing the underlying anatomical structure. Standard filters often blur critical features like tumor margins and tissue boundaries.

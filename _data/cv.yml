@@ -69,11 +69,11 @@
 - title: Selected Research Projects
   type: time_table
   contents:
-    - title: Sparse Echocardiography to 3D Cardiac Volume Reconstruction
+    - title: Sparse-View Cardiac Reconstruction with Neural Implicit Representations
       year: 2025-2026
       description:
-        - Coordinate-based neural implicit reconstruction recovering dense 3D left-ventricular occupancy from three sparse 2D echocardiography slices, achieving 0.864 Dice and 0.765 IoU on MITEA-CAP.
-        - Extended toward explicit Gaussian occupancy representations, reaching 0.950 IoU in preliminary experiments.
+        - Coordinate-based neural implicit reconstruction completing dense 3D left-ventricular geometry from three sparse 2D echocardiography sections, scored only on unobserved voxels, achieving 0.936 Dice and 0.880 IoU on MITEA.
+        - Matched comparison against an explicit Gaussian occupancy field under identical observations (0.902 Dice, 0.821 IoU), with mesh and topology diagnostics distinguishing genuine shape error from label artifacts.
     - title: Deformable 3D Reconstruction of Live Endoscopic Surgical Scenes
       year: 2026-present
       description:
@@ -123,7 +123,7 @@
     - title: Real-time 3D neuro-vascular deformation estimation from sparse 2D angiography
       institution: Manuscript in preparation (IPCAI 2027 / IJCARS)
       year: 2026
-    - title: Approaches in sparse-view 2D echocardiography to 3D cardiac volume reconstruction using neural implicit representations and Gaussian occupancy fields
+    - title: Sparse-view cardiac reconstruction with neural implicit representations
       institution: Manuscript in preparation
       year: 2026
 
