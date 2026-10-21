@@ -43,7 +43,7 @@ enable_framework_scripts: false
     </p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
-      <a class="hero-panel__action" href="https://github.com/tushar-nayak/cv/blob/main/tushar-nayak-cv.pdf">Download CV <span aria-hidden="true">↓</span></a>
+      <a class="hero-panel__action" href="https://raw.githubusercontent.com/tushar-nayak/cv/main/tushar-nayak-cv.pdf" target="_blank" rel="noopener noreferrer">Download CV <span aria-hidden="true">↓</span></a>
     </div>
   </div>
   <aside class="hero-panel__aside">
