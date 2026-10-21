@@ -535,7 +535,7 @@ ninja.data = [{
               window.location.href = "/projects/8_project/";
             },},{id: "projects-attention-augmented-dual-view-mammogram-alignment-for-enhanced-bi-rads-classification",
           title: 'Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Classification',
-          description: "Course project for Projects in Biomedical AI",
+          description: "Aligns and fuses CC and MLO mammograms with spatial transformers, then predicts BI-RADS categories from both views.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
