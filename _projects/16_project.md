@@ -10,8 +10,6 @@ website: https://tushar-nayak.github.io/surgi-prompt/
 status: active
 tags: [Surgical Robotics, Tool Tracking, Open-Vocabulary AI, Segmentation]
 featured: true
-homepage_featured: true
-homepage_order: 3
 ---
 
 ## summary

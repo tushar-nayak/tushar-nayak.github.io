@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Classification
-description: Course project for Projects in Biomedical AI
+description: Aligns and fuses CC and MLO mammograms with spatial transformers, then predicts BI-RADS categories from both views.
 img: assets/img/sang.png
 importance: 2
 category: at carnegie mellon
@@ -10,6 +10,9 @@ report: https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Repo
 status: completed
 tags: [Medical Imaging, Mammography, Classification, Course Project]
 featured: true
+homepage_featured: true
+homepage_order: 3
+homepage_title: Dual-View Mammogram Alignment & Classification
 ---
 
 ### [Project Report](https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Report.pdf)
