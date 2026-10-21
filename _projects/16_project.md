@@ -33,7 +33,7 @@ The pipeline composes existing foundation models rather than training a new dete
 - **Video propagation** through SAM2 so identity persists across frames instead of being re-detected independently each time
 - **Optional fine-tuning** against endoscopy datasets exported in COCO-style formats, for cases where the zero-shot prompt is not enough
 
-The more interesting half of the work is measurement: the repository tracks mAP, mask IoU, and FPS, and supports failure-case inspection, because the practical question is not whether open-vocabulary detection works on surgical video but *where it stops working*.
+The more interesting half of the work is measurement: the repository tracks mAP, mask IoU, and FPS, and supports failure-case inspection, because the practical question is not whether open-vocabulary detection works on surgical video but _where it stops working_.
 
 ## evaluation
 
@@ -41,7 +41,7 @@ Real-data support covers **Endoscapes2023**, **Kvasir-Instrument**, and generic 
 
 Recurring failure modes worth naming:
 
-- Visually similar instruments are reliably found but unreliably *distinguished* by prompt alone
+- Visually similar instruments are reliably found but unreliably _distinguished_ by prompt alone
 - Specular highlights and smoke degrade box quality more than mask quality
 - Propagation drifts after full occlusion, where re-detection would be more robust than tracking
 

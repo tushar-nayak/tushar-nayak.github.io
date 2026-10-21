@@ -72,7 +72,7 @@ Training uses a composite objective that enforces both accuracy and physical pla
 
 FluoroGRID achieves **sub-millimeter reconstruction precision at real-time inference speed**, which is the combination that matters for intra-operative use. The system covers the full loop: physics-grounded synthetic deformation generation, multi-view X-ray rendering, dataset auditing, quad-encoder model training, and evaluation across viewing geometries.
 
-Related outputs from this thread include a [CMU Graduate Research Forum poster]({{ '/assets/pdf/tusharn-poster.pdf' | relative_url }}) on physics-regularized deep graph networks for thrombectomy deformation, and a [review of robotics in autonomous and remote neuroendovascular intervention]({{ '/publications/' | relative_url }}#basdeo2025review_robotics_neuroendovascular) currently under review at the _Journal of Intelligent and Robotic Systems_, for which I wrote the vision subsection.
+Related outputs from this thread include a [CMU Graduate Research Forum poster]({{ '/assets/pdf/tusharn-poster.pdf' | relative_url }}) on physics-regularized deep graph networks for thrombectomy deformation, and a <a href="{{ '/publications/' | relative_url }}#basdeo2025review_robotics_neuroendovascular">review of robotics in autonomous and remote neuroendovascular intervention</a> currently under review at the _Journal of Intelligent and Robotic Systems_, for which I wrote the vision subsection.
 
 ## limitations
 

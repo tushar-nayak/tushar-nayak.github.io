@@ -15,17 +15,17 @@ homepage_order: 3
 
 ## summary
 
-Recovering cardiac geometry from a handful of annotated sections is an underdetermined inverse problem: many shapes agree with the observations and differ everywhere else. This work studies coordinate-based implicit neural representations (INRs) for completing the left-ventricular label of the [MITEA](https://www.cardiacatlas.org/mitea/) dataset from **three known orthogonal sections**, under an evaluation protocol that scores *only voxels outside the observed sections*.
+Recovering cardiac geometry from a handful of annotated sections is an underdetermined inverse problem: many shapes agree with the observations and differ everywhere else. This work studies coordinate-based implicit neural representations (INRs) for completing the left-ventricular label of the [MITEA](https://www.cardiacatlas.org/mitea/) dataset from **three known orthogonal sections**, under an evaluation protocol that scores _only voxels outside the observed sections_.
 
 A compact per-subject Fourier-feature INR reaches **0.932 unobserved-voxel Dice** on a development subject, against **0.899** for a Gaussian occupancy field trained on identical observations. The more useful findings are negative: that overlap coexists with fragmented surfaces, and that the topology metric we started with turns out to measure label artifacts rather than anatomy.
 
-With [Vivek Dhara](https://www.linkedin.com/in/vivek-dhara/) and [Vaibhav Parekh](https://www.linkedin.com/in/vaibhavparekh9/). The INR line began as a *Learning for 3D Vision* course project and was rebuilt under a stricter protocol; a manuscript is in preparation.
+With [Vivek Dhara](https://www.linkedin.com/in/vivek-dhara/) and [Vaibhav Parekh](https://www.linkedin.com/in/vaibhavparekh9/). The INR line began as a _Learning for 3D Vision_ course project and was rebuilt under a stricter protocol; a manuscript is in preparation.
 
 ## problem
 
 Clinically, left-ventricular volumes are usually estimated from two apical views using the biplane method of disks — completing 3D shape from two sections under a strong geometric assumption. We study that same completion problem with learned continuous representations.
 
-The core difficulty is that a continuous representation does not buy anatomical accuracy. Any two fields that agree on the observed set have identical loss, whatever they predict elsewhere. Whatever completion the method returns is selected by the *implicit bias* of the encoding, network, initialization, and optimizer. So the experiment measures that implicit selection; it does not assume it is correct.
+The core difficulty is that a continuous representation does not buy anatomical accuracy. Any two fields that agree on the observed set have identical loss, whatever they predict elsewhere. Whatever completion the method returns is selected by the _implicit bias_ of the encoding, network, initialization, and optimizer. So the experiment measures that implicit selection; it does not assume it is correct.
 
 ## evaluation protocol
 
@@ -48,12 +48,12 @@ giving 24 channels. The network is deliberately small — three width-64 hidden 
 
 ## results
 
-Development subject MITEA\_071, seed 17, native $146\times140\times122$ lattice, planes $z{=}72$ / $y{=}69$ / $x{=}60$ (54,925 distinct observed voxels), Adam at $10^{-3}$ for 1,000 updates:
+Development subject MITEA_071, seed 17, native $146\times140\times122$ lattice, planes $z{=}72$ / $y{=}69$ / $x{=}60$ (54,925 distinct observed voxels), Adam at $10^{-3}$ for 1,000 updates:
 
-| Field | Dice | Unobserved Dice | IoU | Volume error | Parameters |
-| --- | --- | --- | --- | --- | --- |
-| **INR** | **0.9360** | **0.9323** | **0.8798** | 9.33 mL | 9,985 |
-| Gaussian occupancy | 0.9018 | 0.8987 | 0.8211 | 34.76 mL | 1,792 |
+| Field              | Dice       | Unobserved Dice | IoU        | Volume error | Parameters |
+| ------------------ | ---------- | --------------- | ---------- | ------------ | ---------- |
+| **INR**            | **0.9360** | **0.9323**      | **0.8798** | 9.33 mL      | 9,985      |
+| Gaussian occupancy | 0.9018     | 0.8987          | 0.8211     | 34.76 mL     | 1,792      |
 
 Both fields receive identical observed coordinates, labels, minibatch indices, loss, and update counts — verified through a saved SHA-256 fingerprint of the supervision. Matching updates does not match capacity, which is why the parameter counts are reported alongside.
 
@@ -75,7 +75,7 @@ Two findings here mattered more than the overlap scores.
 
 **High overlap does not imply a usable surface.** The INR's favorable Dice coexists with a mesh carrying **15 connected components and 144 boundary edges** — small fragments detached from the main body, and an open surface, so closed-surface curvature is simply unavailable rather than silently capped. The Gaussian field produced the opposite profile: a closed, single-component mesh with Euler characteristic 2, at lower accuracy.
 
-**The topology metric was measuring label defects.** We evaluated integrated Gaussian curvature $\mathcal{K}(M) = \sum_v (2\pi - \sum_{f \ni v} \vartheta_{vf})$, intending it as a shape check. By discrete Gauss–Bonnet, $\mathcal{K}(M) = 2\pi\chi(M)$ — so $\Delta K$ diagnoses *Euler-characteristic mismatch*, not local shape error, and $\Delta K = 0$ does not imply anatomical correctness. Worse, in practice every nonzero $\Delta K$ in our pilot traced to **single-voxel holes in the reference labels** that the Gaussian fields filled in: MITEA\_071 has one, MITEA\_052 has four. The reference mesh's "second component" is the surface of an enclosed hole, not anatomy. Topology diagnostics on label-derived references need hole filling first, or they measure annotation noise.
+**The topology metric was measuring label defects.** We evaluated integrated Gaussian curvature $\mathcal{K}(M) = \sum_v (2\pi - \sum_{f \ni v} \vartheta_{vf})$, intending it as a shape check. By discrete Gauss–Bonnet, $\mathcal{K}(M) = 2\pi\chi(M)$ — so $\Delta K$ diagnoses _Euler-characteristic mismatch_, not local shape error, and $\Delta K = 0$ does not imply anatomical correctness. Worse, in practice every nonzero $\Delta K$ in our pilot traced to **single-voxel holes in the reference labels** that the Gaussian fields filled in: MITEA_071 has one, MITEA_052 has four. The reference mesh's "second component" is the surface of an enclosed hole, not anatomy. Topology diagnostics on label-derived references need hole filling first, or they measure annotation noise.
 
 ## observed loss is not a model-selection signal
 
