@@ -4,7 +4,7 @@ title: Sparse-View Coronary Vessel Reconstruction
 description: A research prototype for recovering 3D coronary vessel geometry from limited angiographic projections using differentiable rendering and hemodynamic constraints.
 img: assets/img/cma.png
 importance: 2
-category: personal projects
+category: at carnegie mellon
 github: https://github.com/tushar-nayak/vascular-reconstruction
 status: research prototype
 tags: [3D Vision, Medical Imaging, Vascular Reconstruction, Differentiable Rendering]

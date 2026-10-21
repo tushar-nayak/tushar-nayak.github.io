@@ -6,7 +6,9 @@ nav_order: 8
 dropdown: true
 children:
   - title: resume
-    permalink: https://tushar-nayak.github.io/output/pdf/Tushar_Nayak_Resume.pdf
+    permalink: https://github.com/tushar-nayak/cv
+  - title: projects
+    permalink: https://tushar-nayak.github.io/projects/
   - title: divider
   - title: github
     permalink: https://github.com/tushar-nayak

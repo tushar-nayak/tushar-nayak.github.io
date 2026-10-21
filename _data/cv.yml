@@ -4,20 +4,22 @@
     - name: Full Name
       value: Tushar Nayak
     - name: Email
-      value: tusharn@andrew.cmu.edu
+      value: tusharnayak128@gmail.com
+    - name: Alumni Email
+      value: tusharn@alumni.cmu.edu
     - name: Website
       value: https://tushar-nayak.github.io/
     - name: Location
-      value: Pittsburgh, Pennsylvania
+      value: Chicago, Illinois
 
 - title: Education
   type: time_table
   contents:
-    - title: Master of Science - Research
+    - title: Master of Science, Biomedical Engineering, Research Track
       institution: Carnegie Mellon University, Pittsburgh, PA
       year: 2024-2026
       description:
-        - Biomedical Engineering with a computational focus.
+        - Computational focus. Completed May 2026.
         - Relevant coursework: Computer Vision, Visual Learning and Recognition, Image-Based Computational Modelling and Analysis, Learning for 3D Vision, Clinical Translations of AI.
     - title: Bachelor of Technology
       institution: Manipal Institute of Technology, Manipal, India
@@ -29,44 +31,63 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Graduate Student Researcher, Computational Engineering and Robotics Lab
-      institution: Carnegie Mellon University
-      year: 2024-present
-      description:
-        - Conducting master's thesis research in computer vision for image-guided robotic intervention and endovascular tele-surgery.
-        - Built synthetic vessel deformation and multi-view X-ray rendering pipelines for endovascular intervention research.
-        - Developed multimodal learning methods that fuse fluoroscopy with 3D geometry for vessel deformation prediction.
-    - title: Summer Researcher
-      institution: University of Pittsburgh, Surreality Lab
+    - title: Staff Scientist, Surgical Biomechanics Lab
+      institution: University of Chicago
       year: 2026-present
       description:
-        - Working on real-time registration and 3D reconstruction of medical imaging data for surgical visualization settings.
-        - Collaborating with Rishi Basdeo under Professors Edward Andrews and Jacob Biehl.
-    - title: Graduate Research Assistant, Glioblastoma Evolution Prediction
+        - "Patient-specific vascular geometry and multiphysics modeling for geometric deep learning based predictive modeling."
+        - Lead computer vision and deep learning researcher under Dr. Luka Pocivavsek, investigating relationships between integrated baseline Gaussian curvature, longitudinal curvature-adaptive patch-wise surface-area growth, and CFD-derived pressure and velocity fields.
+        - Building CT/CTA-to-3D vascular modeling pipelines spanning segmentation, surface reconstruction, mesh processing, and anatomical correspondence, with extension toward biomechanical stress analysis.
+    - title: Research Collaborator, Surreality Lab
+      institution: University of Pittsburgh
+      year: 2026-present
+      description:
+        - "Enhanced intraoperative speech analysis for awake craniotomy (TRACER)."
+        - Contributing to an automated operating-room speech pipeline combining speaker attribution, word-onset localization, overlap detection, and neural source separation.
+        - Evaluating overlap detection and selective source separation, auditing failure modes and robustness of diarization, temporal localization, and separation components.
+    - title: Graduate Student Researcher, Computational Engineering and Robotics Lab
+      institution: Carnegie Mellon University
+      year: 2024-2026
+      description:
+        - "Real-time 3D vascular deformation estimation from monocular fluoroscopy for endovascular robotic surgery."
+        - Developed FluoroGRID, a multimodal deep learning framework combining fluoroscopic input with preoperative vascular geometry, sparse control points, and acquisition metadata to predict 3D deformation.
+        - Designed a quad-encoder architecture fusing image features, graph representations, sampled mesh geometry, and camera metadata with differentiable projection and physics-based geometric regularizers.
+        - Built a synthetic data pipeline generating over 370,000 paired 3D-2D training examples; achieved real-time inference with sub-millimeter reconstruction precision. Presented initial results at the ELSR workshop, IROS 2026.
+    - title: Research Assistant, The ∀ Lab and Image Science Lab
       institution: Carnegie Mellon University
       year: 2025
       description:
-        - Developed Neural ODE-based forecasting models for longitudinal multimodal MRI.
-        - Built attention U-Net and history-conditioned forecasting pipelines for glioblastoma progression modeling.
-        - Presented the work at Carnegie Mellon's 2025 Biomedical Engineering research forum.
-    - title: Teaching Assistant
+        - "Longitudinal glioblastoma evolution and MRI-based forecasting."
+        - Built an Attention U-Net with temporal embeddings and Neural ODE dynamics for continuous-time glioblastoma forecasting from longitudinal multimodal MRI.
+        - Reduced prediction MSE by 6.7% versus a persistence baseline and relative FLAIR-volume error by 98%; presented at the 2025 CMU Biomedical Engineering Forum.
+    - title: Graduate Teaching Assistant
       institution: Carnegie Mellon University
-      year: 2025-present
+      year: 2025-2026
       description:
         - Supported graduate courses in Applied Deep Learning, Fundamentals of Computational Biomedical Engineering, Computer Vision for Engineers, and Machine Learning in Experimental Biomedical Engineering Research.
 
-- title: Projects
+- title: Selected Research Projects
   type: time_table
   contents:
-    - title: Physics-Informed Endovasculature Deformation Estimation and Registration
-      year: 2024-present
+    - title: Sparse Echocardiography to 3D Cardiac Volume Reconstruction
+      year: 2025-2026
       description:
-        - Master's thesis project on modeling vessel deformation from fluoroscopy for image-guided endovascular robotics.
-        - Includes synthetic vessel deformation generation, multi-view X-ray rendering, and geometry-aware multimodal learning.
-    - title: Spatiotemporal Glioblastoma Evolution Visual Prediction
+        - Coordinate-based neural implicit reconstruction recovering dense 3D left-ventricular occupancy from three sparse 2D echocardiography slices, achieving 0.864 Dice and 0.765 IoU on MITEA-CAP.
+        - Extended toward explicit Gaussian occupancy representations, reaching 0.950 IoU in preliminary experiments.
+    - title: Deformable 3D Reconstruction of Live Endoscopic Surgical Scenes
+      year: 2026-present
+      description:
+        - Prototyping deformable 3D Gaussian Splatting for dynamic monocular endoscopic reconstruction with depth/pose initialization, differentiable rendering, and deformation fields.
+        - Exploring semantic feature alignment for open-vocabulary querying of reconstructed surgical scenes.
+    - title: Geometric Multi-View Breast Cancer Detection
+      year: 2026
+      description:
+        - Geometric alignment and dual-view correspondence framework for paired CC/MLO mammography, integrating lesion segmentation, localization, registration, and cross-view attention.
+        - Reduced cross-view lesion-centroid discrepancy by 99.1%, enabling spatially aligned multi-view representations for malignancy classification.
+    - title: Sparse-View Coronary Vessel Reconstruction
       year: 2025
       description:
-        - Neural ODE-based forecasting of future glioblastoma appearance from longitudinal multimodal MRI.
+        - Research prototype for sparse-view 3D coronary vessel reconstruction from angiography projections using Gaussian geometry, differentiable rendering, and PINN-based hemodynamic regularization. Now archived.
     - title: Open Horizon Robotics Perception Curriculum
       year: 2025-present
       description:
@@ -75,6 +96,15 @@
 - title: Publications
   type: time_table
   contents:
+    - title: The use of artificial intelligence and machine learning to predict tumor recurrence in high-grade gliomas - a systematic review
+      institution: Neurosurgical Review
+      year: 2026
+    - title: Toward real-time 3D vascular state estimation from monocular fluoroscopy for endovascular robotic neurosurgery
+      institution: ELSR Workshop, IEEE/RSJ IROS
+      year: 2026
+    - title: A review of robotics in achieving autonomous and remote neuroendovascular intervention
+      institution: Journal of Intelligent & Robotic Systems (under review)
+      year: 2025
     - title: Automated histopathological detection and classification of lung cancer with an image pre-processing pipeline and spatial attention with deep neural networks
       institution: Cogent Engineering
       year: 2024
@@ -84,9 +114,18 @@
     - title: Deep learning based detection of monkeypox virus using skin lesion images
       institution: Medicine in Novel Technology and Devices
       year: 2023
-    - title: Processing and Detection of Lung and Colon Cancer from Histopathological Images using Deep Residual Networks
+    - title: Detection of monkeypox from skin lesion images using deep learning networks and explainable artificial intelligence
+      institution: Applied Mathematics in Science and Engineering
+      year: 2023
+    - title: Processing and detection of lung and colon cancer from histopathological images using deep residual networks
       institution: IEEE CONECCT
       year: 2023
+    - title: Real-time 3D neuro-vascular deformation estimation from sparse 2D angiography
+      institution: Manuscript in preparation (IPCAI 2027 / IJCARS)
+      year: 2026
+    - title: Approaches in sparse-view 2D echocardiography to 3D cardiac volume reconstruction using neural implicit representations and Gaussian occupancy fields
+      institution: Manuscript in preparation
+      year: 2026
 
 - title: Honors and Awards
   type: time_table
@@ -101,15 +140,21 @@
 - title: Skills
   type: nested_list
   contents:
-    - title: Computer Vision
+    - title: 3D Computer Vision and Geometry
       items:
-        - 3D reconstruction, image registration, geometric vision, motion analysis, fluoroscopy and X-ray modeling.
-    - title: Medical Imaging and Biomedical AI
+        - Sparse-view and multi-view 3D reconstruction, 2D-3D registration, camera and projection geometry, SE(3) pose optimization, surface mesh reconstruction and deformation, discrete differential geometry, differentiable rendering.
+    - title: Neural Representations and Geometric Deep Learning
       items:
-        - MRI, CT and CTA, histopathology, image-guided intervention, tumor evolution modeling, clinical data workflows.
-    - title: Machine Learning
+        - Neural implicit representations, Fourier positional encodings, 3D Gaussian Splatting, Gaussian occupancy fields, neural deformation fields, graph neural networks, geometry-aware regularization.
+    - title: Medical Imaging and Image-Guided Intervention
       items:
-        - Neural ODEs, physics-informed learning, attention mechanisms, convolutional neural networks, encoder-decoder models.
+        - CT/CTA, MRI, fluoroscopy and angiography, ultrasound/echocardiography, mammography, endoscopy, histopathology, segmentation and registration, patient-specific anatomical reconstruction.
+    - title: Machine Learning and Computational Modeling
+      items:
+        - Neural ODEs, physics-informed learning, multimodal learning, attention mechanisms, convolutional and graph neural networks, encoder-decoder models, curvature-based geometric descriptors.
+    - title: Programming and Research Computing
+      items:
+        - Python, C++, CUDA, MATLAB, R, Julia; PyTorch, PyTorch3D, PyTorch Geometric, MONAI, TorchDiffEq; OpenCV, SimpleITK/ITK, VTK, VMTK, nnU-Net; Linux, Git, Docker.
     - title: Teaching and Mentoring
       items:
         - Teaching assistantships, curriculum design, technical mentoring, workshop instruction.

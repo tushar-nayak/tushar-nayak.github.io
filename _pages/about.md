@@ -39,11 +39,11 @@ enable_framework_scripts: false
   <div class="hero-panel__content">
     <h2 class="hero-panel__title">Geometry-aware vision for image-guided robotic surgery.</h2>
     <p class="hero-panel__lead">
-      I am a scientist at the <a href="https://surgbiomech.uchicago.edu">SurgBioMech / Pocivavsek Lab</a> at the <a href="https://www.uchicago.edu/">University of Chicago</a>. I build computer vision and learning systems that recover useful anatomy, motion, and deformation from sparse clinical data.
+      I am a staff scientist at the <a href="https://surgbiomech.uchicago.edu">Surgical Biomechanics Lab</a> under Dr. Luka Pocivavsek at the <a href="https://www.uchicago.edu/">University of Chicago</a>, and a research collaborator with the <a href="https://www.pitt.edu/">University of Pittsburgh</a>'s Surreality Lab. I recently completed my M.S. in Biomedical Engineering at Carnegie Mellon University, where I build computer vision and learning systems that recover useful anatomy, motion, and deformation from sparse clinical data.
     </p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
-      <a class="hero-panel__action" href="{{ '/output/pdf/Tushar_Nayak_Resume.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
+      <a class="hero-panel__action" href="https://github.com/tushar-nayak/cv">Download CV <span aria-hidden="true">↓</span></a>
     </div>
   </div>
   <aside class="hero-panel__aside">
@@ -52,27 +52,6 @@ enable_framework_scripts: false
 </section>
 
 {% include featured_projects.liquid %}
-
-<section class="section-shell">
-  <div class="section-shell__heading-row">
-    <p class="section-shell__eyebrow">research directions</p>
-    <a class="section-shell__inline-link" href="{{ '/research/' | relative_url }}">research overview <span aria-hidden="true">↗</span></a>
-  </div>
-  <div class="section-shell__grid section-shell__grid--three">
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">Intervention</p>
-      <p class="section-shell__text">Image-guided robotic intervention, intra-operative deformation, and tele-operated surgical systems.</p>
-    </div>
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">Vision</p>
-      <p class="section-shell__text">Geometric vision, registration, and 3D reconstruction tied to measurement and physics.</p>
-    </div>
-    <div class="section-shell__panel">
-      <p class="section-shell__panel-title">Biomedical ML</p>
-      <p class="section-shell__text">Segmentation and multimodal learning designed around noisy, clinically constrained data.</p>
-    </div>
-  </div>
-</section>
 
 <section class="section-shell home-publications">
   <div class="section-shell__heading-row">
@@ -98,26 +77,10 @@ enable_framework_scripts: false
   </div>
 </section>
 
-<section class="section-shell home-feed">
-  <div class="section-shell__heading-row">
-    <p class="section-shell__eyebrow">technical writing</p>
-    <a class="section-shell__inline-link" href="{{ '/blog/' | relative_url }}">all writing <span aria-hidden="true">↗</span></a>
-  </div>
-  {% include latest_posts.liquid %}
-</section>
-
-<section class="section-shell home-feed">
-  <div class="section-shell__heading-row">
-    <p class="section-shell__eyebrow">recent news</p>
-    <a class="section-shell__inline-link" href="{{ '/news/' | relative_url }}">all news <span aria-hidden="true">↗</span></a>
-  </div>
-  {% include news.liquid limit=true %}
-</section>
-
 <section class="section-shell home-contact">
   <p class="section-shell__eyebrow">contact</p>
   <div class="home-contact__content">
     <p class="section-shell__text">Interested in medical imaging, surgical robotics, geometric vision, or research collaboration?</p>
-    <a class="hero-panel__action" href="mailto:tusharn@uchicago.edu">tusharn@uchicago.edu <span aria-hidden="true">↗</span></a>
+    <a class="hero-panel__action" href="mailto:tusharnayak128@gmail.com">tusharnayak128@gmail.com <span aria-hidden="true">↗</span></a>
   </div>
 </section>

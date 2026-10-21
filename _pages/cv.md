@@ -3,8 +3,8 @@ layout: cv
 permalink: /cv/
 title: cv
 nav: true
-nav_order: 5
-cv_pdf: https://tushar-nayak.github.io/output/pdf/Tushar_Nayak_Resume.pdf
+nav_order: 4
+cv_pdf: https://github.com/tushar-nayak/cv
 description: Research CV and resume for Tushar Nayak, covering education, research, teaching, publications, and selected technical work.
 toc:
   sidebar: left

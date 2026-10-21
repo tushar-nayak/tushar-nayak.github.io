@@ -4,7 +4,7 @@ title: Attention-augmented Dual-View Mammogram Alignment for Enhanced BI-RADS Cl
 description: Course project for Projects in Biomedical AI
 img: assets/img/sang.png
 importance: 2
-category: course projects
+category: at carnegie mellon
 github: https://github.com/tushar-nayak/grading-cbisddsm
 report: https://github.com/tushar-nayak/grading-cbisddsm/blob/main/42657A_G3Report.pdf
 status: completed
