@@ -39,7 +39,7 @@ enable_framework_scripts: false
   <div class="hero-panel__content">
     <h2 class="hero-panel__title">Geometry-aware vision for image-guided robotic surgery.</h2>
     <p class="hero-panel__lead">
-      I am a staff scientist at the <a href="https://surgbiomech.uchicago.edu">Surgical Biomechanics Lab</a> under Dr. Luka Pocivavsek at the <a href="https://www.uchicago.edu/">University of Chicago</a>, and a research collaborator with the University of Pittsburgh's <a href="https://surreality.pitt.edu">Surreality Lab</a>. I recently completed my M.S. in Biomedical Engineering at Carnegie Mellon University, where I build computer vision and learning systems that recover useful anatomy, motion, and deformation from sparse clinical data.
+      I am a staff scientist at the <a href="https://surgbiomech.uchicago.edu">Surgical Biomechanics Lab</a> under Dr. Luka Pocivavsek at the <a href="https://www.uchicago.edu/">University of Chicago</a>, and a research collaborator with the University of Pittsburgh's <a href="https://surreality.pitt.edu">Surreality Lab</a>. I am also a research collaborator with and alumnus of Carnegie Mellon University's <a href="https://cerlab.cmu.edu">Computational Engineering &amp; Robotics Lab (CERLAB)</a>, where I recently completed my M.S. in Biomedical Engineering. I build computer vision and learning systems that recover useful anatomy, motion, and deformation from sparse clinical data.
     </p>
     <div class="hero-panel__actions">
       <a class="hero-panel__action hero-panel__action--primary" href="{{ '/research/' | relative_url }}">View research <span aria-hidden="true">↗</span></a>
