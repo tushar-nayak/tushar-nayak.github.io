@@ -16,26 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "nav-publications",
           title: "publications",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
-          },
-        },{id: "nav-writing",
-          title: "writing",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
           },
         },{id: "nav-cv",
           title: "cv",
@@ -553,7 +539,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%75%73%68%61%72@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
+          window.open("mailto:%74%75%73%68%61%72%6E%61%79%61%6B%31%32%38@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
