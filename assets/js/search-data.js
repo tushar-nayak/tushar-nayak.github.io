@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "research",
-          description: "",
+          description: "Research interests and project work in geometric computer vision, medical imaging, and image-guided intervention.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
@@ -425,14 +425,23 @@ ninja.data = [{
           section: "News",},{id: "news-began-serving-as-a-teaching-assistant-for-professor-newell-washburn-s-course-machine-learning-applications-in-experimental-biomedical-research-at-carnegie-mellon-university-a-full-circle-moment-since-i-took-the-course-myself-in-spring-2025",
           title: 'Began serving as a Teaching Assistant for Professor Newell Washburn’s course, Machine Learning...',
           description: "",
+          section: "News",},{id: "news-presented-a-poster-at-the-carnegie-mellon-university-graduate-research-forum-on-estimating-neurovascular-deformation-during-thrombectomy-from-2d-fluoroscopy-using-physics-regularized-deep-graph-networks",
+          title: 'Presented a poster at the Carnegie Mellon University Graduate Research Forum on estimating...',
+          description: "",
           section: "News",},{id: "news-i-will-be-spending-my-summer-as-a-researcher-at-surreality-lab-with-rishi-basdeo-and-pis-professor-edward-andrews-and-professor-jacob-biehl",
           title: 'I will be spending my summer as a researcher at Surreality Lab with...',
           description: "",
           section: "News",},{id: "news-visiting-the-massachusetts-institute-of-technology-amp-amp-worcester-polytechnic-institute-this-week-at-wpi-i-ll-be-delivering-a-seminar-session-based-on-my-master-s-thesis-and-recent-projects-focusing-on-the-real-time-registration-and-3d-reconstruction-of-medical-imaging-data-from-2d-space",
           title: 'Visiting the Massachusetts Institute of Technology &amp;amp;amp; Worcester Polytechnic Institute this week! At...',
           description: "",
-          section: "News",},{id: "news-after-graduating-from-carnegie-mellon-university-i-am-excited-to-be-starting-as-a-scientist-at-the-surgbiomech-pocivavsek-lab-at-the-university-of-chicago-led-by-dr-luka-pocivavsek",
+          section: "News",},{id: "news-after-graduating-from-carnegie-mellon-university-i-am-excited-to-be-starting-as-a-staff-scientist-at-the-surgical-biomechanics-lab-at-the-university-of-chicago-led-by-dr-luka-pocivavsek",
           title: 'After graduating from Carnegie Mellon University, I am excited to be starting as...',
+          description: "",
+          section: "News",},{id: "news-our-systematic-review-on-using-artificial-intelligence-and-machine-learning-to-predict-tumor-recurrence-in-high-grade-gliomas-has-been-accepted-at-neurosurgical-review-with-dr-trent-kite-and-dr-matthew-shepard",
+          title: 'Our systematic review on using artificial intelligence and machine learning to predict tumor...',
+          description: "",
+          section: "News",},{id: "news-presented-early-results-from-fluorogrid-at-the-2nd-international-workshop-on-the-evolving-landscape-of-surgical-robotics-elsr-held-at-ieee-rsj-iros-2026-on-real-time-3d-vascular-state-estimation-from-monocular-fluoroscopy-for-endovascular-robotic-neurosurgery",
+          title: 'Presented early results from FluoroGRID at the 2nd International Workshop on the Evolving...',
           description: "",
           section: "News",},{id: "projects-neural-anisotropic-diffusion-for-medical-image-relaxation",
           title: 'Neural Anisotropic Diffusion for Medical Image Relaxation',
@@ -466,12 +475,12 @@ ninja.data = [{
               window.location.href = "/projects/15_project/";
             },},{id: "projects-open-vocabulary-surgical-tool-detection-and-tracking",
           title: 'Open-Vocabulary Surgical Tool Detection and Tracking',
-          description: "Detects and tracks surgical instruments from open-vocabulary prompts for adaptable intra-operative perception.",
+          description: "Detects and tracks surgical instruments from free-text prompts, removing the fixed-label assumption that limits closed-set surgical perception.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/16_project/";
-            },},{id: "projects-gaussian-occupancy-cardiac-reconstruction",
-          title: 'Gaussian Occupancy Cardiac Reconstruction',
-          description: "Reconstructs 3D cardiac anatomy from sparse echocardiography using differentiable Gaussian occupancy fields.",
+            },},{id: "projects-sparse-view-cardiac-reconstruction-with-neural-implicit-representations",
+          title: 'Sparse-View Cardiac Reconstruction with Neural Implicit Representations',
+          description: "Completes 3D left-ventricular geometry from three annotated echocardiography sections, scored only on the voxels the model never observed.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/17_project/";
             },},{id: "projects-sparse-view-coronary-vessel-reconstruction",
@@ -484,9 +493,9 @@ ninja.data = [{
           description: "A pathology model that fuses 20x and 40x whole-slide image views with cross-scale attention for malignancy, subtype, and differentiation grading.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/19_project/";
-            },},{id: "projects-physics-informed-endovasculature-deformation-estimation-and-registration",
-          title: 'Physics-Informed Endovasculature Deformation Estimation And Registration',
-          description: "Estimates intra-operative neurovascular deformation by registering sparse fluoroscopy with pre-operative CTA.",
+            },},{id: "projects-fluorogrid-real-time-3d-vascular-deformation-from-monocular-fluoroscopy",
+          title: 'FluoroGRID: Real-Time 3D Vascular Deformation from Monocular Fluoroscopy',
+          description: "Estimates patient-specific 3D neurovascular deformation from a single fluoroscopic view by fusing image evidence, pre-operative anatomy, and camera geometry.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-federated-graph-learning-for-pathology-images",
@@ -504,11 +513,6 @@ ninja.data = [{
           description: "Course Project for Fundamentals of MRI and Neuroimaging Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-few-shot-2d-echo-to-3d-cardiac-reconstruction-via-neural-implicit-priors",
-          title: 'Few-Shot 2D Echo to 3D Cardiac Reconstruction via Neural Implicit Priors',
-          description: "Course Project for Learning for 3D Vision",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
             },},{id: "projects-multi-model-oral-squamous-cell-carcinoma-detection",
           title: 'Multi-Model Oral Squamous Cell Carcinoma Detection',
           description: "Undergraduate thesis",
