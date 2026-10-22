@@ -503,8 +503,8 @@ ninja.data = [{
           description: "A pathology learning pipeline that combines self-supervised image encoding, patient-level federated training, graph reasoning, and concept-bottleneck classification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/20_project/";
-            },},{id: "projects-patient-specific-multiphysics-analysis-of-aortic-remodeling",
-          title: 'Patient-Specific Multiphysics Analysis of Aortic Remodeling',
+            },},{id: "projects-patient-specific-aortic-remodeling-geometry-growth-amp-hemodynamics",
+          title: 'Patient-Specific Aortic Remodeling: Geometry, Growth &amp;amp; Hemodynamics',
           description: "Maps patient-specific aortic geometry, longitudinal growth, and available hemodynamic fields, then tests how their relationships hold across regions and mesh scales.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/21_project/";
