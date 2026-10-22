@@ -29,14 +29,34 @@
             <div class="col-sm-9">{{ content }}</div>
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% if page.permalink == '/cv/' %}
+                <nav id="cv-toc-sidebar" class="sticky-top cv-toc" aria-label="CV sections">
+                  <ul>
+                    {% for entry in site.data.cv %}
+                      <li><a href="#{{ entry.title | slugify }}">{{ entry.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </nav>
+              {% else %}
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% endif %}
             </div>
           </div>
         {% else %}
           <div class="row">
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% if page.permalink == '/cv/' %}
+                <nav id="cv-toc-sidebar" class="sticky-top cv-toc" aria-label="CV sections">
+                  <ul>
+                    {% for entry in site.data.cv %}
+                      <li><a href="#{{ entry.title | slugify }}">{{ entry.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </nav>
+              {% else %}
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% endif %}
             </div>
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>

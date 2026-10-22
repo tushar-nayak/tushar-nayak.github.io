@@ -13,6 +13,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> + <a href="https://github.com/alshedivat/al-folio">al-folio</a>
 keywords: computer vision, medical imaging, robotic surgery, endovascular robotics, image-guided intervention, biomedical engineering, University of Chicago, Carnegie Mellon, Tushar Nayak
+x_username: tusharnayak_
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -174,6 +175,8 @@ exclude:
   - LICENSE
   - lighthouse_results/
   - assets/jupyter
+  - assets/video/tutorial_al_folio.mp4
+  - assets/plotly/demo.html
   - package.json
   - package-lock.json
   - purgecss.config.js

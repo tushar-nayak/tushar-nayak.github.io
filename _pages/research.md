@@ -14,7 +14,7 @@ horizontal: false
     <div>
       <h2 class="section-shell__title">Geometry-aware learning for medical image analysis.</h2>
       <p class="section-shell__text">
-        I develop geometry-aware learning methods that recover 3D anatomy, motion, and deformation from sparse, noisy, or multimodal clinical observations. The recurring problem across my work is that clinically useful structure has to be inferred from measurements that are too few, too noisy, or too low-dimensional to determine it outright — a single fluoroscopic projection, three echocardiography slices, a handful of irregularly sampled MRI timepoints.
+        I develop geometry-aware learning methods that recover 3D anatomy, motion, and deformation from sparse, noisy, or multimodal clinical observations. Across my work, clinically useful structure has to be inferred from measurements that are too few, too noisy, or too low-dimensional to determine it outright. Examples include a single fluoroscopic projection, three echocardiography slices, or a handful of irregularly sampled MRI timepoints.
       </p>
       <p class="section-shell__text">
         My approach is to treat geometry and physics as constraints rather than afterthoughts: representing anatomy explicitly, enforcing consistency with the imaging geometry that produced the observation, and building objectives that make implausible solutions expensive. I am most interested in continuing this line toward intra-operative systems where an estimate is only useful if it is both fast and physically trustworthy.

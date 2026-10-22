@@ -43,7 +43,7 @@ layout: default
       {% endif %}
     </header>
 
-    <article>
+    <article{% if page.permalink == '/teaching/' %} class="teaching-page"{% endif %}>
       {{ content }}
     </article>
   {% endif %}

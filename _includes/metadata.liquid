@@ -63,7 +63,7 @@
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta property="og:title" content="{% if page.title and page.url != '/' %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:description" content="{{ page_description }}">
   {% if og_image_url %}
@@ -239,7 +239,7 @@
         {
           "@type": "Person",
           "@id": "{{ site.url }}#person",
-          "name": "{{ author_name }}",
+          "name": {{ author_name | jsonify }},
           "url": "{{ site.url }}",
           "image": "{{ profile_image_url }}",
           "jobTitle": "Staff Scientist",
@@ -273,16 +273,16 @@
             "Endovascular robotics",
             "3D reconstruction",
             "Physics-aware machine learning"
-          }{% if sameaslinks != blank %},
+          ]{% if sameaslinks != blank %},
           "sameAs": {{ sameaslinks | jsonify }}{% endif %}
         },
         {
           "@type": "{% if page.url == '/' %}ProfilePage{% elsif is_blog_post %}BlogPosting{% else %}WebPage{% endif %}",
           "@id": "{{ canonical_url }}#webpage",
           "url": "{{ canonical_url }}",
-          "name": "{% if page.title and page.url != '/' %}{{ page.title }}{% else %}{{ author_name }}{% endif %}",
-          "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-          "description": "{{ page_description }}",
+          "name": {% if page.title and page.url != '/' %}{{ page.title | jsonify }}{% else %}{{ author_name | jsonify }}{% endif %},
+          "headline": {% if page.title %}{{ page.title | jsonify }}{% else %}{{ site.title | jsonify }}{% endif %},
+          "description": {{ page_description | strip | jsonify }},
           "isPartOf": {
             "@type": "WebSite",
             "@id": "{{ site.url }}#website",
@@ -302,7 +302,7 @@
           "@id": "{{ site.url }}#website",
           "name": "{{ site.title }}",
           "url": "{{ site.url }}",
-          "description": "{{ site.description }}"
+          "description": {{ site.description | strip | jsonify }}
         }
       ]
     }
