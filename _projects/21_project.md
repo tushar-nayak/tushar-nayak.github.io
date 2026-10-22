@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Patient-Specific Aortic Remodeling: Geometry, Growth & Hemodynamics"
+title: "Patient-Specific Multiphysics Analysis of Aortic Remodeling"
 description: Maps patient-specific aortic geometry, longitudinal growth, and available hemodynamic fields, then tests how their relationships hold across regions and mesh scales.
 importance: 3
 category: at the university of chicago
@@ -9,7 +9,7 @@ tags: [Computational Biomechanics, Aortic Remodeling, Medical Imaging, Mesh Anal
 featured: true
 homepage_featured: true
 homepage_order: 4
-homepage_title: "Aortic Remodeling: Geometry, Growth & Flow"
+homepage_title: "Patient-Specific Aortic Multiphysics"
 ---
 
 ## summary
