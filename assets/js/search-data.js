@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "about",
+    id: "nav-tushar-nayak",
+    title: "Tushar Nayak",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "Research CV and resume for Tushar Nayak, covering education, research, teaching, publications, and selected technical work.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -437,7 +437,7 @@ ninja.data = [{
           section: "News",},{id: "news-after-graduating-from-carnegie-mellon-university-i-am-excited-to-be-starting-as-a-staff-scientist-at-the-surgical-biomechanics-lab-at-the-university-of-chicago-led-by-dr-luka-pocivavsek",
           title: 'After graduating from Carnegie Mellon University, I am excited to be starting as...',
           description: "",
-          section: "News",},{id: "news-our-systematic-review-on-using-artificial-intelligence-and-machine-learning-to-predict-tumor-recurrence-in-high-grade-gliomas-has-been-accepted-at-neurosurgical-review-with-dr-trent-kite-and-dr-matthew-shepard",
+          section: "News",},{id: "news-our-systematic-review-on-using-artificial-intelligence-and-machine-learning-to-predict-tumor-recurrence-in-high-grade-gliomas-has-been-accepted-at-neurosurgical-review-the-work-was-done-with-dr-trent-kite-professors-aswin-sankaranarayanan-and-pulkit-grover-and-dr-matthew-shepard",
           title: 'Our systematic review on using artificial intelligence and machine learning to predict tumor...',
           description: "",
           section: "News",},{id: "news-presented-early-results-from-fluorogrid-at-the-2nd-international-workshop-on-the-evolving-landscape-of-surgical-robotics-elsr-held-at-ieee-rsj-iros-2026-on-real-time-3d-vascular-state-estimation-from-monocular-fluoroscopy-for-endovascular-robotic-neurosurgery",
@@ -598,6 +598,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=9xUX7NoAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/tusharnayak_", "_blank");
         },
       },{
       id: 'light-theme',
