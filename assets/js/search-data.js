@@ -503,6 +503,11 @@ ninja.data = [{
           description: "A pathology learning pipeline that combines self-supervised image encoding, patient-level federated training, graph reasoning, and concept-bottleneck classification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/20_project/";
+            },},{id: "projects-multiphysics-analysis-of-aortic-remodeling",
+          title: 'Multiphysics Analysis of Aortic Remodeling',
+          description: "Maps patient-specific aortic geometry, longitudinal growth, and available hemodynamic fields, then tests how their relationships hold across regions and mesh scales.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/21_project/";
             },},{id: "projects-spatiotemporal-glioblastoma-evolution-visual-prediction",
           title: 'Spatiotemporal Glioblastoma Evolution Visual Prediction',
           description: "Research at The ∀ Lab &amp; Image Science Lab",
