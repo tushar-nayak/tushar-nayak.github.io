@@ -6,8 +6,8 @@
       <p class="section-shell__eyebrow">selected work</p>
       <a class="section-shell__inline-link" href="{{ '/projects/' | relative_url }}">all projects <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="home-work__grid">
-      {% for project in homepage_featured limit: 3 %}
+    <div class="home-work__grid" data-count="{{ homepage_featured.size | at_most: 4 }}">
+      {% for project in homepage_featured limit: 4 %}
         <a class="home-work__card" href="{{ project.url | relative_url }}">
           <span class="home-work__index">0{{ forloop.index }}</span>
           <div class="home-work__body">
