@@ -9,7 +9,9 @@
   margin: 0 auto 2.7rem;
 }
 
-.about-page .post-header .desc { white-space: nowrap; }
+.about-page .post-header .desc {
+  white-space: nowrap;
+}
 
 .about-page .minimal-intro {
   display: grid;
@@ -105,14 +107,34 @@
   text-decoration: none !important;
 }
 
-.minimal-list__row:hover .minimal-list__title { color: var(--global-theme-color); }
-.minimal-list__title { font-weight: 600; line-height: 1.5; }
-.minimal-list__description, .minimal-list__year { color: var(--tn-muted); font-size: 0.9rem; line-height: 1.55; }
-.minimal-list__arrow { color: var(--global-theme-color); }
-.minimal-list--projects .minimal-list__row { grid-template-columns: minmax(165px, 0.7fr) minmax(0, 1.4fr); }
-.minimal-list--papers .minimal-list__row { grid-template-columns: 54px minmax(0, 1fr) minmax(120px, 0.42fr); }
-.minimal-list--news .minimal-list__row { grid-template-columns: 90px minmax(0, 1fr); }
-.minimal-list--news .minimal-list__title { font-weight: 400; }
+.minimal-list__row:hover .minimal-list__title {
+  color: var(--global-theme-color);
+}
+.minimal-list__title {
+  font-weight: 600;
+  line-height: 1.5;
+}
+.minimal-list__description,
+.minimal-list__year {
+  color: var(--tn-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.minimal-list__arrow {
+  color: var(--global-theme-color);
+}
+.minimal-list--projects .minimal-list__row {
+  grid-template-columns: minmax(165px, 0.7fr) minmax(0, 1.4fr);
+}
+.minimal-list--papers .minimal-list__row {
+  grid-template-columns: 54px minmax(0, 1fr) minmax(120px, 0.42fr);
+}
+.minimal-list--news .minimal-list__row {
+  grid-template-columns: 90px minmax(0, 1fr);
+}
+.minimal-list--news .minimal-list__title {
+  font-weight: 400;
+}
 
 .teaching-page > .section-nav {
   display: flex;
@@ -124,8 +146,12 @@
   font-size: 0.9rem;
 }
 
-.teaching-page > .section-nav a { color: var(--tn-muted); }
-.teaching-page > .section-nav a:hover { color: var(--global-theme-color); }
+.teaching-page > .section-nav a {
+  color: var(--tn-muted);
+}
+.teaching-page > .section-nav a:hover {
+  color: var(--global-theme-color);
+}
 .teaching-page h2 {
   margin: 2.5rem 0 1rem;
   padding-bottom: 0.55rem;
@@ -157,7 +183,10 @@
   text-transform: none;
   vertical-align: 0.08em;
   box-shadow: none;
-  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background-color 160ms ease;
 }
 
 .teaching-page h3 .teaching-heading-link:hover,
@@ -168,8 +197,12 @@
   text-decoration: none;
 }
 
-.teaching-page p { line-height: 1.75; }
-.teaching-page .caption { color: var(--tn-muted); }
+.teaching-page p {
+  line-height: 1.75;
+}
+.teaching-page .caption {
+  color: var(--tn-muted);
+}
 
 .cv-toc {
   top: 5rem;
@@ -183,7 +216,9 @@
   list-style: none;
 }
 
-.cv-toc li { margin: 0; }
+.cv-toc li {
+  margin: 0;
+}
 .cv-toc a {
   display: block;
   padding: 0.35rem 0.65rem;
@@ -200,30 +235,80 @@
   color: var(--global-theme-color);
 }
 
-.cv h3[id] { scroll-margin-top: 6rem; }
+.cv h3[id] {
+  scroll-margin-top: 6rem;
+}
 
 @media (max-width: 576px) {
-  .cv-toc { display: none; }
+  .cv-toc {
+    display: none;
+  }
 }
 
 @media (max-width: 650px) {
-  .about-page .post-header .desc { white-space: normal; }
-  .about-page .minimal-intro { grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; }
-  .minimal-intro__portrait { width: 120px; height: 120px; }
-  .about-page .minimal-section { margin-bottom: 2.1rem; }
-  .minimal-list__row, .minimal-list--papers .minimal-list__row { grid-template-columns: 1fr; gap: 0.2rem 0.6rem; padding: 0.75rem 0.1rem; }
-  .minimal-list__description, .minimal-list__year { grid-column: 1; grid-row: 1; font-size: 0.8rem; }
-  .minimal-list__title { grid-column: 1; grid-row: 2; }
-  .minimal-list--projects .minimal-list__title { grid-row: 1; }
-  .minimal-list--projects .minimal-list__description { grid-row: 2; }
-  .minimal-list--papers .minimal-list__row { grid-template-columns: 1fr; }
-  .minimal-list--papers .minimal-list__year { grid-column: 1; grid-row: 1; }
-  .minimal-list--papers .minimal-list__title { grid-row: 2; }
-  .minimal-list--papers .minimal-list__description { grid-row: 3; }
-  .minimal-list--news .minimal-list__row { grid-template-columns: 1fr; gap: 0.25rem; }
-  .minimal-list--news .minimal-list__year, .minimal-list--news .minimal-list__title { grid-column: 1; }
-  .minimal-list--news .minimal-list__year { grid-row: 1; }
-  .minimal-list--news .minimal-list__title { grid-row: 2; }
+  .about-page .post-header .desc {
+    white-space: normal;
+  }
+  .about-page .minimal-intro {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .minimal-intro__portrait {
+    width: 120px;
+    height: 120px;
+  }
+  .about-page .minimal-section {
+    margin-bottom: 2.1rem;
+  }
+  .minimal-list__row,
+  .minimal-list--papers .minimal-list__row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem 0.6rem;
+    padding: 0.75rem 0.1rem;
+  }
+  .minimal-list__description,
+  .minimal-list__year {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 0.8rem;
+  }
+  .minimal-list__title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .minimal-list--projects .minimal-list__title {
+    grid-row: 1;
+  }
+  .minimal-list--projects .minimal-list__description {
+    grid-row: 2;
+  }
+  .minimal-list--papers .minimal-list__row {
+    grid-template-columns: 1fr;
+  }
+  .minimal-list--papers .minimal-list__year {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .minimal-list--papers .minimal-list__title {
+    grid-row: 2;
+  }
+  .minimal-list--papers .minimal-list__description {
+    grid-row: 3;
+  }
+  .minimal-list--news .minimal-list__row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .minimal-list--news .minimal-list__year,
+  .minimal-list--news .minimal-list__title {
+    grid-column: 1;
+  }
+  .minimal-list--news .minimal-list__year {
+    grid-row: 1;
+  }
+  .minimal-list--news .minimal-list__title {
+    grid-row: 2;
+  }
 }
 
 :root {

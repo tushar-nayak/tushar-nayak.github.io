@@ -33,7 +33,9 @@
                 <nav id="cv-toc-sidebar" class="sticky-top cv-toc" aria-label="CV sections">
                   <ul>
                     {% for entry in site.data.cv %}
-                      <li><a href="#{{ entry.title | slugify }}">{{ entry.title }}</a></li>
+                      <li>
+                        <a href="#{{ entry.title | slugify }}">{{ entry.title }}</a>
+                      </li>
                     {% endfor %}
                   </ul>
                 </nav>
@@ -50,7 +52,9 @@
                 <nav id="cv-toc-sidebar" class="sticky-top cv-toc" aria-label="CV sections">
                   <ul>
                     {% for entry in site.data.cv %}
-                      <li><a href="#{{ entry.title | slugify }}">{{ entry.title }}</a></li>
+                      <li>
+                        <a href="#{{ entry.title | slugify }}">{{ entry.title }}</a>
+                      </li>
                     {% endfor %}
                   </ul>
                 </nav>
